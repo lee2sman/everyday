@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--
+lee2sman coding sketch 6
+7-XII-2018-0053 at home in bed
+-->
+
+<html>
+<head>
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <title>log cabin</title>
+ <link href="https://fonts.googleapis.com/css?family=Coming+Soon" rel="stylesheet">
+<style>
+
+html, * {
+    margin: none;
+    padding: none;
+    border: none;
+    font-family: 'Coming Soon', cursive;
+}
+
+body {
+    background: linear-gradient(to top left, white, blue, white, black, white);
+    animation: barberpole 20s linear infinite;
+    background-size: 150% 100%;
+}
+
+@keyframes barberpole {
+	0% {
+            background-position: 0 0;
+	}
+	100% {
+            background-position: -100% 0;
+	}
+}
+.quilt-container {
+  display: grid;
+  grid-template-columns: repeat(20, auto);
+  grid-gap: 1vw;
+}
+.allscraps {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  background:             linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+            linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+}
+
+.scrap1 {
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.scrap2 {
+    background: linear-gradient(45deg, rgb(200,0,0),rgb(0,0,200));
+}
+
+.scrap5 {
+  background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+            linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+            linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+}
+</style>
+</head>
+<body>
+
+ <div class="quilt-container">
+  <div class="allscraps scrap1">$</div>
+  <div class="allscraps scrap2">$</div>
+  <div class="allscraps scrap5">$</div>
+<!-- we will close the quilt-container after all our allscraps divs are declared below -->
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<script>
+
+	setInterval(function(){
+    $('.quilt-container').append('<div class="allscraps">$</div>');
+		}, 300);
+
+
+//let blocks = $('allscraps');
+
+//for (let i = 0; i < blocks.length; i++){
+
+//}
+
+</script>
+</div>
+
+</body>
+</html>
