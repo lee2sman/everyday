@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!--
+lee2sman coding sketch 8
+7-XII-2018-0206 at home in bed
+power by quilts / under the blanket
+-->
+
+<html>
+
+<head>
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <title>log cabin</title>
+  <link href="https://fonts.googleapis.com/css?family=Coming+Soon" rel="stylesheet">
+  <style>
+    html,
+    * {
+      margin: none;
+      padding: none;
+      border: none;
+      font-family: 'Coming Soon', cursive;
+    }
+
+    body {
+      background: linear-gradient(to top left, lime, beige, pink, purple, black);
+      color: white;
+      animation: barberpole 20s linear infinite;
+      background-size: 150% 200%;
+    }
+
+    @keyframes barberpole {
+      0% {
+        background-position: 0 0;
+      }
+
+      100% {
+        background-position: 0% -100%;
+      }
+    }
+
+    .quilt-container {
+      width: 70%;
+      height: 70%;
+      margin: auto;
+      display: grid;
+      padding: 5vw;
+      animation: barberpole 20s linear infinite;
+      background-size: 150% 100%;
+      width: 65%;
+      height: 70vh;
+      grid-template-columns: auto auto auto auto;
+      grid-gap: 1vw;
+    }
+
+    .allscraps {
+      background-color: rgba(255, 255, 255, 0.8);
+      animation: barberpole 2s linear infinite;
+      border: 1px solid rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      font-size: 30px;
+      text-align: center;
+      background: rgb(131, 58, 180);
+      border-radius: 50%;
+      background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(255, 248, 242, 1) 23%, rgba(252, 176, 69, 1) 100%);
+    }
+
+    .scrap1 {
+      background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="quilt-container">
+    <div class="allscraps scrap1"></div>
+    <div class="allscraps"></div>
+    <div class="allscraps"></div>
+    <div class="allscraps"></div>
+    <div class="allscraps"></div>
+    <div class="allscraps"></div>
+    <div class="allscraps"></div>
+    <div class="allscraps"></div>
+    <div class="allscraps"></div>
+    <div class="allscraps"></div>
+    <div class="allscraps"></div>
+    <div class="allscraps"></div>
+    <div class="allscraps"></div>
+    <div class="allscraps"></div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <script>
+    let blocks = $('.allscraps');
+
+    setInterval(function() {
+
+      for (let i = 0; i < blocks.length; i++) {
+        let angle = Math.floor(Math.random() );
+        let size = Math.floor(Math.random() * 555);
+        let r1 = Math.floor(Math.random() * 255);
+        let g1 = Math.floor(Math.random() * 255);
+        let b1 = Math.floor(Math.random() * 255);
+        let r2 = Math.floor(Math.random() * 255);
+        let g2 = Math.floor(Math.random() * 255);
+        let b2 = Math.floor(Math.random() * 255);
+
+        $(blocks[i]).css({
+          'background': 'linear-gradient(' + angle + 'deg, rgb(' + r1 + ',' + g1 + ',' + b1 + '),rgb(' + r2 + ',' + g2 + ',' + b2 + '))',
+          'transform': 'rotate(' + angle + 'deg)',
+          'width': size,
+          'height': size
+        });
+      }
+    }, 500);
+  </script>
+
+</body>
+
+</html>
