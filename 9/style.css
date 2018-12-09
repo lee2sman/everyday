@@ -47,6 +47,18 @@ a {
 	-webkit-transform-origin: 0% 0%;
 }
 
+@media (max-width: 1024px){
+
+	#clock {
+		width: 75vw;
+		height: 75vw;
+	}
+
+	#hand {
+		height: 25vw;
+	}
+}
+
 #question {
 	position: absolute;
 	bottom: 2vh;
