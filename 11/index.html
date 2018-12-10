@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<!-- code sketch 11 by lee2sman
+	 early morning hours dec 10 -->
+	<head>
+	<title>Yng Yng</title>
+<style>
+body {
+	background-color: black;
+}
+</style>
+	<!-- jquery js not play work with jquery 3, thus we use an older version -->
+<script src="lib/jquery.js"></script>
+	 <!-- using jquery-turtle.js -->
+<script src="jquery-turtle.js"></script>
+</head>
+<body>
+<script>
+eval($.turtle()); 
+
+//x axis
+//console.log(random($(window).width()));
+//y axis
+//console.log(random($(window).height()));
+
+let trips = 3000;
+
+$('#turtle').wear('assets/yng.png');
+
+$('#turtle').scale(3); //resize
+$('#turtle').speed(10);
+
+for (let i = 0; i < trips; i++){
+
+  if(Math.random() < 0.5){
+    $('#turtle').rt(random(180));
+  } else {
+    $('#turtle').lt(random(180));
+  }
+  if(Math.random() < 0.5){
+    $('#turtle').fd(random(100));
+  } else {
+    $('#turtle').bk(random(100));
+  }
+}
+
+setInterval(function(){
+	if (Math.random() < 0.5){
+    $('body').css('background-color','white');
+	} else {
+    $('body').css('background-color','black');
+	}
+},100);
+
+</script>
