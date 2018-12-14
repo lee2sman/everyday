@@ -18,25 +18,37 @@ body{
   font-family: 'BamsGlitchDemo';
   margin: 0;
   padding: 0;
-  font-size: 20vh;
+  font-size: 20vmax;
+  line-height: 1;
   text-align: justify;
-  line-height: 10vh;
 }
 
 ul {
 	display: flex;
 	flex-direction: column;
+	margin: 0;
+	padding: 0;
+	width: 100%;
 }
 li {
 	margin: 0;
+	padding: 0;
+	opacity: 0.5;
 	display: inline-block;
 	text-align: justify;
+        width: max-100%;
+	margin-top: 0em;
+	margin-bottom: 0em;
 }
   li:after {
+      margin: 0;
+      padding: 0;
       content: "";
       display: inline-block;
       width: max-100%;
       text-align: justify;
+	margin-top: 0em;
+	margin-bottom: 0em;
     }
 
 a {
