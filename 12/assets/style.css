@@ -1,0 +1,50 @@
+@font-face {
+    font-family: BamsGlitchDemo;
+    src: url('BamsGlitchDemo-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+	margin: 0;
+	padding: 0;
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  background-color: black;
+  font-family: 'BamsGlitchDemo';
+  margin: 0;
+  padding: 0;
+  font-size: 20vh;
+  text-align: justify;
+  line-height: 10vh;
+}
+
+ul {
+	display: flex;
+	flex-direction: column;
+}
+li {
+	margin: 0;
+	display: inline-block;
+	text-align: justify;
+}
+  li:after {
+      content: "";
+      display: inline-block;
+      width: max-100%;
+      text-align: justify;
+    }
+
+a {
+  color: red;
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+a:hover {
+  color: aqua;
+}
