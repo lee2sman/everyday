@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    margin: 0;
+    padding: 0;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-gap: 4px;
+  background-color: black;
+  padding: 4px;
+  margin: 0;
+  height: 100vh;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+  margin: 0;
+}
+
+#grid1 {
+	color: white;
+	background-color: black;
+	left: 50vw;
+	font-size: 30vw;
+	display: inline-block;
+}
+
+</style>
+</head>
+<body>
+
+<div class="grid-container">
+	<div id="grid1">?</div>
+	<!-- div grid0 to grid N is appended here in below script -->
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+	<script>
+
+	let makeGrid = function(){
+	
+	};
+
+//on mouse move do something
+$(document).bind('mousemove',function(e){ 
+	//print mouse x and y position
+	//console.log("X: "+e.pageX+" Y: "+e.pageY);
+
+	
+	$( ".grid-container" ).empty(); //remove all children divs of grid-container
+
+	let gridLength = Math.round(Math.random() * e.pageX); //create a number of divs aka grid squares equal to mouse x position
+
+	console.log(gridLength);
+
+	for (let i=0;i<gridLength;i++){
+		$(".grid-container").append("<div id=grid"+i+"></div>");   //creates id grid0 to gridN (gridLength-1)
+		$("#grid"+i).css({"background-color":"rgba("+Math.floor(Math.random()*255)+", "+Math.floor(Math.random()*255)+", "+Math.floor(Math.random()*255)+", 0.8 "});
+	}
+}); 
+
+	</script>
+
+</body>
+</html>
+
