@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    margin: 0;
+    padding: 0;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 4px;
+  background-color: black;
+  padding: 4px;
+  margin: 0;
+  height: 100vh;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+  margin: 0;
+  /* border-radius: 50%; */
+}
+
+</style>
+</head>
+<body>
+<audio id="beep" src="assets/beep.wav" type="audio/wav"></audio>  
+
+<div class="grid-container">
+	<!-- div grid0 to grid N is appended here in below script -->
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+	<script>
+
+// create Grid
+let gridLength = 24;
+
+    //create our grid
+    for (let i=0;i<gridLength;i++){
+	$(".grid-container").append("<div id=grid"+i+"></div>");   //creates id grid0 to gridN (gridLength-1)
+    }
+
+//reset colors
+
+function reset(){
+    for (let i=0;i<gridLength;i++){
+	$("#grid"+i).css({"background-color":"rgba("+Math.floor(Math.random()*55)+", "+Math.floor(Math.random()*55)+", "+Math.floor(Math.random()*255)+", 0.4 "}).append(" <audio id='clap"+i+"' src='assets/sound"+Math.floor(Math.random()*gridLength)+".wav' type='audio/wav'></audio>");  
+    }
+}
+reset();
+
+
+//start loop
+let whichBeat =0;
+
+setInterval(function() {
+
+
+	console.log("beat: "+whichBeat);
+
+	//make current beat blue
+	$('#grid'+whichBeat).css({"background-color":"blue"}).css({"opacity":"0.6"});
+	//make prev beat white
+	$('#grid'+(whichBeat-1)).css({"background-color":"white"}).css({"opacity":"0.5"});
+
+        $('#clap'+whichBeat+'').get(0).play();
+
+	    whichBeat++;
+	if (whichBeat>=gridLength-1){
+		whichBeat=0;
+		reset();
+	}
+
+     }, Math.random() * 2000);
+
+
+//on mouse move do something
+//$(document).bind('mousemove',function(e){ 
+	//print mouse x and y position
+	//console.log("X: "+e.pageX+" Y: "+e.pageY);
+
+	
+//}); 
+
+	</script>
+
+</body>
+</html>
+
