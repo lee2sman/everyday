@@ -1,4 +1,9 @@
-let die1, die2;
+let die1;
+let rollSnd;
+
+function preload(){
+  rollSnd = loadSound('roll.wav');
+}
 
 function setup(){
   createCanvas(windowWidth,windowHeight);
@@ -9,18 +14,14 @@ function setup(){
   stroke(20);
 
   die1 = new Die(width/2,height/2);
-  die2 = new Die(100,height-150);
-
-   die1.rollDie();
-   die1.display(); 
-
-   die2.rollDie();
-   die2.display(); 
-
+  die1.rollDie();
 }
 
-function draw(){
+function mousePressed(){
+  background(255);
 
+  let die = new Die(mouseX, mouseY);
+  die.rollDie();
 }
 
 class Die {
@@ -34,7 +35,10 @@ class Die {
   }
 
   rollDie(){
+    rollSnd.play();
+
     this.roll = ceil(random(6));
+    this.display();
     //print("rolled: "+this.roll);
   }
 
