@@ -59,22 +59,23 @@ function keyPressed(){
 }
 
 function checkKeys(){
+
     //check to see if on edge of map
-    if (((keyCode == UP_ARROW) && (playerY > 0)) || ((keyCode == DOWN_ARROW) && (playerY < rows-1)) || ((keyCode == LEFT_ARROW) && (playerX > 0)) || ((keyCode == RIGHT_ARROW) && (playerX < cols-1))){
+    if (((keyCode == UP_ARROW || key == 'k') && (playerY > 0)) || ((keyCode == DOWN_ARROW || key == 'j') && (playerY < rows-1)) || ((keyCode == LEFT_ARROW || key == 'h') && (playerX > 0)) || ((keyCode == RIGHT_ARROW || key == 'l') && (playerX < cols-1))){
     
 	//first we reset the player current position to what it was previously 
 	grid[playerY][playerX] = prevIcon;
 
-	if (keyCode === UP_ARROW){
+	if ((keyCode === UP_ARROW) || (key == 'k')){
 		playerY--;	
 	}
-	if (keyCode === DOWN_ARROW){
+	if ((keyCode === DOWN_ARROW) || (key == 'j')){
 		playerY++;
 	}
-	if (keyCode === LEFT_ARROW){
+	if ((keyCode === LEFT_ARROW) || (key == 'h')){
 		playerX--;
 	}
-	if (keyCode === RIGHT_ARROW){
+	if ((keyCode === RIGHT_ARROW) || (key == 'l')){
 		playerX++;
 	}
 
@@ -86,16 +87,16 @@ function checkKeys(){
     } else {
 	//OTHERWISE you must be on the edge AND moving offscreen
 	    //WRAP PLAYER AROUND to be on the other side of the screen now
-	if (keyCode === UP_ARROW){
+	if (keyCode === UP_ARROW || key == 'k'){
 		playerY=rows-1;	
 	}
-	if (keyCode === DOWN_ARROW){
+	if (keyCode === DOWN_ARROW || key == 'j'){
 		playerY=0;
 	}
-	if (keyCode === LEFT_ARROW){
+	if (keyCode === LEFT_ARROW || key == 'h'){
 		playerX=cols-1;
 	}
-	if (keyCode === RIGHT_ARROW){
+	if (keyCode === RIGHT_ARROW || key == 'l'){
 		playerX=0;
 	}
 
@@ -107,6 +108,7 @@ function checkKeys(){
 	createBoard();
 
     }
+//return false; //prevent default
 }
 
 function drawBoard(){
