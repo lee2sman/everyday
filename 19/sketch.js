@@ -23,12 +23,16 @@ function createBoard(){
 		grid[i] = [];
 		for (let j=0; j < cols; j++){
 			grid[i][j] = 0;
-			if (random() < 0.005){
-				grid[i][j] = '🏰';
-			} else if (random() < 0.01){
+			if (random() < 0.001){
+				grid[i][j] = '🗻';
+			} else if (random() < 0.002){
+				grid[i][j] = '⛰';
+			} else if (random() < 0.003){
 				grid[i][j] = '⛩';
-			} else if (random() < 0.015){
+			} else if (random() < 0.004){
 				grid[i][j] = '🕌';
+			} else if (random() < 0.005){
+				grid[i][j] = '🏰';
 			} else if (random() < 0.5){
 				grid[i][j] = '🌳';
 			} else {
@@ -81,6 +85,12 @@ function checkKeys(){
 
         //grab element at position before player moves into it, and store it
         prevIcon = grid[playerY][playerX]
+print(prevIcon);
+	
+	if (prevIcon == '🏰'){
+		createP('castle');
+	}
+
         //now change player pos
         grid[playerY][playerX] = '🤡';
 	    
