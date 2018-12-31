@@ -123,7 +123,7 @@ print(prevIcon);
 
 function drawBoard(){
 	for (let i = 0; i < rows; i++){
-		createP(grid[i]);
+		createP(grid[i].join(''));
 	}
 }
 
