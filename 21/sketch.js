@@ -9,7 +9,37 @@ let prevIcon = '.';
 let numOfBoards = 0;
 let gold = 0;
 let potions = 0;
-let monsters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+let scrolls = 0;
+let monsters = 'kebhsmRIOzlQCvAYNWMPXTUVGJD';
+/*
+ * k = kestrel
+ * e = emu
+ * b = bat
+ * h = hobgoblin
+ * s = snake
+ * m = monkey
+ * R = rattlesnake
+ * I = ice monster
+ * O = orc
+ * z = zombie
+ * l = leprechaun
+ * Q = quagga
+ * C = centaur
+ * v = venus flytrap
+ * a = aquator
+ * A = yeti
+ * N = nymph
+ * W = wraith
+ * M = Medusa
+ * P = Phantom
+ * X = xeroc
+ * T = troll
+ * U = Ur-vile
+ * V = vampire
+ * G = griffin
+ * J = Jabberwock
+ * D = dragon
+ */
 
 function setup(){
 	noCanvas();
@@ -21,7 +51,6 @@ function setup(){
 }
 
 function createBoard(){
-
 
 	//create MAIN BOARD with trees and such, by percentage chance
 	for (let i = 0; i < rows; i++){
@@ -135,6 +164,23 @@ function checkKeys(){
 			potions--;
 		}
 	}
+
+	//read a scroll
+	if (key === 'r'){
+		if (scrolls>0){
+		//there are different kinds of scrolls
+
+			let whatScroll = random();
+			if (whatScroll < 0.5){
+				//destroy what's where you are
+				prevIcon = '.'
+			} else {
+				//create new board
+				createBoard();
+				potions--;
+			}
+		}
+	}
 //return false; //prevent default
 }
 
@@ -159,7 +205,7 @@ function checkCollision(){
 	if (prevIcon === '*'){
 		//you've hit gold
 		//add a random amount of gold	
-		gold+=int(random(20,70));
+		gold+=(int(random(5,20))*xp);
 
         	//now that player has taken gold, let's replace * with .
         	prevIcon = '.';
@@ -169,8 +215,13 @@ function checkCollision(){
 		createP('castle');
 	}
 
-	if (prevIcon == '!'){
+	if (prevIcon == '!'){ //potion
 		potions++;
+		prevIcon = '.'; //it's picked up so remove it
+	}
+
+	if (prevIcon == '?'){ //scroll
+		scrolls++;
 		prevIcon = '.'; //it's picked up so remove it
 	}
 }
@@ -189,25 +240,42 @@ function drawBoard(){
 	for (let i = 0; i < rows; i++){
 		createP(grid[i].join(''));
 	}
-	createP('HP '+hp);
-	createP('XP '+xp);
-	createP('Ptn '+potions);
 
-	//display total gold
-	if (gold>99){
-		createP('G:'+gold);
-	} else if (gold>9){
-		createP('Gld'+gold);
-	} else {
-		createP('Gold'+gold);
-	}
+	showStats();
+}
+
+function showStats(){
+	createP('HP '+hp+' XP '+xp).addClass('stats');
+	//createP('XP '+xp).addClass('stats');
+	createP('Potions '+potions).addClass('stats');
+	createP('Scrolls '+scrolls).addClass('stats');
+	createP('Gold '+gold).addClass('stats');
 }
 
 function dead(){
 	removeElements(); //clean out all P added to page
-createP('.....');
-createP('.---.');
-createP('|RIP|');
-createP('|...|');
-createP('|...|');
+	createP('.....');
+	createP('.---.');
+	createP('|RIP|');
+	createP('|...|');
+	createP('|...|');
+
+	showStats();
+}
+
+function restart(){
+	removeElements(); //clean out all P added to page
+
+	playerX = 2;
+	playerY = 2;
+	xp = 1;
+	hp = 5;
+	prevIcon = '.';
+	numOfBoards = 0;
+	gold = 0;
+	potions = 0;
+	scrolls = 0;
+
+	//run setup again
+	setup();
 }
