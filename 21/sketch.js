@@ -1,8 +1,7 @@
 let grid = [];
 let cols = 5;
 let rows = 5;
-let playerX = 2;
-let playerY = 2;
+let playerX = 2, playerY = 2;
 let xp = 1;
 let hp = 5;
 let prevIcon = '.';
@@ -106,6 +105,11 @@ function checkKeys(){
     
 	//first we reset the player current position to what it was previously 
 	grid[playerY][playerX] = prevIcon;
+	
+	//save our location before we move
+	prevX=playerX;
+	prevY=playerY;
+
 
 	if ((keyCode === UP_ARROW) || (key == 'k')){
 		playerY--;	
@@ -175,12 +179,25 @@ function checkKeys(){
 				//destroy what's where you are
 				prevIcon = '.'
 			} else {
+				//teleport
+				grid[playerY][playerX]= '.';
+				playerX = floor(random(5));
+				playerY = floor(random(5));
+				
+				//now redraw screen since we warped somewhere else
+				removeElements(); //clean out all P added to page
 				//create new board
 				createBoard();
-				potions--;
 			}
+			scrolls--;
 		}
 	}
+
+	//debug!
+//	if (key === 's'){
+//		restart();
+//	}
+	
 //return false; //prevent default
 }
 
@@ -190,14 +207,32 @@ function checkCollision(){
 	if (monsters.indexOf(prevIcon) >= 0) {
 
 	    if (random() > 0.5){  //you hit monster
+		//print('hit an enemy');
+
 		if (monsters.indexOf(prevIcon)>0){
-			prevIcon = monsters[monsters.indexOf(prevIcon)-1];
+			grid[playerY][playerX] = monsters[monsters.indexOf(prevIcon)-1];
+			
+			//if monster not dead go back to previous position
+			playerY = prevY;
+			playerX = prevX;
+			//now redraw screen
+	//		removeElements();
+
+			
+			
 		} else {
+			//print('killed');
 			monsterKilled();
 		}
 	    } else {  //otherwise monster hits you
 		hp--;
+		//print('you missed');
+		    
+		//go back to your previous position
+		playerY = prevY;
+		playerX = prevX;
 	    }
+
 
 
 	}
@@ -227,12 +262,13 @@ function checkCollision(){
 }
 
 function monsterKilled(){
-			//remove monster from board 
-			prevIcon = '.';
+	//remove monster from board 
+	grid[prevY][prevX] = '.';	
+	prevIcon = '.';
 
-			//increase xp and hp
-			xp++;
-			hp+=round(random(xp));
+	//increase xp and hp
+	xp++;
+	hp+=round(random(xp));
 
 }
 
@@ -264,10 +300,10 @@ function dead(){
 }
 
 function restart(){
-	removeElements(); //clean out all P added to page
-
-	playerX = 2;
-	playerY = 2;
+	grid = [];
+	cols = 5;
+	rows = 5;
+	playerX = 2, playerY = 2;
 	xp = 1;
 	hp = 5;
 	prevIcon = '.';
@@ -276,6 +312,6 @@ function restart(){
 	potions = 0;
 	scrolls = 0;
 
-	//run setup again
+		//run setup again
 	setup();
 }
