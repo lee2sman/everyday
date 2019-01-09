@@ -52,7 +52,7 @@ h3 {
 	padding: 1vh;
 	font-size: 2vh;
 	color: nimation: barberpole 4s linear infinite;
-black;
+	background-color: black;
 	display: block;
 }
 
@@ -66,10 +66,10 @@ p {
 
 li {
 	list-style-type: none;
-	display: inline;
+	display: inline-block;
 	font-size: 4vh;
 	border: 1vh;
-	padding: 1vh;
+	padding: 2vh;
         color: green !important;
 }
 
@@ -84,7 +84,6 @@ footer {
 a {
 	background-color: black;
 }
-
 
 .question {
 	font-size: 10vh;
@@ -108,8 +107,7 @@ a {
 
 	<script>
 
-	for (let i=0;i<=21;i++){
-		console.log('test'+i);
+	for (let i=0;i<=22;i++){
 		$(".container").append('<li><a href="'+i+'">'+i+'</a></li>');  
 	}
 	</script>

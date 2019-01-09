@@ -103,10 +103,10 @@ function checkKeys(){
     //check to make sure not on edge of map
     if (((keyCode == UP_ARROW || key == 'k') && (playerY > 0)) || ((keyCode == DOWN_ARROW || key == 'j') && (playerY < rows-1)) || ((keyCode == LEFT_ARROW || key == 'h') && (playerX > 0)) || ((keyCode == RIGHT_ARROW || key == 'l') && (playerX < cols-1))){
     
-	//first we reset the player current position to what it was previously 
+	//save original letter where player is moving
 	grid[playerY][playerX] = prevIcon;
 	
-	//save our location before we move
+	//save current player x, y as prevX, prevY
 	prevX=playerX;
 	prevY=playerY;
 
@@ -203,18 +203,28 @@ function checkKeys(){
 
 function checkCollision(){
 
-	//have you hit an enemy?
+	//have you collided with an enemy?
 	if (monsters.indexOf(prevIcon) >= 0) {
+		print('collided with monster');
 
 	    if (random() > 0.5){  //you hit monster
-		//print('hit an enemy');
+		print('hurt monster');
 
 		if (monsters.indexOf(prevIcon)>0){
-			grid[playerY][playerX] = monsters[monsters.indexOf(prevIcon)-1];
+
+			print('prevIcon: '+prevIcon);
+
+			grid[playerY][playerX] = 'prevIcon';
+			grid[prevY][prevX] = '@';
+
+			//prevIcon = monsters[monsters.indexOf(prevIcon)-1];
+
+			//grid[playerY][playerX] = '.';
+			//grid[playerY][playerX] = monsters[monsters.indexOf(prevIcon)-1];
 			
 			//if monster not dead go back to previous position
-			playerY = prevY;
-			playerX = prevX;
+			//playerY = prevY;
+			//playerX = prevX;
 			//now redraw screen
 	//		removeElements();
 
@@ -225,12 +235,17 @@ function checkCollision(){
 			monsterKilled();
 		}
 	    } else {  //otherwise monster hits you
+		    print('monster hit you');
 		hp--;
-		//print('you missed');
 		    
+		//put monster back where it was
+		print('prevIcon: '+prevIcon);
+		print('playerX '+playerX+' playerY '+playerY);
+		print('letter at playerX, playerY '+grid[playerY][playerX]);
+		//grid[playerY][playerX] = prevIcon;
 		//go back to your previous position
-		playerY = prevY;
-		playerX = prevX;
+		//playerY = prevY;
+		//playerX = prevX;
 	    }
 
 
@@ -262,6 +277,7 @@ function checkCollision(){
 }
 
 function monsterKilled(){
+	print('monster killed');
 	//remove monster from board 
 	grid[prevY][prevX] = '.';	
 	prevIcon = '.';
