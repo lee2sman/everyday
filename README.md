@@ -36,4 +36,4 @@ almost-rogues. made by scratch. using p5dom. implemented items, monsters, fighti
 22  
 rotate-like. roguelike code but now rotating. input affects motion.  
 23  
-Used my starter code from [p5flatgame](https://github.com/lee2sman/p5-flatgame)   
+Used my starter code from [p5flatgame](https://github.com/lee2sman/p5-flatgame). Source: sewn self-portrait age 6ish. Arrow keys move.  
