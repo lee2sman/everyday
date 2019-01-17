@@ -1,29 +1,66 @@
 //flatgame template by github/Lee2sman 2018
 //MIT License
 
-let me, myAnimation, soundtrack, room = 0, totalRooms = 0, items = [], bg, roomItems = [], itemImages = [];
+let me, myAnimation, soundtrack, room = 0, totalRooms = 0, items = [], bg, roomItems = [], itemImages = [], roomTexts = [];
+
+//room = 2; //uncomment this line and put whatever room here when you are debugging to jump to it
+//the first room is 0. The second is 1. etc
 
 // Normally you would put this in a .json file, but I'm putting it here
 // for example purposes
 let itemInfo = [
   {'file':'assets/monster.png', 'x':750, 'y': 300, 'room': 0},
-  {'file':'assets/beardo.png', 'x':84, 'y': 95, 'room': 1},
-  {'file':'assets/smiley-joe.png', 'x':364, 'y': 95, 'room': 1},
-  {'file':'assets/yeti.png', 'x':71, 'y': 300, 'room': 1},
-  {'file':'assets/confused.png','x':120, 'y': 150, 'room': 2},
-  {'file':'assets/nobody.png','x':142, 'y': 300, 'room': 2},
-  {'file':'assets/susan.png', 'x':0, 'y': 95, 'room': 2},
-  {'file':'assets/catso.png', 'x':71, 'y': 95, 'room': 3},
-  {'file':'assets/trash.png', 'x':142, 'y': 95, 'room': 4},
-  {'file':'assets/bridge.png', 'x':213, 'y': 300, 'room': 5},
-  {'file':'assets/scroll.png', 'x':284, 'y': 300, 'room': 6},
-  {'file':'assets/tech.png', 'x':213, 'y': 295, 'room': 6},
-  {'file':'assets/tech2.png', 'x':275, 'y': 295, 'room': 6},
-  {'file':'assets/electric-tree.png', 'x':355, 'y': 0, 'room': 6},
-  {'file':'assets/hut.png', 'x':384, 'y': 95, 'room': 7},
-  {'file':'assets/hut2.png', 'x':24, 'y': 95, 'room': 7},
+  {'file':'assets/beardo.png', 'x':184, 'y': 95, 'room': 1},
+  {'file':'assets/smiley-joe.png', 'x':564, 'y': 195, 'room': 1},
+  {'file':'assets/yeti.png', 'x':371, 'y': 300, 'room': 1},
+  {'file':'assets/yeti.png', 'x':371, 'y': 300, 'room': 2}, //copied from above line, but now on the next room as well
+  {'file':'assets/confused.png','x':420, 'y': 150, 'room': 2},
+  {'file':'assets/nobody.png','x':542, 'y': 460, 'room': 2},
+  {'file':'assets/susan.png', 'x':200, 'y': 95, 'room': 2},
+  {'file':'assets/catso.png', 'x':371, 'y': 300, 'room': 3},
+  {'file':'assets/trash.png', 'x':242, 'y': 195, 'room': 4},
+  {'file':'assets/trash.png', 'x':442, 'y': 495, 'room': 4}, //copied from above so I could have it on page 3 times
+  {'file':'assets/trash.png', 'x':542, 'y': 250, 'room': 4},  //copied from above so I could have it on page 3 times
+  {'file':'assets/trash.png', 'x':782, 'y': 195, 'room': 4}, //copied from above so I could have it on page 3 times
+  {'file':'assets/trash.png', 'x':442, 'y': 250, 'room': 4},  //copied from above so I could have it on page 3 times
+  {'file':'assets/bridge.png', 'x':213, 'y': 500, 'room': 5},
+  {'file':'assets/bridge.png', 'x':413, 'y': 500, 'room': 5},
+  {'file':'assets/scroll.png', 'x':584, 'y': 200, 'room': 6},
+  {'file':'assets/tech.png', 'x':113, 'y': 355, 'room': 6},
+  {'file':'assets/tech.png', 'x':613, 'y': 535, 'room': 6},
+  {'file':'assets/tech.png', 'x':183, 'y': 505, 'room': 6},
+  {'file':'assets/tech2.png', 'x':375, 'y': 505, 'room': 6},
+  {'file':'assets/tech2.png', 'x':275, 'y': 405, 'room': 6},
+  {'file':'assets/electric-tree.png', 'x':555, 'y': 80, 'room': 6},
+  {'file':'assets/electric-tree.png', 'x':675, 'y': 200, 'room': 6},
+  {'file':'assets/electric-tree.png', 'x':875, 'y': 400, 'room': 6},
+  {'file':'assets/electric-tree.png', 'x':715, 'y': 500, 'room': 6},
+  {'file':'assets/electric-tree.png', 'x':765, 'y': 600, 'room': 6},
+  {'file':'assets/electric-tree.png', 'x':465, 'y': 440, 'room': 6},
+  {'file':'assets/hut.png', 'x':384, 'y': 395, 'room': 7},
+  {'file':'assets/hut2.png', 'x':734, 'y': 505, 'room': 7},
   {'file':'assets/antenna.png', 'x':104, 'y': 95, 'room': 7},
-  {'file':'assets/exit.png', 'x':180, 'y': 95, 'room': 8}
+  {'file':'assets/exit.png', 'x':180, 'y': 95, 'room': 8} //no comma after last entry
+];
+
+let textInfo = [
+  {'words':'I had fallen into the Sleep State...', 'x':450, 'y':50, 'room': 0},
+  {'words':'i saw a man with a postage stamp face', 'x':250, 'y':550, 'room': 0},
+  {'words':'-->', 'x':1000, 'y':580, 'room': 0},
+  {'words':'i was in the park in the sky', 'x':550, 'y':50, 'room': 1},
+  {'words':'i looked for my friends ', 'x':650, 'y':500, 'room': 1},
+  {'words':'i wanted an ice cream cone', 'x':650, 'y':540, 'room': 1},
+  {'words':'where was the ice cream. and my friends', 'x':350, 'y':540, 'room': 2},
+  {'words':'i walked through trashmor', 'x':450, 'y':375, 'room': 4},
+  {'words':'which i liked to explore. all those bags and delicate houses', 'x':200, 'y':580, 'room': 4},
+  {'words':'and i came to the end of a long bridge', 'x':350, 'y':80, 'room': 5},
+  {'words':'i found an urban farm of electric cacti', 'x':50, 'y':80, 'room': 6},
+  {'words':'amid the bags', 'x':20, 'y':180, 'room': 6},
+  {'words':'2 little huts beyond an antenna broadcasting night sounds', 'x':220, 'y':110, 'room': 7},
+  {'words':'friends', 'x':860, 'y':310, 'room': 7},
+  {'words':'I was back in the subway.', 'x':450, 'y':150, 'room': 8},
+  {'words':'i entered the tunnel and rejoined the night', 'x':350, 'y':550, 'room': 8}
+ //no comma after last entry
 ];
 
 function preload(){
@@ -54,6 +91,8 @@ function setup() {
 
   //font size
   textSize(24);
+  //font
+  textFont('Courier');
 
   //start soundtrack
   soundtrack.loop();
@@ -78,6 +117,9 @@ function draw() {
   movePlayer();
 
   drawSprites(bg);
+
+  drawText();
+
   drawSprite(me);
 }
 
@@ -99,6 +141,18 @@ function loadRoom(){
 			itemIndex++ // Problem? ADDS 1 to itemIndex last time, when there are no more items to add!
 		}
 	}
+}
+
+function drawText(){
+
+	for (i=0; i < textInfo.length; i++){
+		//check if text is in room
+		if (textInfo[i].room == room){
+			fill(255);
+			text(textInfo[i].words,textInfo[i].x,textInfo[i].y);
+		}
+	}
+
 }
 
 function movePlayer(){
