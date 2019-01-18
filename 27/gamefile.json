@@ -1,0 +1,22 @@
+[
+  {
+    "data": {
+      "type": "text",
+      "text": "hello there",
+      "location": {
+        "x": 119,
+        "y": 237
+      }
+    }
+  },
+  {
+    "data": {
+      "type": "text",
+      "text": "hello there",
+      "location": {
+        "x": 270,
+        "y": 152
+      }
+    }
+  }
+]
