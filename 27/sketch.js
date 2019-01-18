@@ -1,3 +1,5 @@
+//TODO: remove text when you switch to new room
+let textBoxes;
 let fileX, fileY;
 let img;
 let colorSlider;
@@ -83,6 +85,8 @@ function draw() {
 
 function changeRoom() {
   room = sel.value();
+
+  textBoxes.hide();
 }
 
 function handleFile(file) {
@@ -173,13 +177,16 @@ function showItem(daImg){
 }
 
 function createTextInput(){
+  let textBoxes = createDiv('parent');
+
   inp = createInput('Enter text. Drag to position.');
+  inp.parent(textBoxes);
   inp.style('font-size', '24px');
   inp.position(110,10);
   inp.input(function(){
     enteredText = this.value();
   });
-
+let onEnterText;
   inp.mouseMoved(function(){
     if (mouseIsPressed)  {
         this.position(mouseX,mouseY);
@@ -188,20 +195,50 @@ function createTextInput(){
         this.remove();
     }
   });
-  inp.mouseOut(function(){
-
-  //TODO:
-  //need to save to temp array first. write to jsonfile on save.
-    roomItemsJSON[item] = createStringDict({
-        'type': 'text',
-        'text': this.elt.value,
-        'location': {
-          'x': this.x,
-          'y': this.y
-        }
-    });
-    item++;
+  inp.mouseOver(function(){
+      onEnterText = this.elt.value;
+ //     print('onEnterText '+onEnterText);
   });
+  inp.mouseOut(function(){
+//print('prev Value '+onEnterText);
+//print('current value '+this.elt.value);
+    let newEntry = true;
+
+    for (let i = 0; i < roomItemsJSON.length; i++){
+
+      if (roomItemsJSON[i].data.room == room){ //is this item in room?
+        if (roomItemsJSON[i].data.type == 'text'){  //is this item text?
+          if (roomItemsJSON[i].data.currentText == onEnterText){ //does it match?
+            //this entry already exists, so just change the text stored
+            roomItemsJSON[i].data.prevText = onEnterText;  //save last string to prevText
+            roomItemsJSON[i].data.currentText = this.elt.value;
+            //change location
+            roomItemsJSON[i].data.location.x = this.x;
+            roomItemsJSON[i].data.location.y = this.y;
+            newEntry = false;
+          }
+        }
+      }
+    }
+
+      if (newEntry){
+              saveRoomText(this.elt.value, this.x, this.y)
+      }
+  });
+}
+
+function saveRoomText(textString, x, y){
+    roomItemsJSON[item] = createStringDict({
+                  'type': 'text',
+                  'prevText': textString,
+                  'currentText': textString,
+                  'location': {
+                    'x': x,
+                    'y': y
+                   },
+                   'room': room
+               });
+          item++;    //TODO: check this is in correct location
 }
 
 function saveRoomColor(){
@@ -215,16 +252,6 @@ function saveRoomColor(){
         }
       }
   }
-
-  roomItemsJSON[item] = createStringDict({
-          'type': 'roomColor',
-          'colorData': {
-              'r': rSlider.value(),
-              'g': gSlider.value(),
-              'b': bSlider.value()
-          },
-            'room': room
-  });
 }
 
 function getMusic(file){
