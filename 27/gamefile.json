@@ -1,21 +1,43 @@
 [
   {
     "data": {
-      "type": "text",
-      "text": "hello there",
-      "location": {
-        "x": 119,
-        "y": 237
-      }
+      "type": "player",
+      "file": "assets/pan.png",
+      "room": 0
     }
   },
   {
     "data": {
       "type": "text",
-      "text": "hello there",
+      "prevText": "room 0",
+      "currentText": "room 0",
       "location": {
-        "x": 270,
-        "y": 152
+        "x": 148,
+        "y": 191
+      },
+      "room": 0
+    }
+  },
+  {
+    "data": {
+      "type": "text",
+      "prevText": "room 1",
+      "currentText": "room 1",
+      "location": {
+        "x": 110,
+        "y": 10
+      },
+      "room": "1"
+    }
+  },
+  {
+    "data": {
+      "type": "image",
+      "file": "assets/felty.png",
+      "room": "1",
+      "location": {
+        "x": 565,
+        "y": 105
       }
     }
   }
