@@ -1,5 +1,4 @@
 //TODO: remove text when you switch to new room
-let textBoxes;
 let fileX, fileY;
 let img;
 let colorSlider;
@@ -39,6 +38,40 @@ function createButtons(){
   button = createButton('Text');
   button.position(55,10);
   button.mousePressed(createTextInput);
+
+  //button = createButton('🌚');
+  //button.position(10,height-10);
+  //button.mousePressed(loadPlayer);
+
+  input = createFileInput(loadPlayer);
+  input.position(10, height-10);
+  //input.style('background-color','blue');
+}
+
+function loadPlayer(file){
+
+    if (file.type === 'image') {
+      itemImages[spriteNum] = loadImage(file.data, showPlayer);
+    }
+
+      spriteNum++; //get it ready for the next one
+
+      roomItemsJSON[item] = createStringDict({
+            'type': 'player',
+            'file': 'assets/'+file.name,
+            'room': room,
+      });
+    item++;
+}
+
+function showPlayer(playerImg){
+  //image(playerImg,0,0);
+  roomSprites[spriteNum] = createSprite(200,200);
+
+  //roomSprites[spriteNum] = createSprite(50,height-100);
+  //roomSprites[spriteNum].addImage(playerImg);
+  //roomSprites[spriteNum].scale = 0.5;
+  //roomSprites[spriteNum].mouseActive = true;
 }
 
 function createSliders(){
@@ -85,8 +118,18 @@ function draw() {
 
 function changeRoom() {
   room = sel.value();
+  inp.hide(); //hide all text
 
-  textBoxes.hide();
+  //now load all text from just that room
+    for (let i=0; i<roomItemsJSON.length;i++){
+        if (roomItemsJSON[i].data.room == room){
+          if (roomItemsJSON[i].data.type == 'text'){
+//                inp.show();
+           //   select('.room'+room).show();
+
+      }
+    }
+  }
 }
 
 function handleFile(file) {
@@ -163,7 +206,7 @@ function showItem(daImg){
         //delete if dragged offscreen
           if ((mouseX > width) || (mouseX < 0) || (mouseY > height) || (mouseY < 0)){
               this.remove();
-              roomItemsJSON[i].data = 'removed';
+              roomItemsJSON[i].data.type = 'removed';
           } else { //otherwise, update the x and y in the json file
             roomItemsJSON[i].data.location.x = mouseX;
             roomItemsJSON[i].data.location.y = mouseY;
@@ -177,15 +220,15 @@ function showItem(daImg){
 }
 
 function createTextInput(){
-  let textBoxes = createDiv('parent');
-
   inp = createInput('Enter text. Drag to position.');
-  inp.parent(textBoxes);
+  inp.addClass('room'+room);
+  inp.addClass('textBoxes');
   inp.style('font-size', '24px');
   inp.position(110,10);
   inp.input(function(){
     enteredText = this.value();
   });
+
 let onEnterText;
   inp.mouseMoved(function(){
     if (mouseIsPressed)  {
@@ -193,6 +236,13 @@ let onEnterText;
     }
     if ((mouseX>width)||(mouseX<0)||(mouseY>height)||(mouseY<0)){
         this.remove();
+
+    for (let i = 0; i < roomItemsJSON.length; i++){
+          if (roomItemsJSON[i].data.currentText == onEnterText){ //does it match?
+
+          }
+    }
+        //roomItemsJSON[item].data.type = 'removed';
     }
   });
   inp.mouseOver(function(){
