@@ -1,0 +1,55 @@
+[
+  {
+    "data": {
+      "type": "image",
+      "file": "assets/baseball.png",
+      "room": 0,
+      "location": {
+        "x": 620,
+        "y": 337
+      }
+    }
+  },
+  {
+    "data": {
+      "type": "image",
+      "file": "assets/jester.png",
+      "room": 0,
+      "location": {
+        "x": 248,
+        "y": 123
+      }
+    }
+  },
+  {
+    "data": {
+      "type": "text",
+      "prevText": "t",
+      "currentText": "t",
+      "location": {
+        "x": 554,
+        "y": 127
+      },
+      "room": 0
+    }
+  },
+  {
+    "data": {
+      "type": "text",
+      "prevText": "test",
+      "currentText": "test",
+      "location": {
+        "x": 554,
+        "y": 127
+      },
+      "room": 0
+    }
+  },
+  {
+    "data": {
+      "type": "audio",
+      "file": "assets/Output7.mp3",
+      "room": 0
+    }
+  }
+]
