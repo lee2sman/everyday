@@ -5,6 +5,13 @@ let quiltW, quiltH, step, gutterX, gutterY;
 function setup(){
   createCanvas(windowWidth,windowHeight);
 
+  reset();
+
+  drawQuilt();
+  setInterval(drawQuilt,5000);
+}
+
+function reset(){
   quiltW = width*2/3;
   quiltH = height*2/3;
   step = quiltW/12;
@@ -12,17 +19,16 @@ function setup(){
   gutterX = (width - quiltW)/2;
   gutterY = (height - quiltH)/2;
 
-  translate(gutterX,gutterY);
-
   background(5);
   noStroke();
 
-  drawQuilt();
-  setInterval(drawQuilt,5000);
+  translate(gutterX,gutterY);
+
 } 
 
 
 function drawQuilt(){
+
   for (let x=0; x < quiltW; x+=step){
     for (let y=0; y < quiltH; y+=step){
       
@@ -43,4 +49,26 @@ function drawQuilt(){
 
     }
   }
+}
+
+function mouseMoved(){
+  background(0);
+  drawQuilt();
+}
+
+function mousePressed(){
+  for (let x=0; x < quiltW; x+=step){
+    for (let y=0; y < quiltH; y+=step){
+      fill(20,random(205,255));
+      rect(x,y,step,step);
+   }
+  }
+}
+
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+  reset();
+  background(0);
+  drawQuilt();
 }
