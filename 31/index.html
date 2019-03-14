@@ -1,0 +1,90 @@
+<!DOCTYPE html> 
+<html>
+
+<!-- 
+                          ____    ,
+ ,  |)   __|_  _  |)       __/   /|
+/ \_|/) |/ |  /   |/\        \    |
+ \/ | \/|_/|_/\__/|  |/   \__/  __|__
+
+March 14, 2019, Lee2sman
+daily sketch
+-->
+
+<head>
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <title>b hippy</title>
+<style>
+
+html, * {
+    margin: none;
+    padding: none;
+    border: none;
+}
+
+body {
+    background: linear-gradient(to right, pink, black, yellow, pink, black, yellow);
+    animation: barberpole 15s linear infinite;
+    border-radius: 50%;
+    background-size: 50% 150%;
+}
+
+#head {
+    background: linear-gradient(to bottom left, yellow, pink, brown);
+    animation: barberpole 5s linear infinite;
+    border-radius: 50%;
+    width: 50vw;
+    height: 50vw;
+    left: 25vw;
+    position: absolute;
+    background-size: 300% 150%;
+}
+
+.eyeballs {
+    background: linear-gradient(to bottom, yellow, black, blue, green, gray);
+    animation: barberpole 6s linear infinite;
+    border-radius: 50%;
+    width: 10vw;
+    height: 10vw;
+    top: 15vw;
+    position: absolute;
+    background-size: 8% 222%;
+}
+
+#left-eye {
+    left: 35vw;
+}
+
+#right-eye {
+    right: 35vw;
+}
+
+#mouth {
+    background: linear-gradient(to top right, red, pink, white, pink, red);
+    animation: barberpole 8s linear infinite;
+    border-radius: 0 0 50% 50%; 
+    width: 30vw;
+    height: 10vw;
+    left: 35vw;
+    top: 30vw;
+    position: absolute;
+    background-size: 10% 200%;
+}
+@keyframes barberpole {
+	0% {
+            background-position: 0 0;
+	}
+	100% {
+            background-position: -100% -100%;
+	}
+}
+
+</style>
+</head>
+<body>
+	<div id="head"></div>
+	<div class="eyeballs" id="left-eye"></div>
+	<div class="eyeballs" id="right-eye"></div>
+	<div id="mouth"></div>
+</body>
+</html>
