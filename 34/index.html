@@ -1,0 +1,162 @@
+<!DOCTYPE html> 
+<html>
+
+<!-- 
+                          ____  . .
+ ,  |)   __|_  _  |)       __/  4 4
+/ \_|/) |/ |  /   |/\        \  4444
+ \/ | \/|_/|_/\__/|  |/   \__/    4  
+
+March 18, 2019, Lee2sman
+daily sketch
+px not ideal!
+if i borrow this code for future projects, use a responsive coordinate system from the start //vw/vh for example
+-->
+
+<head>
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <title>zup an alternate interactive system</title>
+<style>
+
+html, * {
+    margin: none;
+    padding: none;
+    border: none;
+}
+
+body {
+    background: linear-gradient(to top left, yellow, green, white, black);
+    animation: barberpole 5s linear infinite;
+    background-size: 5% 150%;
+}
+
+#controls {
+	position: absolute;
+	left: 8vw;
+	bottom: 8vh;
+	width: 15vw; 
+	height: auto;
+}
+
+#head {
+    background: linear-gradient(to top right, red, white , red, white, black);
+    animation: barberpole 6s linear infinite;
+    border-radius: 50%;
+    width: 50vw;
+    height: 50vw;
+    left: 25vw;
+    position: absolute;
+    background-size: 3% 150%;
+}
+
+.eyeballs {
+    background: linear-gradient(to bottom right, black, white, yellow, green, white, black);
+    animation: barberpole 5s linear infinite;
+    border-radius: 50%;
+    width: 10vw;
+    height: 10vw;
+    top: 15vw;
+    position: absolute;
+    background-size: 8% 222%;
+}
+
+#left-eye {
+    left: 35vw;
+}
+
+#right-eye {
+    right: 35vw;
+}
+
+#mouth {
+    background: linear-gradient(to right, pink, green, white, green, darkgreen, green);
+    animation: barberpole 8s linear infinite;
+    border-radius: 0 0 50% 50%; 
+    width: 30vw;
+    height: 10vw;
+    left: 35vw;
+    top: 30vw;
+    position: absolute;
+    background-size: 10% 200%;
+}
+@keyframes barberpole {
+	0% {
+            background-position: 0 0;
+	}
+	100% {
+            background-position: -100% -100%;
+	}
+}
+
+</style>
+</head>
+<body>
+	<div id="head"></div>
+	<div class="eyeballs" id="left-eye"></div>
+	<div class="eyeballs" id="right-eye"></div>
+	<div id="mouth"></div>
+	<img id="controls" src="controls.png" alt="key controls guide">
+
+	<script src="../lib/jquery-3.3.1.min.js"></script>
+	<script>
+
+	let x, y;
+
+	$(document).ready(function(){
+		//grab starting x (left) and y (top) values from my css
+		//x = $('#head').css('left');
+		//y = $('#head').css('top');
+		//x = x.substring(0, x.length - 2); //remove the trailing px
+		//y = y.substring(0, y.length - 2); 
+
+		//start head in center of page
+		x = $(window).width();
+		x = x/4;
+		y = $(window).height();
+		y = y/4;
+		//draw head with these positions
+	      $('#head').css('left',x + 'px');
+	      $('#head').css('top',y + 'px');
+	});
+
+	$(document).keydown(function(e) {
+		//console.log(e.key);
+
+	  switch(e.key) {
+          case 'ArrowLeft':
+	      x-=20;
+	      $('#head').css('left',x + 'px');
+	      $('.eyeballs').css('left',x + 'px');
+	      $('#right-eye').css('left',x + 150 + 'px');
+	      $('#mouth').css('left',x + 'px');
+          break;
+
+          case 'ArrowUp':
+	      y-=20;
+	      $('#head').css('top',y + 'px');
+	      $('.eyeballs').css('top',y + 'px');
+	      $('#mouth').css('top',y + 150 + 'px');
+          break;
+
+          case 'ArrowRight':
+	      x+=20;
+	      $('#head').css('left',x + 'px');
+	      $('.eyeballs').css('left',x + 150 + 'px');
+	      $('#right-eye').css('left',x + 300 + 'px');
+	      $('#mouth').css('left',x + 150 + 'px');
+          break;
+
+          case 'ArrowDown':
+	      y+=20;
+	      $('#head').css('top',y + 'px');
+	      $('.eyeballs').css('top',y + 'px');
+	      $('#mouth').css('top',y + 150 + 'px');
+          break;
+
+          default: return; // exit this handler for other keys
+          }
+        e.preventDefault(); //prevent page from default scrolling on keypress 
+	});
+	</script>
+</body>
+</html>
