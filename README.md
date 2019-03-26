@@ -37,3 +37,34 @@ almost-rogues. made by scratch. using p5dom. implemented items, monsters, fighti
 rotate-like. roguelike code but now rotating. input affects motion.  
 23  
 Used my starter code from [p5flatgame](https://github.com/lee2sman/p5-flatgame). Source: sewn self-portrait age 6ish. Arrow keys move.  
+24  
+drawing tool based off a photo of a page in my sketchbook  
+25  
+a fake roguelike using my p5-flatgame starter  
+26  
+dream p5-flatgame, using 24/drawing tool  
+27  
+mostly complete starter code for creating a p5-flatgame-building-tool  
+28  
+i think was testing tachyons  
+29  
+construction goth  
+random spin, placement, etc  
+30  
+quiltmaker. mouse motion changes all blocks. click to go dark/stealth mode.?  
+31  
+dont worry be dizzy. trippy css head gaze  
+32  
+a flag thing. i like it~!  
+33  
+black us flag. aa flag/ red-green-black. faded.  
+34  
+face test. using jquery to move face around. not robust pixels to vw/vh.  
+35  
+chase face roguelike starter messin'. not too different from 19-21, reimplemented w/ p5.
+
+
+
+35  
+roguelike-ish thing with childish block graphics. hmmmm.
+
