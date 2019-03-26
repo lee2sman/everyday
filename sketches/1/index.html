@@ -1,20 +1,20 @@
-<!DOCTYPE html> 
-<!-- 
-      _/_/_/  _/                    _/                _/              _/   
-   _/        _/  _/      _/_/    _/_/_/_/    _/_/_/  _/_/_/        _/_/    
-    _/_/    _/_/      _/_/_/_/    _/      _/        _/    _/        _/     
-       _/  _/  _/    _/          _/      _/        _/    _/        _/      
-_/_/_/    _/    _/    _/_/_/      _/_/    _/_/_/  _/    _/        _/       
+<!DOCTYPE html>
+<!--
+      _/_/_/  _/                    _/                _/              _/
+   _/        _/  _/      _/_/    _/_/_/_/    _/_/_/  _/_/_/        _/_/
+    _/_/    _/_/      _/_/_/_/    _/      _/        _/    _/        _/
+       _/  _/  _/    _/          _/      _/        _/    _/        _/
+_/_/_/    _/    _/    _/_/_/      _/_/    _/_/_/  _/    _/        _/
 
 December 3, 2018 Lee2sman
 daily sketch
 -->
 
-<html> 
+<html>
 <head>
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <title>saxie woxie</title>
- <link href="https://fonts.googleapis.com/css?family=Coming+Soon" rel="stylesheet"> 
+ <link href="https://fonts.googleapis.com/css?family=Coming+Soon" rel="stylesheet">
 <style>
 
 html, * {
@@ -57,7 +57,7 @@ p {
 <body>
 <h1 id="the-word"></h1>
 
-<script src="../lib/jquery-3.3.1.min.js"></script>
+<script src="everyday/lib/jquery-3.3.1.min.js"></script>
 
 <script>
 setInterval(function(){
@@ -84,7 +84,7 @@ setInterval(function(){
     let phrase = '';
     let commonWords = data.commonWords;
     let wordIndex = Math.floor(Math.random() * commonWords.length);
-    for (let i = 0; i < 3; i++){ 
+    for (let i = 0; i < 3; i++){
         phrase = phrase + ' ' + commonWords[i+wordIndex];
     }
     $('#the-word').html(phrase);
