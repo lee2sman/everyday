@@ -64,3 +64,11 @@ class Teapot{
     }
   }
 }
+
+//April 29 Monday
+//added save feature for Mark Price
+function keyTyped(){
+  if (key === 's') {
+    saveCanvas('myCanvas', 'jpg');
+  }
+}
