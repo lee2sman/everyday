@@ -1,0 +1,17 @@
+body {
+    background: rgba(73,155,234,1);
+    background: linear-gradient(to right, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
+    animation: barberpole 4s linear infinite;
+    background-size: 150% 5000%;
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes barberpole {
+	0% {
+            background-position: 0 0;
+	}
+	100% {
+            background-position: -100% -100%;
+	}
+}
