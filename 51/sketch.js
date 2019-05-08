@@ -2,14 +2,11 @@ let loaded = false;
 let mark, totalObjects, teapot, pots = [], skins=[];
 let song;
 let timer = 5000;
-let rubik;
 
 function preload(){
   for (let i = 0; i < 7; i++){
     skins[i] = loadImage('assets/dazzle'+i+'.jpg');
   }
-	let rubik = loadImage('https://media.giphy.com/media/12MdYw1jNtzqUM/giphy.gif');
-//  mark = loadModel('assets/Paul.stl.obj', true);
   song = loadSound('assets/eno.mp3');
 }
 
@@ -22,7 +19,7 @@ function setup() {
     pots[i] = new Teapot();
   }
  
-	ambientLight(150);
+  ambientLight(150);
   ambientMaterial(250);
 
 }
@@ -66,7 +63,6 @@ class Teapot{
     translate(this.x, this.y);
 
     texture(this.skin);
-    //model(mark);
     plane(900);
     pop();
   }
