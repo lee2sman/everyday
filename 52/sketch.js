@@ -6,8 +6,10 @@ let song;
 let timer = 5000;
 
 function preload(){
+	console.log('preloading');
   for (let i = 0; i < totalObjects; i++){
     skins[i] = loadImage('assets/rothko'+i+'.jpg');
+	  console.log('loaded '+i);
   }
 }
 
