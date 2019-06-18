@@ -29,7 +29,7 @@ flatgames using my tool. 27 is a prototype flatgame builder.
 generative or css drawing, gradient, face, y mas. check 32 and 33: flag, and black flag  
 36 - 54  
 3D projects (of somewhat increasing complexity). check any, but especially later ones like 52/rothkubes.  
-55 - 56  
-Visited Taipei Museum of Fine Arts - saw Yu Peng's retrospective and used elements from epic 5 Women painting and Mountains of Fu Chan for generative exploratory works with p5play.  
+55 - 57  
+Visited Taipei Museum of Fine Arts - saw Yu Peng's retrospective and used elements from epic 5 Women painting and Mountains of Fu Chun for generative exploratory works with p5play.  
 
 
