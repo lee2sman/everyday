@@ -11,7 +11,7 @@ let title, titleWords = ["birth","introduction","reveal","leaving","exiting","em
 	"learning","education","separation","removal","rejection","elimination",
   "formal","practiced","routine","wounding","hurting","insulting",
 	"giving","departure","victory","trickery","involuntary"];
-	let timer = 3000, questNum = 0, questions = [
+	let roomTimeout = 6000, timer = 3000, questNum = 0, questions = [
     'What am I saying to myself when I am feeling this?',
     'What are the circumstances which trigger these thoughts and feelings?',
     'What can I say differently to myself?',
@@ -98,6 +98,9 @@ function draw(){
 		noCursor();
     background(226,226,216);
 
+    if (millis()>roomTimeout){
+      resetRoom();
+    }
 	birdController();
   drawSprites();
   drawSprite(bird);
@@ -241,6 +244,7 @@ function convo(){
 }
 
 function resetRoom(){
+  roomTimeout = millis()+8000;
 
 	//pick a new text to display
 	roomText = floor(random(fortune.length));
