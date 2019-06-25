@@ -278,6 +278,8 @@ function resetRoom(){
 	  }
     propObjs[i] = createSprite(400,200);
     propObjs[i].addImage(propImg[i]);
+    propObjs[i].velocity.x = random(-1.5,1.5);
+    propObjs[i].velocity.y = random(-1.5,1.5);
 		//propObjs[i].scale = random(0.75,1.75);
   }
 
