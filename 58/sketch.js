@@ -279,10 +279,8 @@ function resetRoom(){
 
 	//draw stuff
 
-	print('added mountain:')
 	for (let i = 0; i < mountains; i++){
            if (random()<0.2){
-								print(i);
                 mountainObjs[i].position.x = random(width);
                 mountainObjs[i].position.y = random(height);
 
