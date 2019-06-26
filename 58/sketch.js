@@ -2,7 +2,7 @@
 //remix 57 to 58
 //made on sloww train chiayi to taipei rainy afternoon june 25 2:30-4:45pm
 //
-let started = false, fadingIn = false, song;
+let started = false, fadingIn = false, song, talk;
 let bird, mountainObjs = [], propObjs = [], mountainImg = [], propImg = [];
 let mountains = 20, props = 17;
 let title, titleWords = ["birth","introduction","reveal","leaving","exiting","embarking",
@@ -11,26 +11,26 @@ let title, titleWords = ["birth","introduction","reveal","leaving","exiting","em
 	"learning","education","separation","removal","rejection","elimination",
   "formal","practiced","routine","wounding","hurting","insulting",
 	"giving","departure","victory","trickery","involuntary"];
-	let roomTimeout = 6000, timer = 3000, questNum = 0, questions = [
-    'What am I saying to myself when I am feeling this?',
-    'What are the circumstances which trigger these thoughts and feelings?',
+	let talkTimer = 6000, talking = false, roomTimeout = 6000, timer = 3000, questNum = 0, questions = [
+    'What am I saying to myself?',
+    'What triggers these feelings?',
     'What can I say differently to myself?',
-    'How can I change my thoughts in situations that prompt these feelings?',
-    'How can I change my behavior in situations that prompt these feelings?',
+    'How can I change my thoughts?',
+    'How can I change my behavior?',
     'What can I do next?',
-		'Does this cause problems for you or for others?',
+		'Does this cause problems for others?',
 		'Why that specific award?',
 		'What changed inside you?',
 		'What beliefs did you adopt?',
 		'In what ways would your life change?',
 		'what is stopping you?',
-		'What beliefs contribute to your anger & frustration?',
+		'What beliefs contribute to your frustration?',
 		'How often does this happen?',
-		'Do you believe you can have this fulfilled?',
+		'Are you fulfilled?',
 		'What is the pattern?',
 		'What can you learn about yourself?',
 		'What are your primary beliefs?',
-		'What kind of activities would you do?',
+		'What would you do?',
 		'How are you feeling about yourself?',
 		'Is this something within your power to change?',
 		'Are they positive or negative memories?',
@@ -64,6 +64,7 @@ function preload(){
 	f2 = loadFont('assets/DS-TERM.TTF');
 
   song = loadSound('assets/wrongsong.mp3');
+  talk = loadSound('assets/talk.mp3');
 }
 
 function setup() {
@@ -101,10 +102,12 @@ function draw(){
     if (millis()>roomTimeout){
       resetRoom();
     }
+
 	birdController();
   drawSprites();
   drawSprite(bird);
-	convo();
+	checkForConvo();
+  haveConvo();
   drawRoomText();
 }} //second is because we have test at beginning to see if clicked
 
@@ -210,38 +213,70 @@ function drawRoomText(){
 	rectMode(CENTER);
 }
 
-function convo(){
+function checkForConvo(){
 	textFont(f2);
 
-	for (let i = 0; i<props;i++){
+	for (let i = 0; i<props;i++){ //run through for every npc
 
-	 if (bird.overlap(propObjs[i])){ //overlapping
-		 bird.scale = 4;
-		 //textFont('helvetica');
-		 textSize(36);
-		 fill(0);
-		 rect(width/2,height/2,width/3,height/3);
-		 fill(0,255,0);
-		 textAlign(LEFT, TOP);
+	 if (bird.overlap(propObjs[i])){ //if overlapping
+     if (!(talking)){ //if not already in talking mode
+       talkTimer = millis() + 6000;
+       talking = true;
 
+       //play talk
+       audioController();
 
-		 if (questNum>=questions.length-1){
-			 questNum = 0;
-		 }
-		 text(questions[questNum],width/2,height/2,width/4,height/4);
-
-		 if (millis()>timer){
-			 questNum++;
-			 timer+=6000;
-		 bird.scale = 1;
-		 }
-
-	 } else {
-		 //not overlapping
-		 bird.scale = 1;
-	 }
- }
+		   bird.scale = 4;
+       birdImg.filter(ERODE);
+      }
+    }
+  }
 }
+
+function haveConvo(){
+
+  if (talking){
+      if (millis()<talkTimer){
+         //show talk text
+  		   textSize(36);
+    		 fill(0);
+    		 rect(width/2,height/2,width/3,height/3);
+    		 fill(0,255,0);
+    		 textAlign(LEFT, TOP);
+
+
+
+		     if (questNum>=questions.length-1){
+			     questNum = 0;
+		     }
+
+     	   text(questions[questNum],width/2,height/2,width/4,height/4);
+      } else {
+        talking = false;
+        bird.scale = 1;
+      }
+   }
+}
+
+//
+// 		 if (millis()>timer){
+// 			 questNum++;
+// 			 timer+=6000;
+// 		 bird.scale = 1;
+// 		 }
+//
+// 	 } else {
+// 		 //not overlapping
+// 		 bird.scale = 1;
+// 	 }
+//  }
+// }
+
+function audioController(){
+    if (!(talk.isPlaying())){
+      talk.play();
+    }
+  }
 
 function resetRoom(){
   roomTimeout = millis()+8000;
