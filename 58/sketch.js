@@ -19,7 +19,7 @@ let title, titleWords = ["birth","introduction","reveal","leaving","exiting","em
     'How can I change my behavior?',
     'What can I do next?',
 		'Does this cause problems for others?',
-		'Why that specific award?',
+		'What could you do instead?',
 		'What changed inside you?',
 		'What beliefs did you adopt?',
 		'In what ways would your life change?',
