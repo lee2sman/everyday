@@ -36,14 +36,13 @@ function draw(){
 
     //left head
     push();
-    rotateY(15);
+    //rotateY(15); //uncomment to rotate to the right (ie for 2 heads)
     head();
     eyeballs();
     nose();
     lips();
     hair();
     pop();
-
   }
 }
 
