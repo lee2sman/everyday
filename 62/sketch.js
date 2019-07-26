@@ -7,7 +7,7 @@ let imgs = [], loaded = false, f
 
 function preload(){
     for (let i = 0; i < 8; i++){
-      imgs[i] = loadImage('assets/background'+i+'.png',function(){console.log('loaded')});
+      imgs[i] = loadImage('assets/background'+i+'.png');
     }
     f = loadFont('assets/linear_beam/Linebeam.ttf')
 }
@@ -33,21 +33,27 @@ function draw(){
 
 function paint(){
    //if (width<height){rotate(90)}
-    times = ceil(random(3))
+    times = ceil(random(4))
   for (let i = 0; i < times; i++){
     push()
+    translate(width/2,height/2)
     rotate(random(360))
-    scale(random(2))
+    scale(random(1,3))
     tint(random(360),random(360),random(360))
-    image(imgs[round(random(2))],random(width),random(height),width,height)
+    image(imgs[round(random(2))],random(-width/2,width/2),random(-height/2,height/2))
     pop()
   }
 
     //cover it up with a png screen
+    times = ceil(random(4))
     for (let i = 0; i < times; i++){
+	push()
+        scale(random(1,2))
         tint(random(360),random(360),random(360))
         image(imgs[round(random(2,7))],0,0,width,height)
+	pop()
     }
+
 }
 
 function mousePressed(){
