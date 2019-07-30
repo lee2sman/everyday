@@ -60,4 +60,12 @@ function mousePressed(){
     loaded = true
     background(0)
     paint()
+    return false
+}
+
+function touchStarted(){
+    loaded = true
+    background(0)
+    paint()
+    return false
 }
