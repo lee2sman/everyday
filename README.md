@@ -35,3 +35,7 @@ Visited Taipei Museum of Fine Arts - saw Yu Peng's retrospective and used elemen
 self-playing self-query-scape  
 59-61  
 floating heads variations, responding to voice, audio  
+62  
+Paintmaster. instant digital glitch funk backgrounds. click to redraw.  
+63  
+dungeon bizness generator  
