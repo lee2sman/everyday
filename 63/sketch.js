@@ -1,5 +1,6 @@
 //sketch 63 which started as a dungeon generator, the most initial steps, but left as 'art' of the imagination
-let f, words, totalRooms = 9, room = []
+let player, npc = [], totalNPCs = 8
+let f, worldColor, words, totalRooms = 9, room = []
 const titles = [
   'fort',
   'base',
@@ -27,7 +28,7 @@ function setup(){
   createCanvas(windowWidth, windowHeight)
   noStroke()
 
-  background(random(150),random(50),random(120))
+  worldColor = color((random(150),random(50),random(120)))
   for (let i = 0; i < totalRooms; i++){
     room[i] = new Room() 
   }
@@ -38,27 +39,56 @@ function setup(){
     room[i].drawRoom()
   }
 
+  createPlayer()
+  createNPCs()
 
-  //show a name
+  //----------------------------------------------EVENTS LOOP WILL BEGIN HERE
+  nameRoom()
+
+  drawSprites()
+  //----------------------------------------------EVENTS LOOP END
+}
+
+function draw(){
+
+  background(worldColor)
+  for (let i = 0; i < totalRooms; i++){
+    room[i].connectRoom()
+  }
+  for (let i = 0; i < totalRooms; i++){
+    room[i].drawRoom()
+  }
+
+  checkKeys()
+  checkOffScreen()
+
+  drawSprites()
+}
+
+function nameRoom(){
+//show a name
   fill(100)
   textFont(f)
   textSize(36)
 	if (width < 700){textSize(24)} //barely mobile-responsive!
-  let pickWord = round(random(words.objects.length-1))
-  let biz = round(random(titles.length-1))
+  let pickWord = int(random(words.objects.length))
+  let biz = int(random(titles.length))
   text(words.objects[pickWord]+' '+titles[biz],20,40)
   //print (words.objects[pickWord])
+
 }
+
 
 
 class Room{
   constructor(){
-    this.w = random(40,width/3)
-    this.h = random(40,height/3)
-    this.x = random(40,width) 
-    this.y = random(40,height) 
-    this.midcoordX = this.x + (this.w)/2
-    this.midcoordY = this.y + (this.h)/2
+    this.w = round(int(random(40,width/3))/10)*10
+    this.h = round(int(random(40,height/3))/10)*10
+    this.x = round(int(random(40,width))/10)*10
+    this.y = round(int(random(40,height))/10)*10
+    this.midcoordX = round((this.x + int(this.w)/2)/10)*10
+    this.midcoordY = round((this.y + int(this.h)/2)/10)*10
+    this.pickRoom = int(random(room.length))
 
   }
 
@@ -70,14 +100,91 @@ class Room{
   }
 
   connectRoom(){
-    stroke(random(50,120))
+    stroke(100)
     strokeWeight(15)
-    //draw Horiz line
-    this.pickRoom = round(random(room.length-1))
-    //room[pickRoom].x
     line(this.midcoordX,this.midcoordY,room[this.pickRoom].midcoordX,this.midcoordY)
     line(room[this.pickRoom].midcoordX,this.midcoordY,room[this.pickRoom].midcoordX,room[this.pickRoom].midcoordY)
-    //line(room[this.pickRoom].x,room[this.pickRoom].y,room[this.pickRoom].x,this.midCoordY)
   }
   
 }
+
+function createPlayer(){
+    startRoom = int(random(totalRooms)) 
+    tempX = room[startRoom].x + round(random(room[startRoom].w))
+    tempY = room[startRoom].y + round(random(room[startRoom].h))
+    player = createSprite(tempX,tempY,10,10)
+
+}
+
+function createNPCs(){
+  for (let i = 0; i < totalNPCs;i++){
+    startRoom = int(random(totalRooms)) 
+    tempX = room[startRoom].x + round(random(room[startRoom].w))
+    tempY = room[startRoom].y + round(random(room[startRoom].h))
+    npc[i] = createSprite(tempX,tempY,10,10)
+  }
+}
+
+function changeNPCpos(){
+  for (let i = 0; i < totalNPCs;i++){
+    startRoom = int(random(totalRooms)) 
+    tempX = room[startRoom].x + round(random(room[startRoom].w))
+    tempY = room[startRoom].y + round(random(room[startRoom].h))
+    npc[i].position.x = tempX
+    npc[i].position.y = tempY
+  }
+}
+
+function checkOffScreen(){
+  if (player.position.x>width ){
+    player.position.x = 10
+    createRooms()
+    changeNPCpos()
+  } 
+
+  if (player.position.x<0){
+    player.position.x = width - 10 
+    createRooms()
+    changeNPCpos()
+  } 
+
+  if (player.position.y>height){
+    player.position.y = 10
+    createRooms()
+    changeNPCpos()
+  } 
+
+  if (player.position.y<0){
+    player.position.y = height - 10 
+    createRooms()
+    changeNPCpos()
+  } 
+}
+
+function createRooms(){
+    for (let i = 0; i < totalRooms; i++){
+      room[i] = new Room()
+    }
+  
+  for (let i = 0; i < totalNPCs; i++){
+
+    startRoom = int(random(totalRooms)) 
+    tempX = room[startRoom].x + round(random(room[startRoom].w))
+    tempY = room[startRoom].y + round(random(room[startRoom].h))
+
+  }
+}
+
+function checkKeys(){
+    if (keyIsDown(UP_ARROW)){
+      player.position.y-=5
+    } else if (keyIsDown(DOWN_ARROW)){
+      player.position.y+=5
+    } else if (keyIsDown(RIGHT_ARROW)){
+      player.position.x+=5
+    } else if (keyIsDown(LEFT_ARROW)){
+      player.position.x-=5
+    }
+    return false 
+}
+
