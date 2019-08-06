@@ -15,6 +15,8 @@ function setup(){
 
   whichNose = int(random(hairs))
   whichHair = int(random(hairs))
+  faceW = random(125,175)
+  faceH = random(200,240)
   hairSize = random(1,1.4)
 }
 
@@ -32,7 +34,7 @@ function draw(){
 
 function drawFace(){
   texture(face)
-  ellipsoid(150,220)
+  ellipsoid(faceW,faceH)
 }
 
 function drawHair(){
@@ -70,4 +72,12 @@ function nose(){
   translate(0,0,200)
   sphere(30)
   pop()
+}
+
+function mousePressed(){
+  whichNose = int(random(hairs))
+  whichHair = int(random(hairs))
+  hairSize = random(1,1.4)
+  faceW = random(125,175)
+  faceH = random(200,240)
 }
