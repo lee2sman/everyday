@@ -38,4 +38,17 @@ floating heads variations, responding to voice, audio
 62  
 Paintmaster. instant digital glitch funk backgrounds. click to redraw.  
 63  
-dungeon bizness generator  
+dungeon map maker - control sprites  
+64  
+10,000 bowls of oatmeal dungeon zone name generator  
+- 'pair of earrings mall'  
+- 'shoe lace economic zone'
+- 'incense holder institute'
+- 'rat mission'
+65  
+unfinished ascii block drawing, ultra too simple n bug-ful  
+66  
+used this as a flux talking head for a promo at ARoS museum in Denmark  
+67  
+my bald head simulator  
+
