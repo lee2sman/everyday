@@ -51,4 +51,7 @@ unfinished ascii block drawing, ultra too simple n bug-ful
 used this as a flux talking head for a promo at ARoS museum in Denmark  
 67  
 my bald head simulator  
+68  
+more baldness w/ sound and motion  
+
 
