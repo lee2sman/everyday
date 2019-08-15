@@ -53,5 +53,6 @@ used this as a flux talking head for a promo at ARoS museum in Denmark
 my bald head simulator  
 68  
 more baldness w/ sound and motion  
-
+69  
+a random white noise player (voice sounds) made for disquiet junto 0398: rauschen bern  
 
