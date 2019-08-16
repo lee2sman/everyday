@@ -55,4 +55,6 @@ my bald head simulator
 more baldness w/ sound and motion  
 69  
 a random white noise player (voice sounds) made for disquiet junto 0398: rauschen bern  
+70  
+variation on 69 with different groan sounds  
 
