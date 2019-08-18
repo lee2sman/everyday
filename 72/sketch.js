@@ -49,11 +49,11 @@ function mousePressed(){
 
 function createBlock(){
 
-  let pic = round(random(picAmt))
+  let pic = floor(random(picAmt))
   let x = random(width)-imgs[pic].width
   let y = random(height)-imgs[pic].height
 
-  fill(random(255),random(255),random(255),random(255))
+  fill(random(255),random(255),random(255),random(100))
   rect(x,y,imgs[pic].width,imgs[pic].height)
 
   image(imgs[pic],x,y)
