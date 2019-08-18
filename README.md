@@ -53,8 +53,6 @@ used this as a flux talking head for a promo at ARoS museum in Denmark
 my bald head simulator  
 68  
 more baldness w/ sound and motion  
-69  
-a random white noise player (voice sounds) made for disquiet junto 0398: rauschen bern  
-70  
-variation on 69 with different groan sounds  
+69 - 72  
+a random white noise player (voice sounds) made for disquiet junto 0398: rauschen bern, 70 = groan sounds, 71 = fm3 buddha machine sounds, 72 = eno music for airports sounds  
 
