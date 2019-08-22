@@ -1,3 +1,5 @@
+let x, y
+
 function setup(){
   createCanvas(windowWidth,windowHeight)
   rectMode(CORNERS)
@@ -21,12 +23,20 @@ function mousePressed(){
 
 
 function mouseReleased(){
-  if ((pmouseX > 50)&&(mouseX > 50)) drawSquare()
+  if ((pmouseX > 50)&&(mouseY > 50)) drawSquare()
 }
 
 function drawSquare(){
-  w = mouseX - x
-  h = mouseY - y
+  if (mouseX > x){
+    w = mouseX - x
+  } else {
+    w = x - mouseX
+  }
+  if (mouseY > y){
+    h = mouseY - y
+  } else {
+    h = y - mouseY
+  }
   txtW = int(w / 12)
   txtH = int(h / 12)
 	print(txtH)
@@ -35,7 +45,7 @@ function drawSquare(){
     txt = txt + '0'
   }
 	//draw to screen
-for (let i=y;i<y+h;i+=txtH){
+  for (let i=y; i<y+h; i+=txtH){
     if (w < 0){
       text(txt,mouseX,i)
     } else {
