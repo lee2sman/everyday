@@ -13,7 +13,7 @@ let world = [
 ];
 
 function preload(){
-  f = loadFont("assets/VT323-REGULAR.TTF");
+  f = loadFont("assets/vt323.ttf");
 }
 
 function setup(){
