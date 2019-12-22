@@ -69,6 +69,7 @@ testing...testing...json button object reader
 These 3 are links to projects I created in November for [National Novel Generating Month](http://nanogenmo.github.io), an annual tradition where computational potes/botmakers/coder-artists produce generated *novels*, defined as being output of 50k words or more. 78 is pomelo, my generator to produce Yoko Ono instruction text pieces in the style of her books Grapefruit and Acorn. This took me a few days, and I used Kate Compton's [Tracery](http://tracery.io) library, and had a few issues getting it going. I still want to pick this back up and tweak it a bit better sometime. The titles don't connect well to the associated generated text. 79 is a link to a Nano-NaNoGenMo (sub 256 character) program I wrote to generate a novel called *Don't Talk to Me or My Son or My Son's Son or My Son's Son's Son Ever Again*. 80 is a link to *Lucifer Bimbisara or Francois unsuperscribed*, another Nano-NaNoGenMo program that uses the built-in word lists on Linux computers to generate poetic text.  
 81  
 Oh man, I've tried to make [roguelikes](https://roguelike.club/roguelikes.html) with p5.js a bunch, but never got to anything playable. (See earlier experiments 19-22). This is a first minimal playable thing. Still needs a good core mechanic. Visually I had fun with it, making my own [Brough-like](https://itch.io/jam/broughlike). Lots still to do.  
-
+82  
+this is a modified version of 81 so that it's self-playing  
 
 
