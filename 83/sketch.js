@@ -11,8 +11,7 @@ function setup() {
   imageMode(CENTER);
   textAlign(CENTER, CENTER);
   
-  clickIcon = loadImage('click.png',
-    function(){ScannerIcon = loadImage('scanner-icon.png',function(){
+    ScannerIcon = loadImage('assets/scanner-icon.png',function(){
       textSize(48);
       text('click to scan',width/2,height/4)
       
@@ -23,14 +22,12 @@ function setup() {
       text('left to right',width*2/3-80,height/2);
       image(ScannerIcon,width*2/3,height/2,100,150);
     
-    //  image(clickIcon,width/2,height/2+150,100,150); 
       imageMode(CORNER);
-    });
   });
 }
 
 function draw() {
-  print('width/2: '+width/2+' , mouseX: '+mouseX+' , altScan: '+altScan);
+  //print('width/2: '+width/2+' , mouseX: '+mouseX+' , altScan: '+altScan);
   if (capture){
    if (capture.loadedmetadata) {
       
