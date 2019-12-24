@@ -11,6 +11,10 @@ function setup() {
   imageMode(CENTER);
   textAlign(CENTER, CENTER);
   
+    capture = createCapture(VIDEO);
+    capture.hide();
+    whatLine = 0;
+
     ScannerIcon = loadImage('assets/scanner-icon.png',function(){
       textSize(48);
       text('click to scan',width/2,height/4)
@@ -28,18 +32,18 @@ function setup() {
 
 function draw() {
   //print('width/2: '+width/2+' , mouseX: '+mouseX+' , altScan: '+altScan);
-  if (capture){
-   if (capture.loadedmetadata) {
+  if (triggered){
+    if (capture){
+     if (capture.loadedmetadata) {
       
-     if (altScan){
-       image(capture,whatLine,0,10,height,whatLine,0,10,height);
-     } else {
-        //normal top to bottom capture render
-        image(capture,0, whatLine,width,3,0,whatLine,width,height);
-     }
+       if (altScan){
+         image(capture,whatLine,0,10,height,whatLine,0,10,height);
+       } else {
+          //normal top to bottom capture render
+          image(capture,0, whatLine,width,3,0,whatLine,width,height);
+       }
             
-     
-      whatLine+=1;
+        whatLine+=1;
        
      //check to see if scan finished
        if ((altScan == false) && (whatLine > height) && (triggered)){
@@ -55,6 +59,7 @@ function draw() {
          //reset so you can click to start again
          triggered = false;
        }
+     }
    }
   }
 }
@@ -71,9 +76,6 @@ function mousePressed(){
     
     triggered = true;
     background(255);
-    capture = createCapture(VIDEO);
-    capture.hide();
-    whatLine = 0;
   }
 }
 
