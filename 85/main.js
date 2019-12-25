@@ -49,13 +49,27 @@ function setup(){
 //-----------------------------------------------ADD BUTTONS TO PAGE------------------------------------------
   //CREATE NEW NOTE
   createNoteButton = createImg('assets/noun_Add note_534027.png').position(3,3).style('background-color','yellow').style('border-radius','10%').style('width','5vw').style('height','5vw');
+  //make responsive-hacky
   if (windowWidth < 600){
     createNoteButton.style('width','13vw').style('height','13vw');
   }
   //Add note by icon 54 from the Noun Project
   createNoteButton.mousePressed(createNewList);
 
+  //DOWLOAD BUTTON
+  createDownloadButton = createImg('assets/noun_Download Postit_396651.png').style('background-color','yellow').style('border-radius','10%').style('width','5vw').style('height','5vw');
+
+  createDownloadButton.style('position','fixed').style('bottom','0').style('left','0');
+  //make responsive -hacky
+  if (windowWidth < 600){
+    createDownloadButton.style('width','13vw').style('height','13vw');
+  }
+
+  createDownloadButton.mousePressed(function(){
+    window.print();
+  });
 }
+
 
 //----------------------------------------CLICK BUTTON TO CREATE NEW POST-IT----------------------------------
 function createNewList(){
@@ -75,6 +89,7 @@ function createNewList(){
 
   div.innerHTML = " <h1>Category</h1> <ul> <li>thing 1</li> <li>thing 2</li> </ul> ";
   div.setAttribute('contenteditable','true');
+
   
   document.body.appendChild(div);
 }
