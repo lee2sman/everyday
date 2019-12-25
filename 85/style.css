@@ -1,0 +1,26 @@
+div {
+  margin: 3vw;
+  padding: 3vw;
+  max-width: 50%;
+  max-height: 50%;
+  display: inline-block; 
+}
+
+.download-button {
+  background-image: url('assets/noun_Download Postit_396651.png');
+  /* noun_Download Postit_396651.png from The Noun Project */
+  background-size: contain;
+  border-radius: 10%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin: 3px;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .download-button {
+    width: 10vw;
+    height: 10vh;
+  }
+}
