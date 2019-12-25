@@ -75,4 +75,5 @@ this is a modified version of 81 so that it's self-playing
 oh, what the hell, it's 4am, i built a scanner-camera, inspired by a short [article](https://reading.supply/@joshuajenkins/imitating-a-copier-evmvhD) and photo/gifs from Joshua Jenkins. He didn't share any code, but I thought this was an interesting idea to build a scanner-style camera in p5.js. Mine can scan top to bottom or right to left. There's a bug. Need to play with the image drawing lines to figure out where, probably in the size of the camera capture.  
 84  
 oh, just some goals  
-
+85  
+oh, just some goals-sheet-maker  
