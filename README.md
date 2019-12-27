@@ -77,3 +77,6 @@ oh, what the hell, it's 4am, i built a scanner-camera, inspired by a short [arti
 oh, just some goals  
 85  
 oh, just some goals-sheet-maker  
+86  
+a zine-maker! wooo! includes a help screen! should be built into a bigger tool! 
+

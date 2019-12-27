@@ -1,0 +1,16 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  border: none;
+}
+
+input, button {
+  background-image: url('assets/background3.png');
+  background-color: lightblue; 
+}
+
+canvas {
+  top: 0;
+}
+
