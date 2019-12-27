@@ -126,7 +126,7 @@ function printZine(){
     screengrab = get(0,0,pageW,totalPages*pageH)
 
     saveOurZine.image(screengrab, 0, 0)
-    save(saveOurZine)
+    save(saveOurZine,'zine.jpg')
 
     for (let b in buttons){
       buttons[b].show()
