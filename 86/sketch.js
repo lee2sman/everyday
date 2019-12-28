@@ -1,34 +1,58 @@
 //ZineMaster 2054
 //photo zine maker <-- had this idea years, finally implemented
 //glue it up
-//coded at variety coffee, sipping an espresso and selter
+//coded at variety coffee, sipping an espresso and seltzer
 //code sketch 62 as starter code
-let imgs = [], loaded = false, f
+let loaded = false, f
 let totalPages = 8, canvasW, canvasH
 let uploadedImg = [], imgCount = 0
 let titleBgColor = '#00C8C8'
 let zineTitle = 'ZineMaster2054', artistName
 
 function preload(){
-    for (let i = 0; i < 8; i++){
-      imgs[i] = loadImage('assets/background'+i+'.png')
-    }
     f = loadFont('assets/linear_beam/Linebeam.ttf')
 }
 
 function setup(){
+  if (windowWidth > windowHeight){
+    pageW = windowHeight/2
+  } else {
     pageW = windowWidth
-    pageH = windowWidth*(11/8.5)
+  }
 
-    canvasW = windowWidth
+    pageH = pageW*(11/8.5)
+    canvasW = pageW
     canvasH = pageH * totalPages
     createCanvas(canvasW,canvasH)
-    angleMode(DEGREES)
-    textFont(f)
 
-  //create Input Buttons
-  createInputButtons()
+    angleMode(DEGREES)
+
+    textFont(f)
+    textAlign(CENTER, CENTER)
+    textSize(pageW/zineTitle.length)
+
+    //draw preview zine pages
+    previewZine()
+
+    //create Input Buttons
+    createInputButtons()
  }
+
+function previewZine(){
+  
+  //previewZine
+  strokeWeight(12)
+  rectMode(CORNER)
+
+  for (let i = 0; i < totalPages; i++){
+    rect(0,i*pageH,pageW,pageH)
+    text(i,width/2,i*pageH+pageH/2)
+  }
+
+  //after drawn, reset
+  strokeWeight(1)
+}
+
 
 function createInputButtons(){
   //file uploader
@@ -143,8 +167,6 @@ function help(){
 
 function draw(){
   if (!loaded){
-    textAlign(CENTER, CENTER)
-    textSize(pageW/zineTitle.length)
     text('ZineMaster2054',width/2,pageH/2)
   }
 }
@@ -154,6 +176,10 @@ function makeCover(){
   rectMode(CENTER)
   noStroke()
   rect(pageW/2,pageH/2,pageW*4/5,100)
+
+  if (zineTitle.length < 1){
+    zineTitle = 'ZineMaster2054'
+  }
 
   if (zineTitle.length > 19){
     rect(pageW/2,pageH/2,pageW,100)
@@ -184,7 +210,6 @@ function makePages(){
 function makePage(_pageNum){
     let whichImg = []
     for (let j = 0; j < 4; j++){
-      //whichImg[j] = floor(random(imgs.length))
       whichImg[j] = floor(random(uploadedImg.length))
     }
 
@@ -241,8 +266,6 @@ function reRenderPage(){
 }
 
 function makeImage(_img,imgX,imgY,imgW,imgH){
-  tint(random(360),random(360),random(360))
-  //image(imgs[_img],imgX,imgY,imgW,imgH)
   image(uploadedImg[_img],imgX,imgY,imgW,imgH)
 }
 
@@ -250,8 +273,10 @@ function mousePressed(){
     loaded = true
 
     if (uploadedImg[0]){
-      if ((mouseX > input.width)&&(mouseY > input.height)){
-        reRenderPage()
+      if ((mouseX > 0) && (mouseX < width)){
+        if (!((mouseX < input.width)&&(mouseY < 4*input.height))){
+          reRenderPage()
+        }
       }
     }
 
@@ -266,6 +291,7 @@ function touchStarted(){
 
 function renderZine(){
   //RENDER zine
+    select('body').style('background-color','black')  //make page background black
     background(0)
 
     makePages()

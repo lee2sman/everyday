@@ -6,11 +6,15 @@ html, body {
 }
 
 input, button {
-  background-image: url('assets/background3.png');
+  background-image: url('assets/background.png');
   background-color: lightblue; 
 }
 
 canvas {
   top: 0;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
-
