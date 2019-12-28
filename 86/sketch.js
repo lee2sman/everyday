@@ -39,14 +39,14 @@ function setup(){
  }
 
 function previewZine(){
-  
-  //previewZine
   strokeWeight(12)
   rectMode(CORNER)
 
   for (let i = 0; i < totalPages; i++){
     rect(0,i*pageH,pageW,pageH)
-    text(i,width/2,i*pageH+pageH/2)
+    if (i > 0){ //don't print 0 on zine cover since there's a title there already
+      text(i,width/2,i*pageH+pageH/2)
+    }
   }
 
   //after drawn, reset
