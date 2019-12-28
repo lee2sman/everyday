@@ -79,4 +79,5 @@ oh, just some goals
 oh, just some goals-sheet-maker  
 86  
 a zine-maker! wooo! includes a help screen! should be built into a bigger tool! 
-
+87  
+it's 83, the scan-camera hosted on glitch.com and embedded here so it'll work in other peoples' browsers because it's using https now  
