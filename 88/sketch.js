@@ -236,6 +236,8 @@ function makePages(){
 }
 
 function makePage(_pageNum){
+    //background(titleBgColor)
+
     let whichImg = []
     for (let j = 0; j < 4; j++){
       whichImg[j] = floor(random(uploadedImg.length))
@@ -391,6 +393,7 @@ function makePage(_pageNum){
 	  vertex(0,_pageNum*pageH+pageH/3)
 	  vertex(0,_pageNum*pageH)
           endShape(CLOSE)
+	}
         break
       default:
 	//fullscreen image
