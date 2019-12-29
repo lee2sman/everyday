@@ -78,6 +78,9 @@ oh, just some goals
 85  
 oh, just some goals-sheet-maker  
 86  
-a zine-maker! wooo! includes a help screen! should be built into a bigger tool! 
+a zine-maker! wooo! includes a help screen! it has its own documentation and is being built out. needs to output pdf!  
 87  
 it's 83, the scan-camera hosted on glitch.com and embedded here so it'll work in other peoples' browsers because it's using https now  
+88  
+Printster7200, a generative poster-maker! it's modified from 86's code (ZineMaker2054) but now it's a single page poster-maker. should be built into a more robust tool!  
+
