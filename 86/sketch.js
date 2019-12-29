@@ -1,4 +1,4 @@
-//ZineMaster 2054
+//ZineMaker 2054
 //photo zine maker <-- had this idea years, finally implemented
 //glue it up
 //coded at variety coffee, sipping an espresso and seltzer
@@ -7,7 +7,7 @@ let loaded = false, f
 let totalPages = 8, canvasW, canvasH
 let uploadedImg = [], imgCount = 0
 let titleBgColor = '#00C8C8'
-let zineTitle = 'ZineMaster2054', artistName, choosePages
+let zineTitle = 'ZineMaker2054', artistName, choosePages
 
 function preload(){
     f = loadFont('assets/linear_beam/Linebeam.ttf')
@@ -110,7 +110,7 @@ function changePages() {
 function changeTitle(){
   zineTitle = prompt('New title: ')
    if (zineTitle == null || zineTitle == '') {
-    zineTitle = 'ZineMaster2054'
+    zineTitle = 'ZineMaker2054'
    }  
 
   textSize(pageW/zineTitle.length)
@@ -166,7 +166,7 @@ function help(){
 
 function draw(){
   if (!loaded){
-    text('ZineMaster2054',width/2,pageH/2)
+    text('ZineMaker2054',width/2,pageH/2)
 
       if ((mouseX > 0) && (mouseX < width)){
 	if (!((mouseX < input.width)&&(mouseY < 4*input.height))){
