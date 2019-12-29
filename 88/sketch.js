@@ -1,13 +1,22 @@
 //Printster7200
 //quick idea to remix the ZineMaker2054 into a poster-maker
-let loaded = false, f
+let loaded = false, f = []
 let totalPages = 1, canvasW, canvasH
 let uploadedImg = [], imgCount = 0
 let titleBgColor = '#00C8C8'
 let zineTitle = 'Printster7200', artistName, choosePages
 
 function preload(){
-    f = loadFont('assets/linear_beam/Linebeam.ttf')
+    f[0] = loadFont('assets/fontType/linear_beam/Linebeam.ttf')
+    f[1] = loadFont('assets/fontType/BadTV-Regular.otf')
+    f[2] = loadFont('assets/fontType/BDP_FOX.ttf')
+    f[3] = loadFont('assets/fontType/Comfortaa-Bold.ttf')
+    f[4] = loadFont('assets/fontType/ComicHelvetic_Medium.otf')
+    f[5] = loadFont('assets/fontType/Multicolore.otf')
+    f[6] = loadFont('assets/fontType/Monoround.otf')
+    f[7] = loadFont('assets/fontType/MyFontIsSlimey-Regular.ttf')
+    f[8] = loadFont('assets/fontType/Pipes.ttf')
+    f[9] = loadFont('assets/fontType/Random.ttf')
 }
 
 function setup(){
@@ -20,7 +29,7 @@ function setup(){
 
     angleMode(DEGREES)
 
-    textFont(f)
+    chooseFont()
     textAlign(CENTER, CENTER)
     textSize(pageW/zineTitle.length)
 
@@ -90,6 +99,12 @@ function createInputButtons(){
   //helpButton.mousePressed(help)
 }
 
+function chooseFont(){
+  
+  let whichFont = int(random(f.length-1))
+  textFont(f[whichFont])
+}
+
 function changePages() {
   totalPages = prompt('New page total: ')
   if (totalPages > 0 && totalPages < 256){
@@ -133,6 +148,7 @@ function printColor(){
 
 function makeRandom(){
   printColor()
+  chooseFont()
 
   if (uploadedImg.length>0){
     reRenderPage()
@@ -191,7 +207,7 @@ function makeCover(){
   fill(titleBgColor)
   rectMode(CENTER)
   noStroke()
-  rect(pageW/2,pageH/2,pageW*4/5,100)
+  rect(pageW/2,pageH/2,pageW*2/3,80)
 
   if (zineTitle.length < 1){
     zineTitle = 'Printster7200'
@@ -201,15 +217,11 @@ function makeCover(){
     rect(pageW/2,pageH/2,pageW,100)
   }
 
-  if (artistName){ 
-     rect(pageW*3/4,pageH*4/5,pageW*2/5,50)
-  }
-
   fill(0)
   text(zineTitle,pageW/2,pageH/2)
 
-  textSize(width/60)
-  text(artistName,pageW*3/4,pageH*4/5)
+  //textSize(width/60)
+  //text(artistName,pageW*3/4,pageH*4/5)
   textSize(pageW/zineTitle.length)
 }
 
@@ -229,7 +241,7 @@ function makePage(_pageNum){
       whichImg[j] = floor(random(uploadedImg.length))
     }
 
-    switch(floor(random(14))) {
+    switch(floor(random(15))) {
       case 0:
 	//cover img
 	makeImage(whichImg[0],0,_pageNum*pageH,pageW,pageH) 
@@ -336,6 +348,49 @@ function makePage(_pageNum){
 	  circle(random(pageW),_pageNum*pageH+random(pageH),pageW)
 	  circle(random(pageW),_pageNum*pageH+random(pageH),pageW)
 	}
+        break
+      case 14:
+	//strokes
+	makeImage(whichImg[0],0,_pageNum*pageH,pageW,pageH)
+        fill(titleBgColor)
+	
+	let whichShape = int(random(3))
+	if (whichShape < 1){
+	  beginShape()
+	  vertex(0,_pageNum*pageH+(pageH*2/3))
+	  vertex(pageW*2/3,0)
+	  vertex(pageW,0)
+	  vertex(pageW,_pageNum*pageH+pageH/3)
+	  vertex(pageW/3,_pageNum*pageH+pageH)
+	  vertex(0,_pageNum*pageH+pageH)
+	  endShape(CLOSE)
+	} else if (whichShape < 2){
+	  beginShape()
+          vertex(pageW/3,_pageNum*pageH)
+	  vertex(pageW,_pageNum*pageH+pageH*2/3)
+	  vertex(pageW,_pageNum*pageH+pageH)
+	  vertex(pageW*2/3,_pageNum*pageH+pageH)
+	  vertex(0,_pageNum*pageH+pageH/3)
+	  vertex(0,_pageNum*pageH)
+          endShape(CLOSE)
+	} else {
+	  beginShape()
+	  vertex(0,_pageNum*pageH+(pageH*2/3))
+	  vertex(pageW*2/3,0)
+	  vertex(pageW,0)
+	  vertex(pageW,_pageNum*pageH+pageH/3)
+	  vertex(pageW/3,_pageNum*pageH+pageH)
+	  vertex(0,_pageNum*pageH+pageH)
+	  endShape(CLOSE)
+
+	  beginShape()
+          vertex(pageW/3,_pageNum*pageH)
+	  vertex(pageW,_pageNum*pageH+pageH*2/3)
+	  vertex(pageW,_pageNum*pageH+pageH)
+	  vertex(pageW*2/3,_pageNum*pageH+pageH)
+	  vertex(0,_pageNum*pageH+pageH/3)
+	  vertex(0,_pageNum*pageH)
+          endShape(CLOSE)
         break
       default:
 	//fullscreen image
