@@ -7,7 +7,7 @@ let loaded = false, f
 let totalPages = 8, canvasW, canvasH
 let uploadedImg = [], imgCount = 0
 let titleBgColor = '#00C8C8'
-let zineTitle = 'ZineMaster2054', artistName
+let zineTitle = 'ZineMaster2054', artistName, choosePages
 
 function preload(){
     f = loadFont('assets/linear_beam/Linebeam.ttf')
@@ -75,7 +75,7 @@ function createInputButtons(){
     addCreator.mousePressed(addName)
 
   //change total page
-    let choosePages = createButton('8 pages')
+    choosePages = createButton('8 Pages')
     choosePages.position(0, 4 * input.height)
     choosePages.mousePressed(changePages)
 
@@ -92,14 +92,13 @@ function createInputButtons(){
 
 function changePages() {
   totalPages = prompt('New page total: ')
-  if (totalPages > 0 || totalPages < 255){
-    
-  } else if (totalPages == '' || totalPages == null) {
-    alert('must be between 1 and 255')
-    totalPages = 8
-  } else {
+  if (totalPages > 0 && totalPages < 256){
+    totalPages=int(totalPages) //in case someone puts a decimal!
+ } else {
+    alert('Must be a number between 1 and 255. Returning to default (8).')
     totalPages = 8
   }
+  choosePages.html(totalPages+' pages')
 
   //resize - change height based on new page total
   canvasH = pageH * totalPages
