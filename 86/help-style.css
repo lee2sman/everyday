@@ -1,20 +1,50 @@
-body {  
-     background: linear-gradient(-90deg, black, purple, pink, white, pink, purple, black); 
+@font-face {
+  font-family: 'linebeam';
+  src: url('assets/linear_beam/Linebeam.ttf'); 
 }
+
+body {  
+  background: linear-gradient(#e66465, #9198e5);
+  background-image: url('assets/background.png');
+}
+
 
 h1 {
+    text-align: center;
     color: #111;
-    font-family: 'Schoolbell', cursive;
-    font-size: x-large;
+    font-family: 'linebeam', sans-serif;
+    font-size: 2em;
 }
 
-h2 {
+h2, h3, h4 {
     color: #111;
-    font-family: 'Open Sans',sans-serif; 
+    font-family: 'Rubik', sans-serif;
 }
 
 p {
-    color: #685206;
-    font-family: 'Schoolbell', cursive;
+    color: black;
     font-size: larger;
+    font-family: 'Rubik', sans-serif;
+}
+
+img {
+    display: block;
+    margin: auto;
+}
+
+#main {
+    padding: 2vw;
+    background-color: white;
+}
+
+#info {
+    background-color: lightgrey;
+    color: black !important;
+    padding: 1vw;
+}
+
+footer {
+    padding: 1vw;
+    color: #3300FF;
+    background-color: #CCFFCC;
 }

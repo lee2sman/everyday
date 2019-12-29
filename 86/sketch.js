@@ -80,7 +80,7 @@ function createInputButtons(){
     choosePages.mousePressed(changePages)
 
   //print zine
-  let printButton = createButton('print')
+  let printButton = createButton('Save')
   printButton.position(0, 5*input.height)
   printButton.mousePressed(printZine)
 
@@ -167,6 +167,14 @@ function help(){
 function draw(){
   if (!loaded){
     text('ZineMaster2054',width/2,pageH/2)
+
+      if ((mouseX > 0) && (mouseX < width)){
+	if (!((mouseX < input.width)&&(mouseY < 4*input.height))){
+	    cursor('assets/wand.png')
+        } else {
+            cursor('default')
+	}
+      }
   }
 }
 
