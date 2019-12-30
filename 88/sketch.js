@@ -169,9 +169,7 @@ function makeRandom(){
   printColor()
   chooseFont()
 
-  //if (uploadedImg.length>0){
-    reRenderPage()
-  //}
+  reRenderPage()
 }
 
 function placeText(){
@@ -249,13 +247,14 @@ function makeCover(captionString,x,y){
   fill(0)
   text(zineTitle,pageW/2,pageH/2)
 
-  //if (
   for (let i = 0; i < caption.length; i++){
-    fill(titleBgColor)
+    if (caption[0].textEntry !== null){
+      fill(titleBgColor)
 
-    rect(caption[i].x,caption[i].y,(caption[i].textEntry.length)*36,50)
-    fill(0)
-    text(caption[i].textEntry,caption[i].x,caption[i].y)
+      rect(caption[i].x,caption[i].y,(caption[i].textEntry.length)*36,50)
+      fill(0)
+      text(caption[i].textEntry,caption[i].x,caption[i].y)
+    }
   }
 
   //RESET?
