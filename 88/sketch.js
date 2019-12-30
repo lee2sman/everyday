@@ -5,6 +5,7 @@ let totalPages = 1, canvasW, canvasH
 let uploadedImg = [], imgCount = 0
 let titleBgColor = '#00C8C8'
 let zineTitle = 'Printster7200', artistName, choosePages
+let caption = [], captionCounter = 0
 
 function preload(){
     f[0] = loadFont('assets/fontType/linear_beam/Linebeam.ttf')
@@ -17,6 +18,10 @@ function preload(){
     f[7] = loadFont('assets/fontType/MyFontIsSlimey-Regular.ttf')
     f[8] = loadFont('assets/fontType/Pipes.ttf')
     f[9] = loadFont('assets/fontType/Random.ttf')
+    uploadedImg[0] = loadImage('assets/black.jpg')
+    uploadedImg[1] = loadImage('assets/black.jpg')
+    uploadedImg[2] = loadImage('assets/black.jpg')
+    uploadedImg[3] = loadImage('assets/black.jpg')
 }
 
 function setup(){
@@ -73,9 +78,14 @@ function createInputButtons(){
     chooseTitle.position(0, 2 * input.height)
     chooseTitle.mousePressed(changeTitle)
 
+  //NEW ADDED for Printster7200
+    let undoText = createButton('Remove Last Text')
+    undoText.position(0, 3 * input.height)
+    undoText.mousePressed(removeLastText)
+
   //NEW ADDED FOR Printster7200
     let randomizer = createButton('Randomizer')
-    randomizer.position(0, 3 * input.height)
+    randomizer.position(0, 4 * input.height)
     randomizer.mousePressed(makeRandom)
 
   //change author
@@ -90,7 +100,7 @@ function createInputButtons(){
 
   //print zine
   let printButton = createButton('Save')
-  printButton.position(0, 5*input.height)
+  printButton.position(0, 6 * input.height)
   printButton.mousePressed(printZine)
 
   //info zine
@@ -133,6 +143,15 @@ function changeTitle(){
   makeCover()
 }
 
+function removeLastText(){
+  if (captionCounter > 0){
+    captionCounter--
+    caption.pop()
+
+    reRenderPage()
+  }
+}
+
 function addName(){
   artistName = prompt("Artist/Creator's Name: ")
 
@@ -150,9 +169,18 @@ function makeRandom(){
   printColor()
   chooseFont()
 
-  if (uploadedImg.length>0){
+  //if (uploadedImg.length>0){
     reRenderPage()
-  }
+  //}
+}
+
+function placeText(){
+  
+  caption[captionCounter] ={"textEntry":captionText=prompt('Enter short text: '),"x":mouseX,"y":mouseY}
+
+  makeCover(caption[captionCounter].textEntry,caption[captionCounter].x,caption[captionCounter].y)
+
+  captionCounter++ //advance, ready for the next one
 }
 
 function printZine(){
@@ -203,7 +231,7 @@ function draw(){
   }
 }
 
-function makeCover(){
+function makeCover(captionString,x,y){
   fill(titleBgColor)
   rectMode(CENTER)
   noStroke()
@@ -217,11 +245,20 @@ function makeCover(){
     rect(pageW/2,pageH/2,pageW,100)
   }
 
+  //title goes here
   fill(0)
   text(zineTitle,pageW/2,pageH/2)
 
-  //textSize(width/60)
-  //text(artistName,pageW*3/4,pageH*4/5)
+  //if (
+  for (let i = 0; i < caption.length; i++){
+    fill(titleBgColor)
+
+    rect(caption[i].x,caption[i].y,(caption[i].textEntry.length)*36,50)
+    fill(0)
+    text(caption[i].textEntry,caption[i].x,caption[i].y)
+  }
+
+  //RESET?
   textSize(pageW/zineTitle.length)
 }
 
@@ -236,9 +273,8 @@ function makePages(){
 }
 
 function makePage(_pageNum){
-    //background(titleBgColor)
 
-    let whichImg = []
+     whichImg = []
     for (let j = 0; j < 4; j++){
       whichImg[j] = floor(random(uploadedImg.length))
     }
@@ -420,13 +456,15 @@ function makeImage(_img,imgX,imgY,imgW,imgH){
 function mousePressed(){
     loaded = true
 
-    if (uploadedImg[0]){
+    //if (uploadedImg[0]){
       if ((mouseX > 0) && (mouseX < width)){
         if (!((mouseX < input.width)&&(mouseY < 4*input.height))){
-          reRenderPage()
+         // reRenderPage()
+	  placeText()
+	 
         }
       }
-    }
+    //}
 
     return false
 }
@@ -450,6 +488,14 @@ function handleFile(file) {
   if (file.type === 'image') {
     uploadedImg[imgCount] = createImg(file.data);
     uploadedImg[imgCount].hide();
+
+    if (imgCount < 4){
+      for (let i = 1; i < (4 - imgCount); i++){
+	uploadedImg[imgCount+i] = createImg(file.data);
+	uploadedImg[imgCount+i].hide();
+      }
+    }
+
     imgCount++
     
     renderZine()
