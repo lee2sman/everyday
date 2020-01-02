@@ -83,4 +83,6 @@ a zine-maker! wooo! includes a help screen! it has its own documentation and is 
 it's 83, the scan-camera hosted on glitch.com and embedded here so it'll work in other peoples' browsers because it's using https now  
 88  
 Printster7200, a generative poster-maker! it's modified from 86's code (ZineMaker2054) but now it's a single page poster-maker. should be built into a more robust tool!  
+89  
+started building out a mini 3d game engine thing instead of using unity. exercise in futility. has a soundtrack, you can eat things. move with arrow keys. grab and rotate world. move mouse to rotate 'body'.  
 
