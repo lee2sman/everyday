@@ -1,5 +1,6 @@
 //Printster7200
 //quick idea to remix the ZineMaker2054 into a poster-maker
+//update: woops, there goes 30 hours
 let loaded = false, f = []
 let totalPages = 1, canvasW, canvasH
 let uploadedImg = [], imgCount = 0
@@ -278,7 +279,10 @@ function makePage(_pageNum){
       whichImg[j] = floor(random(uploadedImg.length))
     }
 
-    switch(floor(random(15))) {
+  let whichOne = floor(random(15))
+  //print(whichOne)
+
+    switch(whichOne) {
       case 0:
 	//cover img
 	makeImage(whichImg[0],0,_pageNum*pageH,pageW,pageH) 
