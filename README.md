@@ -89,3 +89,6 @@ started building out a mini 3d game engine thing instead of using unity. exercis
 different version of 89. playable. not a game but a good roamer.  
 91  
 poster grid. posters generated with printwobbler, new version of 84. saved, presented on screen with version of 83's starter code.  
+92  
+remake 51 w/ file input option. a demake of the floor of messlife.  
+
