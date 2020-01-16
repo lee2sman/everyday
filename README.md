@@ -91,4 +91,5 @@ different version of 89. playable. not a game but a good roamer.
 poster grid. posters generated with printwobbler, new version of 84. saved, presented on screen with version of 83's starter code.  
 92  
 remake 51 w/ file input option. a demake of the floor of messlife.  
-
+93  
+remix of 92, unfortunately now with boxes. need more organic shapes next. i'm on an airplane so couldn't look up syntax.
