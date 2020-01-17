@@ -12,7 +12,7 @@ function preload(){
   for (let i = 0; i < 8; i++){
     uploadedImg[i] = loadImage('assets/background'+i+'.png');
   }
-  song = loadSound('../../assets/audio/eelsOS-hitstix.mp3');
+  song = loadSound('../assets/audio/eelsOS-hitstix.mp3');
 }
 
 function setup() {
