@@ -92,6 +92,8 @@ poster grid. posters generated with printwobbler, new version of 84. saved, pres
 92  
 remake 51 w/ file input option. a demake of the floor of messlife.  
 93  
-remix of 92, unfortunately now with boxes. need more organic shapes next. i'm on an airplane so couldn't look up syntax.
+remix of 92, unfortunately now with boxes. need more organic shapes next. i'm on an airplane so couldn't look up syntax. mouse grab rotates.  
 94  
-variation of 93, using screenshots of terminal / txt / imgs  
+variation of 93, using screenshots of terminal / txt / imgs. mouse grab rotates.  
+95  
+simple 2d bezier curves in 3d space, at first an emulation of struggle inc / cody hudson but mine is much simpler, done in 20-30 min, worth revisiting later. mouse grab to rotate/reposition.  
