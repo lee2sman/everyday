@@ -99,4 +99,5 @@ variation of 93, using screenshots of terminal / txt / imgs. mouse grab rotates.
 simple 2d bezier curves in 3d space, at first an emulation of struggle inc / cody hudson but mine is much simpler, done in 20-30 min, worth revisiting later. mouse grab to rotate/reposition.  
 96  
 sucky bad first rendering of ultra dashed off scene made from scans of my notebook chickenscratch and some crayone drawings. don't yet know how to properly render lights in webgl from unity. looked fine in the editor? no skybox. no nothin' really.  
-
+97  
+same problems, different day. using images scanned in C.F. from a poster hanging in my bedroom from his show "Comics" exhibited at beginnings in brooklyn circa 2014?  
