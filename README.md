@@ -101,3 +101,5 @@ simple 2d bezier curves in 3d space, at first an emulation of struggle inc / cod
 sucky bad first rendering of ultra dashed off scene made from scans of my notebook chickenscratch and some crayone drawings. don't yet know how to properly render lights in webgl from unity. looked fine in the editor? no skybox. no nothin' really.  
 97  
 same problems, different day. using images scanned in C.F. from a poster hanging in my bedroom from his show "Comics" exhibited at beginnings in brooklyn circa 2014?  
+98  
+mockup of a different version of the talking face. won't work in firefox or on http, requires https. copy on glitch.com should work  
