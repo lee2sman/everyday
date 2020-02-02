@@ -103,3 +103,8 @@ sucky bad first rendering of ultra dashed off scene made from scans of my notebo
 same problems, different day. using images scanned in C.F. from a poster hanging in my bedroom from his show "Comics" exhibited at beginnings in brooklyn circa 2014?  
 98  
 mockup of a different version of the talking face. won't work in firefox or on http, requires https. copy on glitch.com should work  
+99  
+modification of 57, self-flying - submission to vector fest  
+100  
+redo 58, submission to vector fest
+
