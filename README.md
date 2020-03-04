@@ -107,4 +107,5 @@ mockup of a different version of the talking face. won't work in firefox or on h
 modification of 57, self-flying - submission to vector fest  
 100  
 redo 58, submission to vector fest
-
+101  
+blatant oblique strategies cover  
