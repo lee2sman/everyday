@@ -1,27 +1,15 @@
 <!DOCTYPE html>
 <html lang="en-us">
-	<!-- Lee's code sketch in unity with Doodle Studio 95! This took me a while, slow going. inside during the coronavirus. xin was coughing intermittently. we're in different rooms now.
-	 scurrred -->
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Pink House Black Sky Blue Cloud</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
-    <script src="TemplateData/UnityProgress.js"></script>
+    <title>Unity WebGL Player | Pink House Black Sky Blue Cloud</title>
     <script src="Build/UnityLoader.js"></script>
     <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/pink-house-black-sky-blue-cloud.json", {onProgress: UnityProgress});
+      UnityLoader.instantiate("unityContainer", "Build/pink-house-black-sky-blue-cloud.json");
     </script>
   </head>
   <body>
-    <div class="webgl-content">
-      <div id="unityContainer" style="width: 960px; height: 600px"></div>
-      <div class="footer">
-        <div class="webgl-logo"></div>
-        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
-        <div class="title">doodle-test</div>
-      </div>
-    </div>
+    <div id="unityContainer" style="width: 960px; height: 600px; margin: auto"></div>
   </body>
 </html>
