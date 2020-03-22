@@ -111,3 +111,5 @@ redo 58, submission to vector fest
 blatant oblique strategies cover  
 102  
 doodle studio 95 mini zone, music from my modular. bizarro. corona virus indoors day. sunday.  
+103  
+a flatgame using starter movement and animation scripts from the [flatgame first-timer's beginner's guide](https://flatgame.itch.io/first-timers-tutorial). made of drawings of the houses i've lived in, and my notes. music recorded on my modular synth. created in nu jersey.  
