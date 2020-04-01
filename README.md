@@ -113,3 +113,5 @@ blatant oblique strategies cover
 doodle studio 95 mini zone, music from my modular. bizarro. corona virus indoors day. sunday.  
 103  
 a flatgame using starter movement and animation scripts from the [flatgame first-timer's beginner's guide](https://flatgame.itch.io/first-timers-tutorial). made of drawings of the houses i've lived in, and my notes. music recorded on my modular synth. created in nu jersey.  
+104  
+my second 2d in 3d game. made with drawings in my notebook of my childhood house at 232 henley. put a lot of time into getting this right, figuring out sound, ending fade/glitches, etc. proud of this one.  
