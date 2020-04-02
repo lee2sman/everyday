@@ -1,0 +1,44 @@
+body {
+      background: #f85032;
+        background: -moz-linear-gradient(45deg, #f85032 0%, #83ab15 22%, #f6290c 51%, #f02f17 71%, #6ea6fa 100%);
+        background: -webkit-gradient(left bottom, right top, color-stop(0%, #f85032), color-stop(22%, #83ab15), color-stop(51%, #f6290c), color-stop(71%, #f02f17), color-stop(100%, #6ea6fa));
+        background: -webkit-linear-gradient(45deg, #f85032 0%, #83ab15 22%, #f6290c 51%, #f02f17 71%, #6ea6fa 100%);
+        background: -o-linear-gradient(45deg, #f85032 0%, #83ab15 22%, #f6290c 51%, #f02f17 71%, #6ea6fa 100%);
+        background: -ms-linear-gradient(45deg, #f85032 0%, #83ab15 22%, #f6290c 51%, #f02f17 71%, #6ea6fa 100%);
+        background: linear-gradient(45deg, #f85032 0%, #83ab15 22%, #f6290c 51%, #f02f17 71%, #6ea6fa 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#6ea6fa', GradientType=1 );
+        font-size: 1.5em;
+        font-family: 'Kavivanar', cursive, sans-serif;
+        line-height: 1;
+        max-width: 60em;
+        margin: 0 auto;
+        padding: 2em;
+        text-shadow:5px 5px 10px blue;
+        color: rebeccapurple;
+        cursor: crosshair; 
+}
+
+ #about {
+  font-size: larger;
+  padding: 5vmin;
+  border-radius: 1em;
+  margin-bottom: 2vmin;
+  border-style: dashed;
+}  
+
+#about:hover {
+  background-color: rgb(190, 190, 190, 0.5);
+}
+
+img {
+    width: 20vmin;
+    height: 30vmin;
+    opacity: 0.5; 
+    cursor: cell;
+}
+
+img:hover {
+    opacity: 1;
+    cursor: help;
+    transform: scale(2);
+}
