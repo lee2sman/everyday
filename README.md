@@ -119,4 +119,6 @@ my second 2d in 3d game. made with drawings in my notebook of my childhood house
 speculative software (really a website) called Zonez88 or homezonez88, 'a simulation manifesation based on ambient memories and dream-material of their native living units'  
 106  
 a virtual seder plate  
+107  
+collapsed website / collapsed poesis generated  
 
