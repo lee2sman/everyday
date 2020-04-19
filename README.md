@@ -121,4 +121,6 @@ speculative software (really a website) called Zonez88 or homezonez88, 'a simula
 a virtual seder plate  
 107  
 collapsed website / collapsed poesis generated  
+108  
+made during twitch tv stream for babycastles academy on april 19, 2020 during covid-19. improvisationally made live. "becoming landscape" - demo poemware.  
 

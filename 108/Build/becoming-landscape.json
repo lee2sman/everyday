@@ -1,0 +1,16 @@
+{
+"companyName": "DefaultCompany",
+"productName": "myselves",
+"productVersion": "0.1",
+"dataUrl": "becoming-landscape.data.unityweb",
+"wasmCodeUrl": "becoming-landscape.wasm.code.unityweb",
+"wasmFrameworkUrl": "becoming-landscape.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.2.7f2"
+}
