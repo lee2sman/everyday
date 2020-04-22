@@ -1,0 +1,162 @@
+﻿<!--save as html file-->
+<!-- 
+lee2sman riffin day 1 of 30 day html speculations
+           ..
+     ____ / '>
+    >-_- )  )"
+mrf .\,,.,./.
+   '',"'.-','"
+
+-->
+<html  dir="auto" >
+<head>
+<link rel="icon" 
+      type="image/png" 
+      href="favicon.png">
+<title>1-chicken-house</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+<style>
+	body {
+		margin:40px;
+		padding:40px;
+	}
+</style>
+<script>
+
+var embedDat = "%7B%22START%22:%5B%5B%22You%20lie%20snug%20as%20a%20bug%20in%20bed.%22%5D,%5B%22%22%5D,%5B%22Your%20body%20is%20WARM%20with%20the%20blanket%20up%20to%20your%20chin.%22%5D,%5B%22%22%5D,%5B%22Your%20head%20is%20a%20wee%20bit%20nippy%20but%20not%20uncomfortably%20so.%22%5D,%5B%22%22%5D,%5B%22Outside%20are%20chicks%20clucking.%22%5D,%5B%22%22%5D,%5B%22Inside%20outside%20are%20keyboard%20keys%20clacking.%22%5D,%5B%22%22%5D,%5B%22Go%20to%20the%20chicks%22,%22COOP%22%5D,%5B%22%22%5D,%5B%22Go%20to%20the%20clacking%22,%22KEYBOARD%22%5D,%5B%22%22%5D,%5B%22A%20lectrofan%20whitenoise%20murmurrer%20is%20murmuring%20soothingly.%22%5D,%5B%22%22%5D%5D,%22__STARTSECTION__%22:%22START%22,%22COOP%22:%5B%5B%22Chicks%20are%20clucking%20about.%20Scratching%20about.%20Looking%20about.%22%5D,%5B%22%22%5D,%5B%22Trees,%20leaves,%20grubs,%20worms,%20grasses,%20dirts,%20woodchips.%22%5D,%5B%22%22%5D,%5B%22Cluck%20with%20the%20chicks%22,%22CLUCK%22%5D,%5B%22Leave%20this%20place%22,%22START%22%5D,%5B%22%22%5D,%5B%22Lawnmower%20hhhhhhnnnnnnnn%22,%22MOW%22%5D,%5B%22%22%5D%5D,%22CLUCK%22:%5B%5B%22Cluck%20cluck%20clunk.%20You%20not%20a%20chickie.%22%5D,%5B%22%22%5D,%5B%22Leave%20this%20place%22,%22START%22%5D,%5B%22%22%5D%5D,%22KEYBOARD%22:%5B%5B%22Clicky%20clacky%20fingers%20flying%20frying%20up%20and%20down%20clicked%20kachunked%20karumphed%20clack.%22%5D,%5B%22%22%5D,%5B%22Clink%20clack%20kachunk%20flunk%20klick%20klunk.%22%5D,%5B%22%22%5D,%5B%22Leave%20this%20place%22,%22START%22%5D,%5B%22%22%5D,%5B%22%22%5D%5D,%22MOW%22:%5B%5B%22Unnecessary.%22%5D,%5B%22%22%5D,%5B%22Drive%20drive%20drive%20drive%20drive.%22%5D,%5B%22%22%5D,%5B%22Turn.%22%5D,%5B%22%22%5D,%5B%22Drive%20drive%20drive%20drive%20drive.%22%5D,%5B%22%22%5D,%5B%22Turn.%22%5D,%5B%22%22%5D,%5B%22Drive%20drive%20drive%20drive.%22%5D,%5B%22%22%5D,%5B%22Screech%20whine%20whrrr%20cut%20putter%20zrrrrrrrrrrr.%22%5D,%5B%22%22%5D,%5B%22Leave%20this%20place%22,%22START%22%5D%5D%7D";
+
+var gameState = null;
+
+
+var aurl = document.createElement('a');
+function qualifyURL(url) {
+ aurl.href = url;
+ return aurl.href;
+}
+
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+function strip_http(url) {
+   url = url.replace(/^https?:\/\//,'');
+   return url;
+}
+
+function startSection(){
+  if (gameState==null){
+    return "";
+  }
+  var param = getParameterByName("section");
+
+  var result = "__STARTSECTION__" in gameState ? gameState["__STARTSECTION__"] : "START";
+  if (param.length>0){
+    result=param;
+  }
+
+  return result;
+}
+
+function init(){
+	if (embedDat.length>0 && embedDat[0]!=='_'){
+		var dat = decodeURI(embedDat);
+		gameState = JSON.parse(dat);
+    var startKey = startSection();
+		goTo(startKey);
+		return;
+	}
+
+var id = getParameterByName("p").replace(/[\\\/]/,"");
+  if (id===null||id.length===0) {
+    console.log("No ID specified in URL.")
+    return;
+  }
+
+  var githubURL = 'https://api.github.com/gists/'+id;
+
+  var githubHTTPClient = new XMLHttpRequest();
+  githubHTTPClient.open('GET', githubURL);
+  githubHTTPClient.onreadystatechange = function() {
+    if(githubHTTPClient.readyState!=4) {
+      return;
+    }   
+    var result = JSON.parse(githubHTTPClient.responseText);
+    if (githubHTTPClient.status===403) {
+      console.log(result.message);
+    } else if (githubHTTPClient.status!==200&&githubHTTPClient.status!==201) {
+      console.log("HTTP Error "+ githubHTTPClient.status + ' - ' + githubHTTPClient.statusText);
+    }
+    var result = JSON.parse(githubHTTPClient.responseText);
+    var code=result["files"]["game.txt"]["content"];
+    console.log(code);
+
+	gameState = JSON.parse(code);
+	goTo(startSection());
+  }
+  githubHTTPClient.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+  githubHTTPClient.send();
+
+	goTo(startSection());
+}	
+
+function escapeHtmlEntities (str) {
+  if (typeof jQuery !== 'undefined') {
+    // Create an empty div to use as a container,
+    // then put the raw text in and get the HTML
+    // equivalent out.
+    return jQuery('<div/>').text(str).html();
+  }
+
+  // No jQuery, so use string replace.
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/>/g, '&gt;')
+    .replace(/</g, '&lt;')
+    .replace(/"/g, '&quot;');
+}
+
+function goTo(targetState){
+  if (gameState==null){
+    return;
+  }
+	var curstate = gameState[targetState];
+	var gameArea = document.getElementById("gameArea");
+	var str = "";
+	for (var i=0;i<curstate.length;i++){
+		var l = curstate[i];
+		if (l.length==1){			
+			str+=escapeHtmlEntities(l[0])+"<br>";
+		} else if (l.length==2){
+			str+='<a href="#" onclick="goTo(\''+escapeHtmlEntities(l[1])+'\');return false;">'+escapeHtmlEntities(l[0])+'</a><br>';
+		}	
+	}
+	gameArea.innerHTML=str;
+}
+
+</script>
+</head>
+<body onload="init();" dir="auto">
+
+  <!-- injected h1 page header-->
+  <h1>chicken house</h1>
+  <br>
+  <!-- end h1 header -->
+
+<div id="gameArea" dir="auto"></div>
+
+  <!-- injected page footer ascii art -->
+  <pre>
+	     ..
+       ____ / '>
+      >-_- )  )"
+  mrf .\,,.,./.
+     '',"'.-','"
+  </pre>
+  <!-- end injected ascii art -->
+
+</body>
+</html>

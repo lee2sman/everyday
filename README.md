@@ -123,4 +123,6 @@ a virtual seder plate
 collapsed website / collapsed poesis generated  
 108  
 made during twitch tv stream for babycastles academy on april 19, 2020 during covid-19. improvisationally made live. "becoming landscape" - demo poemware.  
+109  
+BEGIN DAY 1 of ??. Finals Fantasy-Jake Elliott prompt's. Make a html branching game every day speculating on something happening nearby. Today: chicken house.  
 

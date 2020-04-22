@@ -1,0 +1,33 @@
+@font-face {
+  font-family: comfortaa;
+  src: url('../assets/fonts/comfortaa/Comfortaa-Regular.ttf');
+}
+
+body {
+  background-color: #ffcccc;
+  color: #0059b3;
+  font-family: comfortaa;
+}
+
+h1 {
+  color: black;
+  background-color: yellow;
+  display: inline-block;
+  padding: 0.3em;
+  border-radius: 1em;
+  font-size: 4em;
+}
+
+
+div {
+  display: inline-block;
+  padding: 2em;
+  border-radius: 1em;
+  background-color: lightyellow;
+  color: #cc00cc;
+  font-size: 2em;
+}
+
+a {
+  color: #00cc00;
+}
