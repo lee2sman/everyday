@@ -1,0 +1,162 @@
+﻿<!--save as html file-->
+<html  dir="auto" >
+<head>
+<link rel="icon" 
+      type="image/png" 
+      href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <title>bug life 2am</title>
+<style>
+	body {
+		margin:40px;
+		padding:40px;
+	}
+</style>
+<script>
+
+var embedDat = "%7B%22START%22:%5B%5B%22A%20woman%20stands%20in%20her%20study.%22%5D,%5B%22No,%20her%20office.%22%5D,%5B%22%22%5D,%5B%22Her%20husband,%20asleep%20next%20door.%22%5D,%5B%22%22%5D,%5B%22Her%20dog,%20asleep.%22%5D,%5B%22%22%5D,%5B%22Her%20kids,%20asleep.%22%5D,%5B%22%22%5D,%5B%22She%20reviews%20her%20work%20for%20tomorrow.%22%5D,%5B%22%22%5D,%5B%22A%20stink%20bug%20descends%22,%22DESCENDS%22%5D,%5B%22%22%5D%5D,%22__STARTSECTION__%22:%22START%22,%22DESCENDS%22:%5B%5B%22Deus%20ex%20machina%22%5D,%5B%22%22%5D,%5B%22%22%5D,%5B%22A%20slight%20scurry%20behind%20LIVE%20LOVE%20LAUGH-like%22%5D,%5B%22%22%5D,%5B%22Do%20not%20disturb%22%5D,%5B%22%22%5D,%5B%22Skitter%22,%22SKITTER%22%5D,%5B%22Freeze%22,%22FREEZE%22%5D,%5B%22%22%5D%5D,%22SKITTER%22:%5B%5B%22Krrkkle%20krrrrkkkkle%20cruk%20cruk%20cruk%22%5D,%5B%22%22%5D,%5B%22%22%5D,%5B%22Krrruk%20ukrrukle%20krkkle%20krukc%20crk%22%5D,%5B%22%22%5D,%5B%22krrk%20crkkkle%20krklk%20kllkrk%20krlklk%22%5D,%5B%22%22%5D,%5B%22%22%5D,%5B%22kkrkkl%22,%22SMASH%22%5D,%5B%22%22%5D%5D,%22SMASH%22:%5B%5B%22Hand%20reaches%20out%20with%20tissue,%20grabs,%20dumps%20into%22,%22TOILET%22%5D,%5B%22%22%5D%5D,%22TOILET%22:%5B%5B%22BURIAL%20AT%20SEA%22%5D,%5B%22%22%5D,%5B%22fin%22,%22START%22%5D,%5B%22%22%5D%5D,%22FREEZE%22:%5B%5B%22Wait%22%5D,%5B%22%22%5D,%5B%22Wait%22%5D,%5B%22%22%5D,%5B%22Wait%22%5D,%5B%22%22%5D,%5B%22Wait%22%5D,%5B%22%22%5D,%5B%22Wait%22%5D,%5B%22%22%5D,%5B%22Wait%22%5D,%5B%22%22%5D,%5B%22Wait%22%5D,%5B%22%22%5D,%5B%22Wait%22%5D,%5B%22%22%5D,%5B%22Wait%22%5D,%5B%22%22%5D,%5B%22Wait%22%5D,%5B%22%22%5D,%5B%22Wait%22%5D,%5B%22%22%5D,%5B%22Wait%22%5D,%5B%22%22%5D,%5B%22Wait%22%5D,%5B%22%22%5D,%5B%22Wait%22%5D,%5B%22%22%5D,%5B%22Wait%22%5D,%5B%22%22%5D,%5B%22krkrkle%22,%22SKITTER%22%5D,%5B%22%22%5D,%5B%22Wait%22%5D,%5B%22%22%5D,%5B%22Wait%22%5D,%5B%22%22%5D,%5B%22Wait%22%5D,%5B%22%22%5D,%5B%22Wait%22%5D,%5B%22%22%5D,%5B%22Wait%22%5D,%5B%22%22%5D,%5B%22cruk%22,%22SMASH%22%5D,%5B%22%22%5D,%5B%22Wait%22%5D,%5B%22%22%5D,%5B%22Wait%22%5D,%5B%22%22%5D,%5B%22Wait%22%5D,%5B%22%22%5D,%5B%22Wait%22%5D,%5B%22%22%5D,%5B%22.%22%5D,%5B%22.%22%5D,%5B%22.%22%5D,%5B%22.%22%5D,%5B%22.%22%5D,%5B%22.%22%5D,%5B%22.%22%5D,%5B%22.%22%5D,%5B%22.%22%5D,%5B%22.%22%5D,%5B%22.%22%5D,%5B%22.%22%5D,%5B%22.%22%5D,%5B%22.%22%5D,%5B%22.%22%5D,%5B%22.%22%5D,%5B%22.%22%5D,%5B%22%22%5D,%5B%22.%22%5D,%5B%22.%22%5D,%5B%22.%22%5D,%5B%22.%22%5D,%5B%22.%22%5D,%5B%22.%22%5D,%5B%22%22%5D,%5B%22%22%5D,%5B%22If%20a%20stink%20bug%20hides%20behind%20a%20picture%20frame%20forever,%20where%20does%20it%20go?%22,%22WAIT%22%5D,%5B%22%22%5D%5D,%22WAIT%22:%5B%5B%22It%20waits%20forever.%22%5D,%5B%22%22%5D,%5B%22%22%5D,%5B%22fin.%22,%22START%22%5D,%5B%22%22%5D%5D%7D";
+
+var gameState = null;
+
+
+var aurl = document.createElement('a');
+function qualifyURL(url) {
+ aurl.href = url;
+ return aurl.href;
+}
+
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+function strip_http(url) {
+   url = url.replace(/^https?:\/\//,'');
+   return url;
+}
+
+function startSection(){
+  if (gameState==null){
+    return "";
+  }
+  var param = getParameterByName("section");
+
+  var result = "__STARTSECTION__" in gameState ? gameState["__STARTSECTION__"] : "START";
+  if (param.length>0){
+    result=param;
+  }
+
+  return result;
+}
+
+function init(){
+	if (embedDat.length>0 && embedDat[0]!=='_'){
+		var dat = decodeURI(embedDat);
+		gameState = JSON.parse(dat);
+    var startKey = startSection();
+		goTo(startKey);
+		return;
+	}
+
+var id = getParameterByName("p").replace(/[\\\/]/,"");
+  if (id===null||id.length===0) {
+    console.log("No ID specified in URL.")
+    return;
+  }
+
+  var githubURL = 'https://api.github.com/gists/'+id;
+
+  var githubHTTPClient = new XMLHttpRequest();
+  githubHTTPClient.open('GET', githubURL);
+  githubHTTPClient.onreadystatechange = function() {
+    if(githubHTTPClient.readyState!=4) {
+      return;
+    }   
+    var result = JSON.parse(githubHTTPClient.responseText);
+    if (githubHTTPClient.status===403) {
+      console.log(result.message);
+    } else if (githubHTTPClient.status!==200&&githubHTTPClient.status!==201) {
+      console.log("HTTP Error "+ githubHTTPClient.status + ' - ' + githubHTTPClient.statusText);
+    }
+    var result = JSON.parse(githubHTTPClient.responseText);
+    var code=result["files"]["game.txt"]["content"];
+    console.log(code);
+
+	gameState = JSON.parse(code);
+	goTo(startSection());
+  }
+  githubHTTPClient.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+  githubHTTPClient.send();
+
+	goTo(startSection());
+}	
+
+function escapeHtmlEntities (str) {
+  if (typeof jQuery !== 'undefined') {
+    // Create an empty div to use as a container,
+    // then put the raw text in and get the HTML
+    // equivalent out.
+    return jQuery('<div/>').text(str).html();
+  }
+
+  // No jQuery, so use string replace.
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/>/g, '&gt;')
+    .replace(/</g, '&lt;')
+    .replace(/"/g, '&quot;');
+}
+
+function goTo(targetState){
+  if (gameState==null){
+    return;
+  }
+	var curstate = gameState[targetState];
+	var gameArea = document.getElementById("gameArea");
+	var str = "";
+	for (var i=0;i<curstate.length;i++){
+		var l = curstate[i];
+		if (l.length==1){			
+			str+=escapeHtmlEntities(l[0])+"<br>";
+		} else if (l.length==2){
+			str+='<a href="#" onclick="goTo(\''+escapeHtmlEntities(l[1])+'\');return false;">'+escapeHtmlEntities(l[0])+'</a><br>';
+		}	
+	}
+	gameArea.innerHTML=str;
+}
+
+</script>
+</head>
+<body onload="init();" dir="auto">
+  <h1>meanwhile at 2am</h1>
+<div id="gameArea" dir="auto"></div>
+<pre>
+             .-.
+            o   \     .-.
+               .----.'   \
+             .'o)  / `.   o
+            /         |
+            \_)       /-.
+              '_.`    \  \
+               `.      |  \
+                |       \ |
+            .--/`-.     / /
+          .'.-/`-. `.  .\|
+         /.' /`._ `-    '-.
+    ____(|__/`-..`-   '-._ \
+   |`------.'-._ `      ||\ \
+   || #   /-.   `   /   || \|
+   ||   #/   `--'  /  /_::_|)__
+   `|____|-._.-`  /  ||`--------`
+         \-.___.` | / || #      |
+          \       | | ||   #  # |
+          /`.___.'\ |.`|________|
+          | /`.__.'|'.`
+        __/ \    __/ \
+       /__.-.)  /__.-.) LGB
+</pre>
+
+</body>
+</html>

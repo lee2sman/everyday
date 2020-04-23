@@ -1,0 +1,33 @@
+@font-face {
+  font-family: multicolore;
+  src: url('../assets/fonts/multicolore/Multicolore.otf');
+}
+
+body {
+  background-color: #00000c;
+  color: #0059b3;
+  font-family: multicolore;
+}
+
+h1 {
+  color: lightgrey;
+  background-color: lightred;
+  display: block;
+  padding: 0.3em;
+  border-radius: 1em;
+  font-size: 4em;
+}
+
+
+div {
+  display: inline-block;
+  padding: 2em;
+  border-radius: 1em;
+  background-color: #000c9a;
+  color: #aqua;
+  font-size: 2em;
+}
+
+a {
+  color: purple;
+}
