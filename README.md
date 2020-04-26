@@ -129,4 +129,6 @@ BEGIN DAY 1 of ??. Finals Fantasy-Jake Elliott prompt's. Make a html branching g
 day 2 of ??. branching narrative of a woman and stink bug in new jersey.  
 111  
 day 3 of ??. non-branching-stream-of-thoughtlessness.  
+112  
+my own *obscure instructions*, inspired by Eno and Scmidt, Yoko Ono, and Do It. Also hosted on glitch and itch! Why not.   
 
