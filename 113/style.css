@@ -1,0 +1,28 @@
+html, body{ height:100%; margin:0; }
+header{ height:50px; background:lightcyan; }
+footer{ height:50px; background:PapayaWhip; }
+
+/* Trick */
+body{ 
+  display:flex; 
+  flex-direction:column; 
+}
+
+#overlay {
+  z-index: 1000;
+  margin: 1em 2em 2em 1em;
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1em;
+}
+
+.bg-color {
+  padding: 2rem;
+  border: dashed;
+  background-color: yellow;
+  color: purple;
+}
+
+
