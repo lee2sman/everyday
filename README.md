@@ -133,4 +133,5 @@ day 3 of ??. non-branching-stream-of-thoughtlessness.
 my own *obscure instructions*, inspired by Eno and Scmidt, Yoko Ono, and Do It. Also hosted on glitch and itch! Why not.   
 113  
 custom 404 page based on 107  
-
+114  
+it's been a min. added a page of my goals, assessing where i'm at during this halfyear mark.  
