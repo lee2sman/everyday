@@ -135,3 +135,7 @@ my own *obscure instructions*, inspired by Eno and Scmidt, Yoko Ono, and Do It. 
 custom 404 page based on 107  
 114  
 it's been a min. added a page of my goals, assessing where i'm at during this halfyear mark.  
+115, 116  
+reviving my self-playing starter p5.roguelike in some tests  
+117  
+one-dimensional version of roguelike, sketch 81  
