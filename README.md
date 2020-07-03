@@ -139,8 +139,6 @@ it's been a min. added a page of my goals, assessing where i'm at during this ha
 reviving my self-playing starter p5.roguelike in some tests  
 117  
 one-dimensional version of roguelike, sketch 81  
-118 - 120  
-various frank stella-ish viz tests  light and surupy  
-121  
-variation on above with drawings i did in nopaint  
+118 - 123  
+various frank stella-ish viz tests. light and surupy. then dark and heavy. remangling past imagery. etc.  
 
