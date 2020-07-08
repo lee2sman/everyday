@@ -143,3 +143,6 @@ one-dimensional version of roguelike, sketch 81
 various frank stella-ish viz tests. light and surupy. then dark and heavy. remangling past imagery. etc.  
 124  
 website test of something  
+125  
+i coded up an amateur 1-dimensional hunt the wumpis (which i call wimpis) for hardware, the microbit, and an emulated version here that works in the browser  
+
