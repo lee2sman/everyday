@@ -145,4 +145,5 @@ various frank stella-ish viz tests. light and surupy. then dark and heavy. reman
 website test of something  
 125  
 i coded up an amateur 1-dimensional hunt the wumpis (which i call wimpis) for hardware, the microbit, and an emulated version here that works in the browser  
-
+126-127  
+some tests with hands. don't mind me.    

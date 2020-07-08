@@ -1,0 +1,126 @@
+html {
+	margin: 0;
+	padding: 0;
+	scroll-snap-type: y mandatory;
+}
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-family: "Roboto Mono", monospace;
+	font-size: 6rem;
+}
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+p,
+ul,
+li {
+	margin: 2vmin;
+	padding: 2vmin;
+}
+ul {
+	list-style-type: none;
+}
+.block {
+	width: 100%;
+	height: 100vh;
+	border: 4px dotted #000000;
+	scroll-snap-align: start;
+}
+.squish-block {
+	height: 20vh;
+}
+#one {
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#signup-third {
+	background-color: #73d974;
+	margin: 3vmin;
+	width: 33%;
+}
+
+#two {
+	background-color: #ec5b5b;
+}
+#three {
+	background-color: #fff;
+	display: flex; /* this div is the container to hold minibar-left */
+	flex-direction: row;
+}
+#minibar-left {
+	/* inside 3 on the left */
+	background-color: #73d974;
+	min-width: 15vw;
+	height: 100%;
+	/* for the smiley (this div is container */
+	display: flex;
+	justify-content: center;
+}
+#four {
+	background-color: #fff;
+	display: flex; /* this div is the container to hold minibar-right */
+	/* push this column to the right */
+	justify-content: flex-end;
+}
+#minibar-right {
+	background-color: #6b94de;
+	width: 15vw;
+	height: 100%;
+	/* for the social media icons inside */
+	display: flex-end;
+	flex-direction: column;
+	/* justify-content: space-around; */
+	align-items: center;
+}
+.bar-item {
+	height: 15vmin;
+	margin: 5vmin;
+}
+#five {
+	background-color: #fff;
+	display: flex; /* this div is the container to hold signup button on right */
+	/* push this to the right */
+	justify-content: flex-end;
+}
+#signup-half {
+	background-color: #73d974;
+	margin: 3vmin;
+	width: 50%;
+}
+
+/* ANIMATION / INTERACTION STUFF */
+.hand {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 25vw;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 600px) {
+	body {
+		font-size: 2rem;
+	}
+	.block {
+		width: 100%;
+	}
+
+	.squish-block {
+		height: 30vh;
+	}
+
+	#minibar-left,
+	#minibar-right {
+		width: 30vw;
+	}
+}
