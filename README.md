@@ -147,4 +147,5 @@ website test of something
 i coded up an amateur 1-dimensional hunt the wumpis (which i call wimpis) for hardware, the microbit, and an emulated version here that works in the browser  
 126-128  
 some tests with hands. don't mind me.    
-
+129  
+um i just needed something to pick a card any card  

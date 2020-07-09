@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>card picker</title>
+		<style>
+			body {
+				background-color: #DAF3EF;
+			}
+			button {
+				background-color: purple;
+				color: white;
+				font-size: 2em;
+				margin: 3em;
+				padding: 4em;
+				border: dotted 10px green;
+				border-radius: 6%;
+			}
+			span {
+				font-size: 6em;
+			}
+			img {
+			    position: fixed;
+			    bottom: 0;
+			    right: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<button onmousedown="clonked()">
+			ladies and gentlemen step right up step right yes you young man you sir
+			just step right up that's right yes i'm talking to you you just over there
+			and what's your name sir lee excellent lee now if you don't mind i'm just
+			going to shuffle the deck and you tell me when to stop now lee we don't
+			know each other right ok but make sure you say it loud enough for the
+			audience to hear we don't know each other right i didn't put you up to
+			this okay well i'm still shuffling now lee tell me when i should stop ok
+			and i've stopped ok and let's see what card you got
+		</button>
+
+		<img src="barker.png">
+		<script>
+			function clonked() {
+				let cards = [
+					"🂡",
+					"🂱",
+					"🃁",
+					"🃑",
+					"🂢",
+					"🂲",
+					"🃂",
+					"🃒",
+					"🂣",
+					"🂳",
+					"🃃",
+					"🃓",
+					"🂤",
+					"🂴",
+					"🃄",
+					"🃔",
+					"🂥",
+					"🂵",
+					"🃅",
+					"🃕",
+					"🂦",
+					"🂶",
+					"🃆",
+					"🃖",
+					"🂧",
+					"🂷",
+					"🃇",
+					"🃗",
+					"🂨",
+					"🂸",
+					"🃈",
+					"🃘",
+					"🂩",
+					"🂹",
+					"🃉",
+					"🃙",
+					"🂪",
+					"🂺",
+					"🃊",
+					"🃚",
+					"🂫",
+					"🂻",
+					"🃋",
+					"🃛",
+					"🂭",
+					"🂽",
+					"🃍",
+					"🃝",
+					"🂮",
+					"🂾",
+					"🃎",
+					"🃞"
+				];
+
+				let selection = cards[Math.floor(Math.random() * cards.length)];
+				let h = document.createElement("SPAN");
+				let t = document.createTextNode(selection);
+				h.appendChild(t);
+
+				document.body.appendChild(h);
+			}
+		</script>
+	</body>
+</html>
