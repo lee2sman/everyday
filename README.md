@@ -149,3 +149,5 @@ i coded up an amateur 1-dimensional hunt the wumpis (which i call wimpis) for ha
 some tests with hands. don't mind me.    
 129  
 um i just needed something to pick a card any card  
+130  
+a variation of 118, and color red  
