@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Test 132</title>
+		<style>
+			body {
+				margin: 0;
+				border: 0;
+				padding: 0;
+			}
+			.container {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+			.half {
+				box-sizing: border-box;
+				width: 100vw;
+				height: 50vh;
+				background-color: purple;
+background-image: linear-gradient(-0.5deg, red, yellow, blue);
+				color: blue;
+				padding: 5vmin;
+				font-size: 1.6em;
+			}
+			.bottom {
+background-image: linear-gradient(2deg, red, yellow, blue);
+
+			}
+			.mark {
+			  background-color: yellow;
+background-image: linear-gradient(22deg, yellow, #ffe6e6);
+				padding: 2em;
+				display: inline;
+				border-radius: 0.15em;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="half">
+				<p class="mark">hello</p>
+			</div>
+			<div class="half bottom">
+				<p class="mark">world</p>
+			</div>
+		</div>
+	</body>
+</html>
