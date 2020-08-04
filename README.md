@@ -41,10 +41,7 @@ Paintmaster. instant digital glitch funk backgrounds. click to redraw.
 dungeon map maker - control sprites  
 64  
 10,000 bowls of oatmeal dungeon zone name generator  
-- 'pair of earrings mall'  
-- 'shoe lace economic zone'  
-- 'incense holder institute'  
-- 'rat mission'  
+'pair of earrings mall','shoe lace economic zone','incense holder institute','rat mission'  
 65  
 unfinished ascii block drawing, ultra too simple n bug-ful  
 66  
