@@ -3,12 +3,15 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>Procrastination</title>
+		<script src="../lib/p5.min.js"></script>
 		<style>
 			body {
 				font-family: Helvetica, sans-serif;
 				padding: 1rem;
 				border: dotted;
 				margin: 1rem;
+
+				background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
 				border-radius: 4%;
 			}
 
@@ -17,296 +20,134 @@
 			}
 			p {
 				font-size: 1em;
-			}
-			ul {
-				font-size: 1.3em;
-				list-style: none;
+				line-height: 2em;
 				color: blue;
-			}
-			li {
-				padding: 0.3rem;
 				display: inline-block;
-				margin: 0.3rem;
+				padding: 2vmin;
+			}
+			button {
+				background-color: lightgreen;
+				padding: 1em;
+				font-size: 1.2em;
+				border-radius: 0.5em;
 			}
 		</style>
 	</head>
 	<body id="home">
 		<h1>Things I have chosen to do rather than update my website:</h1>
-		<p>
-			It has taken me 2+ years to update my website. This is a list of excuses
-			for what I was doing instead of updating my website
-		</p>
-		<ul>
-			<li>
-				Surfing the web mindlessly
-			</li>
-			<li>
-				Cooking dinner
-			</li>
-			<li>
-				Prepping to teach class
-			</li>
-
-			<li>
-				Relaxing after long commute home
-			</li>
-
-			<li>
-				Playing a game
-			</li>
-
-			<li>
-				Reading the Times
-			</li>
-
-			<li>
-				Looking at instagram
-			</li>
-
-			<li>
-				Checking Discord
-			</li>
-
-			<li>
-				Reading a book
-			</li>
-
-			<li>
-				Taking a walk
-			</li>
-
-			<li>
-				Watching Columbo
-			</li>
-
-			<li>
-				Making a different website for fun
-			</li>
-
-			<li>
-				Traveling
-			</li>
-
-			<li>
-				Texting
-			</li>
-
-			<li>
-				Playing the synth
-			</li>
-
-			<li>
-				Watching a documentary
-			</li>
-
-			<li>
-				Responding to an email
-			</li>
-
-			<li>
-				Chopping vegetables
-			</li>
-
-			<li>
-				Taking out the trash
-			</li>
-
-			<li>
-				Picking up groceries
-			</li>
-
-			<li>
-				Cleaning
-			</li>
-
-			<li>
-				Recording music
-			</li>
-
-			<li>
-				Biking
-			</li>
-
-			<li>
-				Climbing
-			</li>
-
-			<li>
-				Drinking
-			</li>
-
-			<li>
-				Coding a game
-			</li>
-
-			<li>
-				Researching something
-			</li>
-
-			<li>
-				Reading Wikipedia
-			</li>
-
-			<li>
-				Talking on the phone to my parents
-			</li>
-
-			<li>
-				Talking to x
-			</li>
-
-			<li>
-				Barbecuing
-			</li>
-
-			<li>
-				Writing
-			</li>
-
-			<li>
-				Shaving
-			</li>
-
-			<li>
-				Drawing
-			</li>
-
-			<li>
-				Digital painting
-			</li>
-
-			<li>
-				Organizing
-			</li>
-
-			<li>
-				Moving
-			</li>
-
-			<li>
-				Learning Toki Pona
-			</li>
-
-			<li>
-				Learning Forth
-			</li>
-
-			<li>
-				Watering the plants
-			</li>
-
-			<li>
-				Doing laundry
-			</li>
-
-			<li>
-				Going to an exhibit
-			</li>
-
-			<li>
-				Going to a museum
-			</li>
-
-			<li>
-				Going to a concert
-			</li>
-
-			<li>
-				Listening to music
-			</li>
-
-			<li>
-				Dancing
-			</li>
-
-			<li>
-				Sketching
-			</li>
-
-			<li>
-				Visiting my parents
-			</li>
-
-			<li>
-				Visiting friends
-			</li>
-
-			<li>
-				Drinking on the roof
-			</li>
-
-			<li>
-				Talking to C
-			</li>
-
-			<li>
-				Talking to D
-			</li>
-
-			<li>
-				Talking to J
-			</li>
-
-			<li>
-				Talking to A,L,F,J,J,..
-			</li>
-
-			<li>
-				Looking at graffiti
-			</li>
-
-			<li>
-				Sewing
-			</li>
-
-			<li>
-				Reading a novel
-			</li>
-
-			<li>
-				Office hours with students
-			</li>
-
-			<li>
-				Looking at trees and the sky
-			</li>
-
-			<li>
-				Looking something up online
-			</li>
-
-			<li>
-				Meeting up with a friend
-			</li>
-
-			<li>
-				Moving the car
-			</li>
-
-			<li>
-				Code 'sketching'
-			</li>
-			<li>
-				Petting a cat
-			</li>
-			<li>
-				Exercising
-			</li>
-
-			<li>
-				I don't remember
-			</li>
-
-			<li>
-				WASTING TIME
-			</li>
-		</ul>
+		<h2>
+			It has taken me 2+ years to update my website. This is an excuse for what
+			I was doing instead of updating my website:
+		</h2>
+		<script>
+			let excuses = [
+				"Surfing the web mindlessly",
+				"Cooking dinner",
+				"Prepping to teach class",
+				"Relaxing after long commute home",
+				"Playing a game",
+				"Reading the Times",
+				"Looking at instagram",
+				"Checking Discord",
+				"Reading a book",
+				"Taking a walk",
+				"Watching Columbo",
+				"Making a different website for fun",
+				"Traveling",
+				"Texting",
+				"Playing the synth",
+				"Watching a documentary",
+				"Responding to an email",
+				"Chopping vegetables",
+				"Taking out the trash",
+				"Picking up groceries",
+				"Cleaning",
+				"Recording music",
+				"Making A Zine",
+				"Biking",
+				"Mountain Biking",
+				"Looking For Something I've Lost",
+				"Taking The Trash Out",
+				"Looking For A Book At The Library",
+				"Typing A Story",
+				"Drinking Seltzer",
+				"Checking The Weather",
+				"Laughing At Something",
+				"Climbing",
+				"Playing The Synth",
+				"Editing Music",
+				"Writing A Letter",
+				"Drinking",
+				"Coding a game",
+				"Researching something",
+				"Reading Wikipedia",
+				"Talking on the phone to my parents",
+				"Talking to x",
+				"Barbecuing",
+				"Writing",
+				"In a Meeting",
+				"Shaving",
+				"Looking at a Picture",
+				"Drawing",
+				"Digital painting",
+				"Organizing",
+				"Moving",
+				"Learning Toki Pona",
+				"Learning Forth",
+				"Watering the plants",
+				"Measuring Something (twice)",
+				"Doing laundry",
+				"Going to an exhibit",
+				"Going to a museum",
+				"Going to a concert",
+				"Listening to music",
+				"Dancing",
+				"Sketching",
+				"Visiting my parents",
+				"Visiting friends",
+				"Playing Bocce",
+				"Drinking on the roof",
+				"Talking to C",
+				"Talking to D",
+				"Talking to J",
+				"Talking to A,L,F,J,J,..",
+				"Looking at graffiti",
+				"Sewing",
+				"Reading a novel",
+				"Admiring Art",
+				"Visiting A Museum",
+				"Office hours with students",
+				"Looking at trees and the sky",
+				"Looking something up online",
+				"Meeting up with a friend",
+				"Watching Cartoons",
+				"Reading Comix",
+				"Writing a Wiki",
+				"Listening to Klezmer",
+				"Staring Out The Window",
+				"Checking Other Things Off My Task List",
+				"Reading About Organizational Methods",
+				"Moving the car",
+				"Code sketching",
+				"Exercising",
+				"I don't remember",
+				"WASTING TIME"
+			];
+		</script>
 		<button onclick="roll()">
-			reroll
+			roll an excuse
 		</button>
 		<script>
+			function setup() {
+				noCanvas();
+			}
+			function draw() {}
+
 			function roll() {
-				document.body.style.backgroundColor =
+				createP(excuses[int(random(excuses.length - 1))]);
+
+				const lis = Array.from(document.querySelectorAll("p"));
+				lis[lis.length - 1].style.color =
 					"rgb(" +
 					Math.floor(Math.random() * 255) +
 					"," +
@@ -314,31 +155,14 @@
 					"," +
 					Math.floor(Math.random() * 255) +
 					")";
-				const lis = Array.from(document.querySelectorAll("li"));
-				for (let i = 0; i < lis.length; i++) {
-					lis[i].style.color =
-						"rgb(" +
-						Math.floor(Math.random() * 255) +
-						"," +
-						Math.floor(Math.random() * 255) +
-						"," +
-						Math.floor(Math.random() * 255) +
-						")";
-					lis[i].style.backgroundColor =
-						"rgb(" +
-						Math.floor(Math.random() * 255) +
-						"," +
-						Math.floor(Math.random() * 255) +
-						"," +
-						Math.floor(Math.random() * 255) +
-						")";
-				}
-
-				/*
-    let lis = document.getElementsByTagName("li");
-    lis.
-background-color:rgb(255, 0, 0);
-*/
+				lis[lis.length - 1].style.backgroundColor =
+					"rgb(" +
+					Math.floor(Math.random() * 255) +
+					"," +
+					Math.floor(Math.random() * 255) +
+					"," +
+					Math.floor(Math.random() * 255) +
+					")";
 			}
 			roll();
 		</script>
