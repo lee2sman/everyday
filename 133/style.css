@@ -1,0 +1,30 @@
+body,
+canvas {
+	background-color: black;
+	margin: 0;
+	padding: 0;
+}
+p {
+	margin: 3vmin;
+	padding: 3vmin;
+	font-size: 1.2rem;
+	display: inline-block;
+	border-radius: 0.7rem;
+	color: white;
+	animation: anim 5s infinite !important;
+}
+@keyframes anim {
+	0% {
+		background-color: none;
+		transform: scale(1);
+	}
+	50% {
+		background-color: grey;
+		opacity: 0.6;
+		transform: scale(1.025);
+	}
+	to {
+		background-color: none;
+		transform: scale(1);
+	}
+}
