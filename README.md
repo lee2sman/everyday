@@ -154,3 +154,6 @@ procrastination for 5 min
 test to see if git hooks workin'  
 133 - 135  
 sigil generator, zygil generator, zyzzyggyy generator  
+136  
+this is basically my hello world for pico-8. no significant interaction yet. arrow keys move.  
+
