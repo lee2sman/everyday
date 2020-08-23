@@ -1,0 +1,26 @@
+			body {
+				font-family: sans-serif;
+				background-color: Ivory;
+			}
+			h1 {
+				font-size: 3rem;
+				border-radius: 0.2rem;
+				background-color: pink;
+				border: 3px dashed;
+				display: inline-block;
+			}
+			p {
+				margin: 1vmin;
+				padding: 1vmin;
+				border-radius: 0.3rem;
+				background-color: yellow;
+				font-size: 1.7rem;
+				border: 2px dotted;
+				display: inline-block;
+			}
+			button {
+				background-color: Gainsboro;
+				margin: 2vmin;
+				padding: 2vmin;
+				border-radius: 0.3rem;
+			}
