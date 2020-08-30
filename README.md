@@ -162,3 +162,5 @@ a personal tool to play a game
 uh-oh, starting pico-8. a generative toything  
 139  
 found this on old computer from several several years ago. added fillp and then >>> published.  
+140  
+same, an early sketch i just found, from before i knew pico-8 or lua. i added in some random fillp backgrounds.
