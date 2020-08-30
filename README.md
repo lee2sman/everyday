@@ -160,3 +160,5 @@ this is basically my hello world for pico-8. no significant interaction yet. arr
 a personal tool to play a game  
 138  
 uh-oh, starting pico-8. a generative toything  
+139  
+found this on old computer from several several years ago. added fillp and then >>> published.  
