@@ -166,4 +166,5 @@ found this on old computer from several several years ago. added fillp and then 
 same, an early sketch i just found, from before i knew pico-8 or lua. i added in some random fillp backgrounds.  
 141  
 pico-8 quilt generator  
-
+142  
+progressing on my quiltlike, tiny village walkabout. procedural generation of the village map implemented, along with naming each location. makes fun of the Museum of Pizza, Museum of Illusions, etc - the tourist/slob-circuit in nyc. anyway....  
