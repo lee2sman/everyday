@@ -168,3 +168,5 @@ same, an early sketch i just found, from before i knew pico-8 or lua. i added in
 pico-8 quilt generator  
 142  
 progressing on my quiltlike, tiny village walkabout. procedural generation of the village map implemented, along with naming each location. makes fun of the Museum of Pizza, Museum of Illusions, etc - the tourist/slob-circuit in nyc. anyway....  
+143  
+more progress! quiltfolk is now a full village, procedurally generated, with houses, people, mini conversation stubs and procedurally generated quilts!  
