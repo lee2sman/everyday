@@ -172,3 +172,6 @@ progressing on my quiltlike, tiny village walkabout. procedural generation of th
 more progress! quiltfolk is now a full village, procedurally generated, with houses, people, mini conversation stubs and procedurally generated quilts!    
 144  
 digital holga cam  
+145  
+same but 100px x 100px, for use in Xzone workshop in Our Networks conference  
+
