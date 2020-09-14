@@ -1,9 +1,5 @@
 let cnv, capture, camIcon, vignette;
 
-if (location.protocol !== 'https:') {
-    location.replace(`https:${location.href.substring(location.protocol.length)}`);
-}
-
 function preload(){
   camIcon=loadImage('vintage.png');
 }
