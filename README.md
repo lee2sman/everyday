@@ -174,4 +174,6 @@ more progress! quiltfolk is now a full village, procedurally generated, with hou
 digital holga cam  
 145  
 same but 100px x 100px, for use in Xzone workshop in Our Networks conference  
+146, 147  
+like the 122s w/ dif imgs  
 
