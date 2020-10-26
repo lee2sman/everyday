@@ -1,0 +1,53 @@
+@font-face {
+	font-family: roman;
+	src: url(assets/fonts/RomanAntique.ttf);
+}
+html,
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #d0c8b1;
+	font-family: roman;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container {
+	width: 80vw;
+	height: 100vh;
+	box-sizing: border-box;
+	display: flex;
+}
+#photo {
+	width: 60vw;
+}
+#ui {
+	background-color: #c1bc97;
+	width: 20vw;
+	font-size: x-large;
+}
+
+#buttons {
+         height: 50%;
+	 border: 2px dotted;
+	 display: flex;
+	 flex-direction: column;
+	 justify-content: space-around;
+}
+.actions {
+         height: 5vh;
+	 border: dashed;
+	 padding: 1vmin;
+	 background-color: #d0c8b1;
+
+}
+#console {
+         height: 50%;
+	 border: 2px dotted;
+
+}
+p {
+	padding: 1vmin;
+	line-height: 1em;
+}
