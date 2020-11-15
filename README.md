@@ -177,5 +177,6 @@ same but 100px x 100px, for use in Xzone workshop in Our Networks conference
 146, 147, 148, 149  
 like the 122s w/ dif imgs  
 150  
-this is an attempt at recreating a mid-90s shareware videogame I used to play on Mac system 9. It came on a disk with hundreds of programs on it. I don't remember the name. The graphics and sound were different. This is my take. Images from [Ruins of Desert Cathay](https://archive.org/details/ruinsofdesertcat01stei).  
-
+this is an attempt at recreating a mid-90s shareware videogame I used to play on Mac system 9. It came on a disk with hundreds of programs on it. I don't remember the name. The graphics and sound were different. This is my take. Images from [Ruins of Desert Cathay](https://archive.org/details/ruinsofdesertcat01stei).  This is a first commit/version, i am continuing to work on it in another location and will publish to my itch page.  
+151  
+first step, generating a random "customer" as a first step to possibly building out a generated world, inspired by my microfiction game Shopkeeper  
