@@ -180,3 +180,5 @@ like the 122s w/ dif imgs
 this is an attempt at recreating a mid-90s shareware videogame I used to play on Mac system 9. It came on a disk with hundreds of programs on it. I don't remember the name. The graphics and sound were different. This is my take. Images from [Ruins of Desert Cathay](https://archive.org/details/ruinsofdesertcat01stei).  This is a first commit/version, i am continuing to work on it in another location and will publish to my itch page.  
 151, 152  
 first steps. 151: generating a random "customer" as a first step to possibly building out a generated world, inspired by my microfiction game Shopkeeper. 152: trying to figure out why translate is also rotating, probably due to adding up translations in draw? more investigation needed.  
+153  
+dice thing  
