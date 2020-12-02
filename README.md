@@ -182,3 +182,5 @@ this is an attempt at recreating a mid-90s shareware videogame I used to play on
 first steps. 151: generating a random "customer" as a first step to possibly building out a generated world, inspired by my microfiction game Shopkeeper. 152: trying to figure out why translate is also rotating, probably due to adding up translations in draw? more investigation needed.  
 153  
 dice thing  
+154  
+DIY slideshow  
