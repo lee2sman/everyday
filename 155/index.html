@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<title>todo</title>
+<script src="../lib/p5.min.js"></script>
+<script>
+function setup() {
+  i = createInput('todo')
+  i.input(function(){t=this.value()})
+}
+function keyPressed(){
+  if (keyCode==13){
+    createCheckbox(t)
+  }
+}
+</script> 
