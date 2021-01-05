@@ -192,3 +192,5 @@ based on 155, extended simply, an idea that came to me quickly, around 2am. made
 mit commission, minus seed / page api / print capability  
 159  
 b&w THRESHOLD variation  
+160  
+same as 159 but camera follows (zero) player, always placing at center  
