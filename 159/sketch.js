@@ -251,6 +251,8 @@ filter(THRESHOLD);
         detectSave();
   } else {
         startScreen();
+
+filter(THRESHOLD);
   }
 }
 
@@ -356,13 +358,7 @@ function drawRoomText() {
 	textAlign(LEFT, TOP);
 	fill(5);
 	rectMode(CORNER);
-	rect(0, height - 50, width, 50);
-	fill(0, 200, 0);
-	text(fortune[roomText], textX, height - 50);
-	textX--;
-	if (textX + fortune[roomText].length * 25 < 0) {
-		textX = 30;
-	}
+	
 	if (millis() < roomTimer) {
 		fill(20);
 		textFont(overpass);
