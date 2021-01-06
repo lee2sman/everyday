@@ -194,3 +194,5 @@ mit commission, minus seed / page api / print capability
 b&w THRESHOLD variation  
 160  
 same as 159 but camera follows (zero) player, always placing at center  
+161  
+i love this one. my first generative animated illustrated dream.  
