@@ -270,7 +270,7 @@ function drawRoomText() {
   rect(player.position.x-width/2,player.position.y+height/2-50,width,50);
 	fill(200);
 	text(fortune[lineOfText], player.position.x-width/2+textX, player.position.y+height/2 - 50);
-	textX-=20;
+	textX-=10;
 	if (textX + fortune[roomText].length * 25 < 0) {
 
 lineOfText++;
