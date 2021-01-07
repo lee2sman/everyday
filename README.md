@@ -198,3 +198,5 @@ same as 159 but camera follows (zero) player, always placing at center
 i love this one. my first generative animated illustrated dream.  
 162  
 modified version of 158 that changes from Black and White to Color periodically  
+163  
+another dream, about a cat playing with 'a penumbra'  
