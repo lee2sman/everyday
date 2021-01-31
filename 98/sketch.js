@@ -9,7 +9,7 @@ let mic, micLevel, rot = 0;
 function setup(){
   createCanvas(windowWidth,windowHeight,WEBGL);
 
-  noStroke();
+  noStroke(); //remove debug lines
 	f = loadFont('assets/DS-TERM.TTF',startScreen);
 
   faceImg = loadImage('assets/background1.jpg',function(){faceReady = true;});
