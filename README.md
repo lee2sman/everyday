@@ -204,3 +204,5 @@ another dream, about a cat playing with 'a penumbra'
 starter title screen scroller / randomizer, for use by other scripts for an autonomous generative animated story-movie for an exhibit  
 165  
 started something new, a test submission possibly for taper6. i rarely code in straightup js so it took me more than a reasonable time to get this simple code setup.  
+166  
+made a tiny logo-like toy language DSL and tested it out here, implementing something like gary stager's 21st century logo quilts assignment  
