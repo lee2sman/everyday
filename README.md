@@ -212,3 +212,5 @@ added another quilt i made with my PLogo
 quilt of trees in a forest  
 169  
 same as 168, now with retro filter applied  
+170  
+made a drunk turtle walk with my LOGO. "art" as neil would say.  
