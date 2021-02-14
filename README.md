@@ -214,3 +214,7 @@ quilt of trees in a forest
 same as 168, now with retro filter applied  
 170  
 made a drunk turtle walk with my LOGO. "art" as neil would say.  
+171  
+same as 170 but added console output  
+172  
+nother quick test run, minor changes  
