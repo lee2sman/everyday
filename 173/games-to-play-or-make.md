@@ -1,0 +1,65 @@
+# Games I'd like to play and/or make
+
+- [ ] a command line text-game where you wander between different villages with a donkey. You are trying to buy ~~silks~~ textiles. Like Dopewars? When you are successful, you return home to a feast. High chance of failure.
+- [ ] a hand drawn black and white (charcoal? pencil?) and scanned in assets. You ar ewandering around a bombed-out post-apocalyptic landscape, but plants are taking back over (kudzu?). Ther aer old broken bits of technology, like old keyboards and ethernet cables that you can find occasionally. At some point you find a gameboy and turn it on. It still works and you can play little games on it.
+- [ ] A game where you have to fill out generated grants and artists statements with your wildest ideas. Each form and RPF is different. But when you submit, there is some chance your grant will be *accepted* (maybe it depends on number of questions what your chances are?). Fireworks shoot off when one of your grants is accepted and your score increases by one.
+- [ ] A game where you are pushing a katamari ball and you roll up and remove cars from the street. Eventually you are big enough to roll up McMansions, police departments, prisons, corporations.
+- [ ] a videogame where you read a book
+- [ ] a videogame at the north (south?) pole. Made up of generated pokey the penguin characters and dialog and quests that don't need to be done.
+- [ ] A roguelike where you play a monster trying to kill the player. When you get killed you are reincarnated as the next monster.
+- [ ] ~~A twine game version of Passage.~~ nvm 
+- [ ] ~~a 2d videogame where i am the main character and i live in a treehouse with lots of cats~~
+- [ ] an actual paper rad x corey arcangel homebrew nintendo game
+- [ ] a video game where you play as slime mold
+- [ ] a videogame where the "screen" you are playing on is a strip of lightbulbs
+- [ ] a chess game that slowly unfolds with input via a blood sugar monitor. If I keep my blood sugar in check, my player (AI-controlled) is a bit "smarter" and does better. As I'm spiking or dropping, my AI makes bad moves against the opponent.
+- [ ] a roguelike played on the Monome Teletype that produces musical output as you battle and explore. 
+- [ ] games that fit in the size of a tweet. any language.
+- [ ] a text game where you travel through rural parts of northern thailand, burma and laos that includes music from tribes of the region
+- [ ] a 3d game where are a black hole that absorbs an entire IKEA 
+- [ ] a videogame that you play with your nose
+- [ ] i think it would be cool to have a game played with a controller made out of bread. maybe some kind of cooking game.
+- [ ] lots of personalized remakes of Muscle March (the GREATEST videogame of all time)
+- [ ] a donkey kong country mine cart level maker/generator
+- [ ] make games where you can play the radio and change stations
+- [ ] a choose your own adventure played with morse code audio and a code keyer
+- [ ] a game like rock band except that it's a jazz quartet playing a simple 1-4-5 blues progression and you're playing keyboard accompaniment while NPCs take turns soloing. you have a midi keyboard controller and nothing bad happens if you hit off notes other than it may sound bad to you. it should have a bunch of fake book songs to choose from, slow blues, and the sounds of glasses clinking and clapping after solos.
+- [ ] a game where you collect snipped out letters and then compose a ransom note. it tells you who the ransom note should be written for.
+- [ ] a remake of the mac plus helicopter drop game. needs some good music.
+- [ ] a game that asks you to list 15 or 20 ingredients from your kitchen at the beginning, and when you finally win or lose it, it produces a recipe for you
+- [ ] a game based on Caves of Qud style graveyards. All you do is walk around explore the tombstones and epitaphs.
+- [ ] a shared online radio station you can DJ with your friends
+- [ ] write a text adventure game based on the box art of the original Mastermind game. (okay, you can have a version of the original game played within the text game as well).
+- [ ] a series of oulipo text games
+- [ ] Dungeon Painter. whatever that is.
+- [ ] a game that can be played and experienced in google forms
+- [ ] a game for that fancy ipod-like vape that comes with the game Simon. do they still have that? can you hack the firmware? *[update](https://www.youtube.com/watch?v=uAt7wfiNOdE)*
+- [ ] an interactive audio-based exercise game that you play maybe on a phone, like the zombies run game but the story is interesting
+- [X] a game where you draw all the rooms from your childhood home. you can add yourself as a playable character if you want.
+- [ ] a game where robotic legs can try on many different silly shoes and you get to see how it affects their walk
+- [ ] Qwoperpillar - a qwop-like but with 20 legs
+- [ ] Mario Teaches Cooking
+- [ ] Felicia's Pizza (where i worked in high school) made in the Hotline Miami level editor
+- [ ] 9 men's morris played live (not turn-based) by 2 teams. Games will probably last just a few seconds?
+- [ ] a chess RPG
+- [ ] a game you play by going to sleep. when you wake up you look to see how well your character did, read about their adventure, qquests, treasure gained, monsters fought, etc. Your character has greater chance of success and riches based on getting closest to adequate amount of sleep.
+- [ ] a Tamagotchi based on my exercising
+- [ ] more games where you assemble scrap quilt parts
+- [ ] write back stories for all the characters in the boring Spades game I have on my iPad. What's their story? How did they come to be playing this game?
+- [X] a LOGO-like where you can control the character in a roguelike game only by issuing instruction code. you have to write your own movement and action and combat functions and use them when you're not hungry. *update: this is actually how most kids' "learn to program" environments [are made now](https://www.apple.com/swift/playgrounds/)*
+- [ ] a simple grad-based level editor. You can click to place enemies, power ups, potions, weapons and add the player. click to try the level, and a button to export or share.
+- [ ] more games that are based on or use the Talmud
+- [ ] a really crappy trippy weird reimplementation of Carmen Sandiego
+- [ ] a really crappy digital CLAW machine game where the prizes are generated and if you successfully grab one it gets added to your inventory and displayed on the desktop
+- [ ] an adventure game (collaborative or solo) played on a chalkboard, whiteboard or post-it notes
+- [ ] a drawing app where there is an occasional sound affect playing from the original NBA Jam as you draw. ("Perfect!", "He's on fire!","Is it the shoes?!")
+- [ ] 10,000 bowls of oatmeal, the game
+- [ ] a game where you design or select a simple flag, motto, food, drink, flower favored in each village and then see how civilization plays out and cultures combine and influence each other
+- [ ] a game where you collect and read library books. there should be a large number of books (from project gutenberg?) and nooks to read in. actually, maybe the virtual nook should drop away and the while the character reads the book on the screen you should mostly just have the ebook available for you to read in your own real nook somewheres
+- [ ] what if the mechanics of the NES space vikings game had gone on to become a canon genre of games and there were clones and variations of it available on every platform?
+- [X] no more plant simulation games. get actual plants. jeez.
+- [ ] more games like robot finds kitten
+- [ ] root bear as possible inventory item
+- [ ] 3d open world game but it's raining a ton, like Seattle
+- [ ] text game but in toki pona
+- [ ] a LOGO-like where the player issues the normal commands to move around and turn but also can augment and add arms, legs, other appendages like tank treads and strange abilities
