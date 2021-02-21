@@ -218,3 +218,5 @@ made a drunk turtle walk with my LOGO. "art" as neil would say.
 same as 170 but added console output  
 172  
 nother quick test run, minor changes  
+173  
+a submission to list jam 2021  
