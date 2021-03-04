@@ -220,3 +220,5 @@ same as 170 but added console output
 nother quick test run, minor changes  
 173  
 a submission to list jam 2021  
+174  
+link to Gobi game on itch.io  

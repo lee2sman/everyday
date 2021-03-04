@@ -1,0 +1,53 @@
+html {
+  background-image: url("beach.gif");
+  background-repeat: repeat; 
+}
+body {
+	max-width: 38em;
+	margin: auto;
+	padding: 2vmin;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	background-color: white;
+	opacity: 0.7;
+}
+h1 {
+ background-color: #668cff;
+ padding: 1vmin;
+ border-radius: 15px;
+}
+ul {
+	list-style-type: none;
+}
+li {
+	margin-bottom: 8vmin;
+	font-size: 16px;
+	line-height: 1.5em;
+}
+img {
+  width: 100px;
+  height: 100px;
+}
+
+#music {
+  margin-top: 10vmin;
+  margin-bottom: 10vmin;
+  margin-left: 10vmin;
+}
+
+
+
+/* MOBILE */
+
+@media (max-width: 684px) {
+	body {
+		font-size: 1.53rem;
+	}
+}
+
+@media (max-width: 382px) {
+	body {
+		font-size: 1.35rem;
+	}
+}
