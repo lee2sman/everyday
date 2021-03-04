@@ -222,3 +222,5 @@ nother quick test run, minor changes
 a submission to list jam 2021  
 174  
 link to Gobi game on itch.io  
+175  
+ploguelike, not really a roguelike in plogo, just an idea  
