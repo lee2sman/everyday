@@ -9,6 +9,7 @@ let mic, micLevel;
 
 function setup(){
   createCanvas(windowWidth,windowHeight,WEBGL);
+  noStroke();
 
 	f = loadFont('assets/DS-TERM.TTF',startScreen);
   song = loadSound('assets/taro-pork-bean-cake.mp3',startButton);
