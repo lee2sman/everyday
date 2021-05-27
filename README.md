@@ -224,3 +224,6 @@ a submission to list jam 2021
 link to Gobi game on itch.io  
 175  
 ploguelike, not really a roguelike in plogo, just an idea  
+176  
+found an old bitsy sketch from summer 2018 and might as well plop it here.  
+
