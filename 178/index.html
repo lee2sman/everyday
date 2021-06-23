@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>A Throw of the Text (Taper #6)</title>
+
+<!-- “A Throw of the Text” Copyright (C) 2021 Lee Tusman
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved. This file is offered as-is,
+without any warranty.
+
+original from my work in Taper #6: A Throw of the Dice, Spring 2021:
+https://taper.badquart.to/6/a-throw-of-the-text.html
+-->
+
+	<style>
+	body { margin:0 ; overflow:hidden }
+	a { color:#eee ; text-decoration:none }
+	header { margin:0 ; padding:0 ; background-color:#444 ; color:#bbb ;
+		position:relative ; z-index:1000 }
+	header > h1 { margin:0 ; font-size:12px ; font-family:sans-serif ;
+		border-bottom:1px #999 solid ; padding:5px 10px ; line-height:17px }
+</style>
+</head>
+<body>
+<script>
+const numElements = 2000;
+const body = document.body;
+body.style.backgroundColor = "AntiqueWhite";
+
+	for (let i = 0; i < numElements; i++) {
+		let p = document.createElement("p");
+
+		body.appendChild(p);
+		p.innerHTML = "&#96" + Math.floor(Math.random() * 42 + 10);
+		p.style.fontSize = Math.floor(Math.random() * 255) + "px";
+	}
+
+	let para = document.getElementsByTagName("p");
+
+setInterval(function() {
+
+        let die = Math.floor(Math.random()*para.length);
+
+		para[die].innerHTML = "&#96" + Math.floor(Math.random() * 42 + 10);
+		para[die].style.fontSize = Math.floor(Math.random() * 255) + "px";
+
+		if (Math.random() < 0.1) {
+
+		  let grayVal = Math.floor(Math.random()*20);
+			para[die].style.color = "rgb("+grayVal+","+grayVal+","+grayVal+")";
+		} else if (Math.random() < 0.2){
+			para[die].style.color ="red";
+		} else {
+			para[die].style.color ="AntiqueWhite";
+		        para[die].style.opacity = Math.random();
+		}
+
+		para[die].style.position = "absolute";
+        
+                if (Math.random()<0.2){
+			para[die].style.left = Math.floor(Math.random() * innerWidth) + "px";
+			para[die].style.top = Math.floor(Math.random() * innerHeight) + "px";
+                }
+
+}, Math.random()*20+20);
+
+</script>
+</body>
+</html>
