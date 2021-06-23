@@ -230,3 +230,6 @@ found an old bitsy sketch from summer 2018 and might as well plop it here.
 abandoned but pushed anyway  
 178  
 variation on my Taper #6 submission  
+179  
+another variation on taper #6 piece  
+
