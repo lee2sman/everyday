@@ -226,4 +226,7 @@ link to Gobi game on itch.io
 ploguelike, not really a roguelike in plogo, just an idea  
 176  
 found an old bitsy sketch from summer 2018 and might as well plop it here.  
-
+177  
+abandoned but pushed anyway  
+178  
+variation on my Taper #6 submission  
