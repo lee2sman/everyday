@@ -1,0 +1,14 @@
+html {
+  background: linear-gradient(#e66465, #9198e5);
+}
+
+iframe {
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #FFF9F;
+	width: 100vmin;
+	height: 100vmin;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	display: block;
+}
