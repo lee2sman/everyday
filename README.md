@@ -234,5 +234,5 @@ variation on my Taper #6 submission
 another variation on taper #6 piece  
 180, 181, 182  
 weird worldbuilding via forms   
-183  
-mini vimwiki scratchpad  
+183, 184  
+mini scratchpads doodling tools, originally made to be used for vimwiki wiki but can be used on phone, web, etc  
