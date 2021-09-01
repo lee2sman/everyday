@@ -240,3 +240,5 @@ mini scratchpads doodling tools, originally made to be used for vimwiki wiki but
 2 minute program, generate 'sigil'  
 186, 187, 188  
 tiny avatar generator, inspired by pixelfaces  
+189  
+different avatar generator, in semi-3d  
