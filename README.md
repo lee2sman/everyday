@@ -238,9 +238,7 @@ weird worldbuilding via forms
 mini scratchpads doodling tools, originally made to be used for vimwiki wiki but can be used on phone, web, etc  
 185  
 2 minute program, generate 'sigil'  
-186, 187, 188  
-tiny avatar generator, inspired by pixelfaces  
+186, 187, 188, 190, 191  
+tiny avatar generator, inspired by pixelfaces, and derivatives  
 189  
 different avatar generator, in semi-3d  
-190  
-quick 30 sec hack of 188 to do wraparound  
