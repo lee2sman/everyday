@@ -242,3 +242,5 @@ mini scratchpads doodling tools, originally made to be used for vimwiki wiki but
 tiny avatar generator, inspired by pixelfaces  
 189  
 different avatar generator, in semi-3d  
+190  
+quick 30 sec hack of 188 to do wraparound  
