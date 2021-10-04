@@ -243,4 +243,6 @@ tiny avatar generator, inspired by pixelfaces, and derivatives
 189 - 191    
 different avatar generators, in semi-3d  
 192  
-extremely simple 'print-quality' b&w threshold collage using a single public domain image of kurt schwitters' merzbau  
+extremely simple 'print-quality' b&w threshold collage using a single public domain image of kurt schwitters' merzbau. s to save. click to add more images.  
+193  
+added more found merzbau images and layer them more. extensions of 192. s to save. click to add more layers.  
