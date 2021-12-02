@@ -246,5 +246,6 @@ different avatar generators, in semi-3d
 extremely simple 'print-quality' b&w threshold collage using a single public domain image of kurt schwitters' merzbau. s to save. click to add more images.  
 then added more found merzbau images and layer them more. extensions of 192. s to save. click to add more layers. 193 - 4 are merzbild. 195 & 197 is my apartment. 196 is patterns in my apt. 198 is a quilt experiment. 199 are my drawings integrated. 201 is built of eurorack images, 202 is government images database from the dep't of energy. 203 is an early early test for my nanogenmo entry.  
 204  
-puzzlescript game, just getting some basics down in a few minutes  
-
+puzzlescript game, just getting some basics down in a few minutes. dumdum dungeon.  
+205  
+randum robots puzzlescript  
