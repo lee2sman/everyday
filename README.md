@@ -250,4 +250,6 @@ puzzlescript game, just getting some basics down in a few minutes. dumdum dungeo
 205  
 randum robots puzzlescript  
 206  
-made while teaching. tongueTeyeballed.  
+made while teaching puzzlescript today to students in programming for visual artists. 
+207  
+slightly better variation  
