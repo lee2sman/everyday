@@ -261,3 +261,5 @@ indiana jones demake
 same, but with better built-in learning tutorials  
 211  
 an actual fun 'first' game, haberdashery!  
+212  
+a maze game with teleporters  
