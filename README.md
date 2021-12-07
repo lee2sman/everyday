@@ -257,3 +257,7 @@ slightly better variation
 mario demake, unfinished  
 209  
 indiana jones demake  
+210  
+same, but with better built-in learning tutorials  
+211  
+an actual fun 'first' game, haberdashery!  
