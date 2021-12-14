@@ -277,3 +277,5 @@ a wanderland vision quest sans mechanics
 the aging process (accurate)  
 219  
 rabbit in a hat puzzlescript toy. could be built into more of a game. right now it's a very simple find-it/guess-who type game.  
+220  
+Dungeon of Eyeballs. A simple but challenging escape the dungeon maze game. 
