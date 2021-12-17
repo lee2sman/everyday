@@ -281,3 +281,5 @@ rabbit in a hat puzzlescript toy. could be built into more of a game. right now 
 Dungeon of Eyeballs. A simple but challenging escape the dungeon maze game.  
 221  
 Carnivorous Plant Farmer of Xsfot. A fun gardening game!  
+222  
+4 art assignments. 4 pixel painting art assignments.  
