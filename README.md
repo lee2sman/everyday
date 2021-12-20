@@ -287,3 +287,5 @@ Carnivorous Plant Farmer of Xsfot. A fun gardening game!
 petri dish. a kind of automata.  
 224  
 sleeping in the pandemic. a diary / memoir / journal of life in the pandemic.  
+225  
+excuses. just text describing my day and why i didn't make any 'art.'  
