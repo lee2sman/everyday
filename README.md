@@ -289,3 +289,5 @@ petri dish. a kind of automata.
 sleeping in the pandemic. a diary / memoir / journal of life in the pandemic.  
 225  
 excuses. just text describing my day and why i didn't make any 'art.'  
+226  
+made clue. took forever and it's not even great.  
