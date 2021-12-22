@@ -291,3 +291,5 @@ sleeping in the pandemic. a diary / memoir / journal of life in the pandemic.
 excuses. just text describing my day and why i didn't make any 'art.'  
 226  
 made clue. took forever and it's not even great.  
+227  
+caniblock, canabalt-like  
