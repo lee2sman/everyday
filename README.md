@@ -295,3 +295,6 @@ made clue. took forever and it's not even great.
 caniblock, canabalt-like  
 228  
 worked harder on 227 and turned it into Stunt Copter, a clone of the Mac SE game I used to play in the early 90s when we were supposed to learn touch typing in middle school  
+229  
+island adrift [screensaver]  
+a small slow ambient minimal ecosystem. sailboat, islands.  
