@@ -299,3 +299,7 @@ worked harder on 227 and turned it into Stunt Copter, a clone of the Mac SE game
 island adrift [screensaver]  
 230  
 a not-great game but finished! for glorious trainwrecks secret santa event.  
+231  
+made in about 30 min during the web1.0 (0.0?) jam organized by html energy, sometime in jan i think  
+232  
+made a week after getting concussion, 8 days  
