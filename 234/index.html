@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>in transit</title>
+		<style>
+			@font-face {
+				font-family: "calc";
+				src: url(font/Calculator.ttf) format("truetype");
+			}
+			body {
+				color: lightgreen;
+				background-color: black;
+				font-family: "calc", sans-serif;
+			}
+			p {
+				font-size: 20vmin;
+				padding: 3vmin;
+			}
+		</style>
+	</head>
+	<body>
+		<p id="phrase">in transit</p>
+		<script>
+			let transit = [
+				"through",
+				"up",
+				"down",
+				"across",
+				"along",
+				"from",
+				"to",
+				"within",
+				"under",
+				"over",
+			];
+			let passage = [
+				"avenue",
+				"conveyor",
+				"corridor",
+				"door",
+				"doorway",
+				"dumbwaiter",
+				"entrance",
+				"entryway",
+				"exit",
+				"fire escape",
+				"fire pole",
+				"foyer",
+				"gate",
+				"hallway",
+				"hatch",
+				"ladder",
+				"opening",
+				"passage",
+				"passageway",
+				"path",
+				"pit",
+				"secret door",
+				"staircase",
+				"stairway",
+				"track",
+				"trail",
+				"trapdoor",
+				"tunnel",
+				"walkway",
+			];
+
+			subject = ["we", "he", "she", "ze", "they", "i", "you", "it", "you all"];
+			activity = [
+				"pause",
+				"consider",
+				"ponder",
+				"fancy",
+				"research",
+				"question",
+				"chew on",
+				"collect",
+				"contemplate",
+				"collate",
+				"count",
+				"cover",
+				"dare",
+				"detect",
+				"dislike",
+				"deflect",
+				"divide",
+				"doubt",
+				"educate",
+				"enjoy",
+				"excuse",
+				"explain",
+				"guide",
+				"guarantee",
+				"guess",
+				"help",
+				"imagine",
+				"interrupt",
+				"judge",
+				"join",
+				"label",
+				"measure",
+				"memorize",
+				"mend",
+				"mess up",
+				"mourn",
+				"miss",
+				"muddle",
+				"notice",
+				"need",
+				"observe",
+				"obtain",
+				"offend",
+				"offer",
+				"open",
+				"overflow",
+				"order",
+				"perform",
+				"permit",
+				"pick",
+				"place",
+				"prefer",
+				"prepare",
+				"present",
+				"preserve",
+				"present",
+				"program",
+				"protect",
+				"recognize",
+				"raise",
+				"refuse",
+				"reject",
+				"remember",
+				"remind",
+				"report",
+				"risk",
+				"search",
+				"shelter",
+				"spoil",
+				"spare",
+				"strengthen",
+				"surprise",
+				"supply",
+				"test",
+				"trouble",
+				"try",
+				"use",
+			];
+			w = ["who", "what", "where", "when", "why", "how"];
+
+			let toggle, s, vis;
+			window.onload = function () {
+				toggle = true;
+				vis = 1;
+				render();
+				setInterval(function () {
+					render();
+				}, 9000);
+			};
+			function render() {
+				toggle = !toggle;
+
+					vis = 1;
+				if (toggle) {
+					s = (choose(transit) + " " + choose(passage)).toUpperCase();
+				} else {
+					s = (
+						choose(subject) +
+						" " +
+						choose(activity) +
+						" " +
+						choose(w)
+					).toUpperCase();
+
+				}
+
+				function choose(list) {
+					let which = Math.floor(Math.random() * list.length);
+					return list[which];
+				}
+
+				let el = document.getElementById("phrase");
+				el.textContent = s;
+			}
+			setInterval(function () {
+				vis -= .05;
+				let el = document.getElementById("phrase");
+				el.style.opacity = vis;
+			}, 300);
+		</script>
+	</body>
+</html>
