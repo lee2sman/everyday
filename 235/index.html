@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+  <title>WHITE FLAG 1.0</title>
+
+<script src="../lib/jquery-3.3.1.min.js"></script> 
+<script src="../lib/jquery.terminal.min.js"></script>
+<link href="jquery.terminal.min.css" rel="stylesheet"/>
+<style>
+body, .terminal {
+  background-color: black;
+  /* background-image: radial-gradient(
+    rgba(0, 150, 0, 0.75), black 120%
+  ); */
+  height: 100vh;
+  margin: 0;
+  border: 1px solid green;
+  overflow: hidden;
+  padding: 2rem;
+  font: 1.3rem Inconsolata, monospace;
+  text-shadow: 0 0 5px #C8C8C8;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: repeating-linear-gradient(
+      0deg,
+      rgba(black, 0.15),
+      rgba(black, 0.15) 1px,
+      transparent 1px,
+      transparent 2px
+    );
+    pointer-events: none;
+  }
+}
+::selection {
+  background: #0080FF;
+  text-shadow: none;
+}
+pre {
+  margin: 0;
+}
+#term_demo {
+  width: 70vw;
+  height: auto;
+  margin: auto;
+}
+
+.terminal {
+ --color: green;
+ --background: black;
+ --animation: terminal-bar;
+}
+</style>
+  </head>
+  <body>
+<div id="term_demo">
+</div>
+
+<script>
+jQuery(function($, undefined) {
+ $('#term_demo').terminal(function(command) {
+   if (command == 'HELP' || command == 'help' || command == 'info') {
+     this.echo("OPTIONS:\n");
+     this.echo("* GENERATE WHITE FLAG => CREATE")
+     this.echo("* SURRENDER           => SURRENDER")
+     this.echo("* QUIT                => QUIT\n");
+   } 
+   else if (command == 'SURRENDER' || command == 'surrender'){
+     this.echo("\\_(-_-)_/\n")
+   }
+     else if (command == "QUIT" || command == 'quit' || command == 'q') {
+     this.echo("IT IS NOW (   ) TO QUIT\n");
+   }
+   else if (command == 'CREATE' || command == 'create'){
+      this.echo("\n")
+      this.echo(" ______________________")
+      this.echo("|                      |")
+      this.echo("|                      |")
+      this.echo("|                      |")
+      this.echo("|                      |")
+      this.echo("|                      |")
+      this.echo("|                      |")
+      this.echo(" ~~~~~~~~~~~~~~~~~~~~~~")
+   }
+
+   else {
+     if (command !== '') {
+       try {
+         var result = window.eval(command);
+         if (result !== undefined) {
+           this.echo(new String(result));
+         }
+       } catch(e) {
+         this.error(new String(e));
+       }
+     } else {
+       this.echo('');
+     }
+   }
+ 
+
+ }, {
+     greetings: 'WHITE FLAG 1.0. --CLICK HERE TO ACTIVATE TERMINAL--- \nFOR INFO, ENTER HELP',
+ name: 'notapipe.itch.io',
+ prompt: 'flag> ',
+ color: 'green'
+ });
+});
+</script>
+  </body>
+</html>
