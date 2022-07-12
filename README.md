@@ -309,3 +309,5 @@ sound test proof of concept for a piece for Sholeh Asgary
 back in business. first lil thing after concussion. just wanted to try something out. was reading allison's report on her culturehub project and decided i'd mock something up fast before bed.  
 235  
 CLI (emulated) in the browser, running WHITE FLAG 1.0 - command line software to generate a white flag. more to come?  
+236  
+minimal test, not a game, to move a player @ around screen with key presses, just vanilla browser API  

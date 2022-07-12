@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>@</title>
+<style>
+* {
+  /* font-size: 144px; */
+}
+#player {
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+#instructions {
+  position: absolute;
+  font-size: 10px;
+  top: 20px;
+  right: 10px;
+}
+</style>
+  </head>
+  <body> 
+
+    <span id='player'>@</span>
+
+    <span id='instructions'>WASD HJKL ↑↓←→</span>
+
+
+    <script>
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+      let x = width/2;
+      let y = height/2;
+      let fsize = width/4;
+
+    let el = document.getElementById('player');
+    el.style.left = x + 'px';
+    el.style.top = y + 'px';
+    document.body.style.fontSize = fsize + 'px';
+
+document.onkeydown = function (e) {
+    e = e || window.event;
+
+    let el = document.getElementById('player');
+    //console.log(getOffset(el));
+	console.log(e)
+	//console.log(getOffset(
+	//console.log(e.key)
+
+    switch(e.key) {
+      case 'j':
+      case 's':
+      case 'ArrowDown':
+	// down
+	y+=20;
+	break;
+      case 'k':
+      case 'w':
+      case 'ArrowUp':
+	// up
+	y-=20;
+	break;
+      case 'l':
+      case 'd':
+      case 'ArrowRight':
+	// right
+	x+=20;
+	break;
+      case 'h':
+      case 'a':
+      case 'ArrowLeft':
+	// left
+	x-=20;
+	break;
+      default:
+	// code block
+    } 
+
+    el.style.left = x + 'px';
+    el.style.top = y + 'px';
+	  
+};
+
+function getOffset(el) {
+  const rect = el.getBoundingClientRect();
+  return {
+    left: rect.left + window.scrollX,
+    top: rect.top + window.scrollY
+  };
+}
+
+    </script>
+  </body>
+</html>
