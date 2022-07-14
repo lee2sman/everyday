@@ -1,0 +1,5 @@
+cornsilk
+cadetblue
+darkseagreen
+darkkhaki
+darkmagenta

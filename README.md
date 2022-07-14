@@ -317,3 +317,5 @@ little test page listing my computers, inspired by the ultra-minimal design of b
 list of white noise sounds in my room  
 239  
 listed all the books i'm reading lately, why not. minimal non-theme again.  
+240  
+CSS Grid practice, inspired by Elliott Computer, to build an archive of today's fave archives and sites  

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-color: darkseagreen;
+  font-family: sans-serif;
+  font-size: 2rem;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: ghostwhite;
+  padding: 10px;
+  width: 80vmin;
+  height: 80vmin;
+  margin: auto;
+}
+.grid-title {
+  background-color: ghostwhite;
+  padding: 10px;
+  width: 80vmin;
+  height: 10vmin;
+  margin: auto;
+  border-radius: 2vmin 2vmin 0 0;
+}
+.grid-item {
+  background-color: white;
+  border: 3px solid ghostwhite;
+  padding: 20px;
+  font-size: 1rem;
+  text-align: center;
+  width: 20vmin;
+  height: 20vmin;
+}
+  img {
+     max-width: 18vmin;
+     max-height: 18vmin;
+  }
+  footer {
+  font-size: 1rem;
+  display: block;
+  }
+@media screen and (max-width: 600px) {
+  .grid-title {
+     display: none;
+  }
+  .grid-container {
+    grid-template-columns: auto;
+    padding: 0;
+  }
+  .grid-item {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  footer {
+    display: none;
+  }
+}
+</style>
+</head>
+<body>
+
+<h1>Today's Archives</h1>
+
+<div class="grid-title">
+  Little things to remember and save in my pocket.
+</div>
+<div class="grid-container">
+  <div class="grid-item" style="background-color:dodgerblue;"><p>page design inspo by <a href="https://elliott.computer" alt="elliott.computer personal and project website">elliott.computer</a></p></div>
+  <div class="grid-item"><p>james chip's <a href="https://jameschip.io" alt="James Chip website">games+software</a><img src="chess.png" alt="chess variant 6"></p></div>
+  <div class="grid-item" style="background-color:forestgreen;"><p><a href="https://gossipsweb.net/" alt="Gossip's Web">gossip's web</a></p></div>  
+  <div class="grid-item" style="background-color:orange;"><p><a href="http://jasongriffey.net/librarybox/index.php" alt="LibraryBox">LibraryBox</a></p></div>
+  <div class="grid-item" style="background-color:papayawhip;"><p>Lexie Mountain presents <a href="https://www.youtube.com/watch?v=aLsyYWKtzXw" alt="Lexie Mountain video about fixing a bowl">how to fix a bowl</a></p></div>
+  <div class="grid-item"><p><a href="https://thecreativeindependent.com/library/how-do-you-use-the-internet-mindfully/" alt="How do you use the internet mindfully?" style="background-color:yellow;">How do you use the internet mindfully?</a></div>
+  <div class="grid-item" ><a href="http://frogfind.com" alt="Frog Find Search Engine"><img src="frogfind.gif" alt="frogfind logo gif"></a></div>  
+  <div class="grid-item" style="background-color:#D3DEDB;"><p style="background-color:pink;color:white;"><a href="http://ashgreyseafoam.com">Ash Grey Seafoam</a></p></div>
+  <div class="grid-item"><p><a href="https://www.servinglibrary.org/" alt="The Serving Library">The Serving Library 📖</a></p></div>  
+  <span style="font-size:1rem;">Plus one more thing: <a href="https://archive.org/about/offline-archive/" alt="The Offline Internet Archive">The Offline Internet Archive</a></span>
+</div>
+<footer>
+  <p>
+  2022-07-14 03:36 lt @ bk, nyc, u$a, earth
+    </p>
+</footer>
+
+</body>
+</html>
+
+
