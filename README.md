@@ -319,3 +319,5 @@ list of white noise sounds in my room
 listed all the books i'm reading lately, why not. minimal non-theme again.  
 240  
 CSS Grid practice, inspired by Elliott Computer, to build an archive of today's fave archives and sites  
+241  
+a list of (almost) every item i purchased or bought on ebay 1999 - 2022  
