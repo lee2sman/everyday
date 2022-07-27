@@ -321,3 +321,5 @@ listed all the books i'm reading lately, why not. minimal non-theme again.
 CSS Grid practice, inspired by Elliott Computer, to build an archive of today's fave archives and sites  
 241  
 a list of (almost) every item i purchased or bought on ebay 1999 - 2022  
+242  
+A <dream> within a <dream>  

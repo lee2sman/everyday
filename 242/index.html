@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			* {
+				margin: 0;
+				border: 0;
+				padding: 0;
+			}
+			.marquee {
+				height: 100vh;
+				height: 100vmin;
+				background: #fefefe;
+				color: #333;
+			}
+
+			.marquee span {
+			        color: skyblue;
+				position: absolute;
+				font-size: 15vh;
+				height: 100%;
+				margin: 0;
+				text-align: center;
+				-moz-transform: translateX(100%);
+				-webkit-transform: translateX(100%);
+				transform: translateX(100%);
+				-moz-animation: scroll-left 4s linear infinite;
+				-webkit-animation: scroll-left 4s linear infinite;
+				animation: scroll-left 4s linear infinite;
+			}
+			@-moz-keyframes scroll-left {
+				0% {
+					-moz-transform: translateX(100%);
+				}
+				100% {
+					-moz-transform: translateX(-100%);
+				}
+			}
+
+			@-webkit-keyframes scroll-left {
+				0% {
+					-webkit-transform: translateX(100%);
+				}
+				100% {
+					-webkit-transform: translateX(-100%);
+				}
+			}
+
+			@keyframes scroll-left {
+				0% {
+					-moz-transform: translateX(100%);
+					-webkit-transform: translateX(100%);
+					transform: translateX(100%);
+				}
+				100% {
+					-moz-transform: translateX(-100%);
+					-webkit-transform: translateX(-100%);
+					transform: translateX(-100%);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="marquee">
+			<span>
+			
+				<div id="first">A dream</div>
+				within
+				<div id="second">a dream</div></span
+			>
+		</div>
+		<script>
+			window.onload = function () {
+				let words = [
+					"delusion",
+					"fantasy",
+					"idea",
+					"image",
+					"imagination",
+					"nightmare",
+					"half-baked idea",
+					"thought",
+					"bubble",
+					"chimera",
+					"daydream",
+					"fancy",
+					"hallucination",
+					"impression",
+					"incubus",
+					"rainbow",
+					"reverie",
+					"specter",
+					"speculation",
+					"trance",
+					"vagary",
+					"wraith",
+					"castle in the air",
+					"head trip",
+					"mental picture",
+					"deception",
+					"fantasy",
+					"hallucination",
+					"illusion",
+					"pipe dream",
+					"apparition",
+					"blunder",
+					"casuistry",
+					"chicanery",
+					"daydream",
+					"deceptiveness",
+					"error",
+					"fallacy",
+					"figment",
+					"ghost",
+					"lapse",
+					"mirage",
+					"misapprehension",
+					"mistake",
+					"oversight",
+					"phantasm",
+					"phantom",
+					"self-deception",
+					"shade",
+					"speciousness",
+					"spuriousness",
+					"trickery",
+					"trip",
+					"vision",
+					"charade",
+					"disguise",
+					"dissimulation",
+					"fakery",
+					"imagination",
+					"pageant",
+					"playacting",
+					"pretense",
+					"pretension",
+					"pretentiousness",
+					"sham",
+					"fairy tale",
+					"fib",
+					"deceit",
+					"falsehood",
+					"forgery",
+					"myth",
+					"untruth",
+					"artifact",
+					"concoction",
+					"fable",
+					"brew",
+					"mixture",
+					"combination",
+					"compound",
+					"contrivance",
+					"intention",
+					"medley",
+					"plan",
+					"preparation",
+					"project",
+					"solution",
+				];
+
+				let first = document.getElementById("first");
+				let second = document.getElementById("second");
+				setInterval(function () {
+					if (Math.random() > 0.5) {
+							    let dream1 = words[Math.floor(Math.random() * words.length - 1)];
+
+						first.innerHTML ="An " + dream1;
+							    if ((dream1.charAt(0) != 'a') && (dream1.charAt(0) != 'e') && (dream1.charAt(0) != 'i') && (dream1.charAt(0) != 'o')){
+
+						first.innerHTML ="A " + dream1
+									      }
+							
+					} else {
+
+							let dream2 = words[Math.floor(Math.random() * words.length - 1)];
+
+						second.innerHTML ="an " + dream2
+							    if ((dream2.charAt(0) != 'a') && (dream2.charAt(0) != 'e') && (dream2.charAt(0) != 'i') && (dream2.charAt(0) != 'o')){
+
+						second.innerHTML ="a " + dream2
+									      }
+	
+
+
+
+					}
+				}, 4000);
+			};
+		</script>
+	</body>
+</html>
