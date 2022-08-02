@@ -1,0 +1,22 @@
+@font-face {
+  font-family: lunchtype;
+  src: url(Lunchtype21-Regular.ttf);
+}
+body {
+  width: 70vw;
+  margin: auto;
+  background-color: #95EDB7;
+  font-family: lunchtype, Arial, Helvetica, sans-serif;
+}
+h1 {
+  font-size: xx-large;
+  margin-top: 6vmin;
+}
+h3 {
+  margin: 4vmin;
+  margin-bottom: 10vmin;
+}
+p {
+   font-style: italic;
+   margin-bottom: 10vmin;
+}

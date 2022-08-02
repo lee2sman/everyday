@@ -323,3 +323,5 @@ CSS Grid practice, inspired by Elliott Computer, to build an archive of today's 
 a list of (almost) every item i purchased or bought on ebay 1999 - 2022  
 242  
 A <dream> within a <dream>  
+243  
+things i like, my cultural/artistic influences  
