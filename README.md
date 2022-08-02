@@ -329,3 +329,5 @@ things i like, my cultural/artistic influences
 i'll be honest this was a 30 second messup that i liked the look of so am keeping it. but i'll fix and turn my intention into 245  
 245  
 a version of 243 that can be played coninuously  
+246  
+made a version hacked to display fluxers  

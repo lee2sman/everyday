@@ -1,0 +1,44 @@
+* {
+ margin: 0;
+ padding: 0;
+     }
+@font-face {
+  font-family: lunchtype;
+  src: url(Lunchtype21-Regular.ttf);
+}
+body {
+
+  margin: auto;
+  margin-top: 40vh;
+/*  background-color: #95EDB7; */
+  font-family: lunchtype, Arial, Helvetica, sans-serif;
+
+  width: 400px;
+  /* border: 1px solid #2d2d2d; */
+  display: flex;
+  /* justify-content: center; */
+   align-items: center; 
+
+    background: linear-gradient(to bottom right, pink, green, white);
+    animation: barberpole 6s linear infinite;
+    background-size: 150% 100%;
+}
+canvas {
+  padding: 12px;
+  display: inline-block;
+  margin-right: 4vmin;
+}
+h1 {
+  margin-right: 4vmin;
+}
+p {
+ font-size: 2rem;
+}
+@keyframes barberpole {
+	0% {
+            background-position: 0 0;
+	}
+	100% {
+            background-position: -150% 0;
+	}
+}
