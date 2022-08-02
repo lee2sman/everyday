@@ -325,3 +325,6 @@ a list of (almost) every item i purchased or bought on ebay 1999 - 2022
 A <dream> within a <dream>  
 243  
 things i like, my cultural/artistic influences  
+244  
+i'll be honest this was a 30 second messup that i liked the look of so am keeping it. but i'll fix and turn my intention into 245  
+
