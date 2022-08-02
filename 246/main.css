@@ -9,11 +9,11 @@
 body {
 
   margin: auto;
-  margin-top: 40vh;
+  margin-top: 25vh;
 /*  background-color: #95EDB7; */
   font-family: lunchtype, Arial, Helvetica, sans-serif;
 
-  width: 400px;
+  width: 50vw; 
   /* border: 1px solid #2d2d2d; */
   display: flex;
   /* justify-content: center; */
@@ -21,18 +21,19 @@ body {
 
     background: linear-gradient(to bottom right, pink, green, white);
     animation: barberpole 6s linear infinite;
-    background-size: 150% 100%;
+    background-size: 150% 75%;
 }
 canvas {
-  padding: 12px;
+  /* padding: 4vmin;  */
   display: inline-block;
-  margin-right: 4vmin;
+  margin-right: 7vmin;
 }
 h1 {
-  margin-right: 4vmin;
+ margin-right: 7vmin;
+ font-size: 4rem;
 }
 p {
- font-size: 2rem;
+ font-size: 3rem;
 }
 @keyframes barberpole {
 	0% {
