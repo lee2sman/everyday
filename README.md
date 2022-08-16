@@ -335,3 +335,5 @@ made a version hacked to display fluxers
 bootleg eno reflection inspired app made in a few minutes for someone who doesn't like eno  
 248  
 piece created for live performance at ARoS public event 'i would die 2 u' august 11, 2022 with flux factory  
+249  
+link to Web World and cooperative Computing site made for ARoS Public and Mixr event - organized with flux factory and code&share[], aarhus  
