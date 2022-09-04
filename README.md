@@ -341,3 +341,7 @@ link to Web World and cooperative Computing site made for ARoS Public and Mixr e
 Radio Free Aarhus audiozine  
 251  
 yet another random village generator  
+252  
+village generator grid, half-completed  
+253  
+quick and dirty presentation 'zine' layout using community memory images    
