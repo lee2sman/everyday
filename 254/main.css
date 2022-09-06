@@ -1,0 +1,58 @@
+@font-face {
+  font-family: lunchtype;
+  src: url(assets/font/Lunchtype21-Regular.ttf);
+}
+
+@font-face {
+  font-family: stretchpro;
+  src: url(assets/font/StretchPro.otf);
+}
+
+body {
+  width: 48vw;
+  max-width: 1200px;
+  margin: auto;
+  background-color: #95EDB7;
+  font-family: lunchtype, Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-family: stretchpro, serif;
+}
+
+p {
+  margin-bottom: 5vh;
+}
+
+em {
+  margin-left: 10px;
+}
+
+em::before {
+  content: "> ";
+}
+
+.compass {
+  background-color: #f71348;
+  opacity: 0.6;
+  margin: auto;
+  padding: 3vmin;
+  border-radius: 10px;
+  border: dashed;
+  margin-bottom: 7vmin;
+  margin-top: 7vmin;
+}
+
+#north {
+  position: fixed;
+  top: 5vmin;
+  left: 5vmin;
+}
+
+#south {
+  position: fixed;
+  bottom: 5vmin;
+  left: 5vmin;
+}
+header, footer {
+}

@@ -345,3 +345,5 @@ yet another random village generator
 village generator grid, half-completed  
 253  
 quick and dirty presentation 'zine' layout using community memory images    
+254  
+map of the neighborhood, made as demonstration site for Scripting for the Web
