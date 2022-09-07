@@ -16,6 +16,10 @@ body {
   font-family: lunchtype, Arial, Helvetica, sans-serif;
 }
 
+main {
+ margin-top: 7em;
+ margin-bottom: 7em;
+}
 h1 {
   font-family: stretchpro, serif;
 }
