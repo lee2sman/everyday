@@ -1,0 +1,194 @@
+@font-face {
+   font-family: modern;
+   src: url(Modern_Mono.otf);
+}
+
+html {
+	background-color: #ccffcc;
+}
+
+body {
+        font-family: modern, sans;
+	border: 2px dotted #0533fe;
+	border-radius: 2em;
+	font-size: 14pt;
+	background: White;
+	color: #111;
+	width: 85vw;
+	margin-top: 7%;
+	margin-bottom: 7%;
+	padding: 2%;
+	max-width: 1060px !important;
+	margin-left: auto;
+	margin-right: auto;
+	line-height: 1.7em;
+	background-color: #ccffcc;
+}
+
+h1 {
+	margin-top: 10px;
+	padding: 0.25em;
+	background-color: white;
+	margin-bottom: 10px;
+	display: block;
+	color: White;
+	background: #9c9;
+	border-bottom: 3px solid black;
+	text-decoration: none !important;
+	text-shadow: 2px 2px 1px #9c9;
+}
+
+u {
+	font-size: 140%;
+	color: black;
+	background: #9c9;
+}
+
+strong {
+	display: inline;
+	font-style: normal;
+	color: BLACK;
+	background: #9c9;
+	color: WHITE;
+	background: silver;
+	text-shadow: 1px 1px 0px black;
+	text-shadow: 1px 1px 0px #dddddd;
+	text-shadow: 2px 0px 1px WHITE;
+	text-shadow: none;
+	font-weight: bold;
+	padding: 3px;
+	margin: 3px;
+}
+
+em {
+	display: inline;
+	font-style: italic;
+	font-weight: bold;
+}
+
+strong em u {
+	opacity: 0.85;
+	letter-spacing: 7px;
+	font-size: 190%;
+	padding: 7px;
+	line-height: 140%;
+}
+
+s {
+	line-height: 0px !important;
+	font-size: 0 !important;
+}
+
+/************* (link) ***********/
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+	text-decoration: none;
+	cursor: default;
+	text-decoration: none;
+	color: black;
+}
+
+/****** TITLES *********/
+
+strong em u {
+	font-size: 150%;
+	text-shadow: 2px 1px 1px #333;
+}
+
+h1 {
+	color: black;
+	background: white;
+}
+
+u {
+	font-size: 155%;
+	color: white !important;
+	background: #333;
+	color: black !important;
+	background: white;
+}
+
+strong {
+	background: white;
+	color: black !important;
+	background: #333;
+	color: white !important;
+	color: black !important;
+	background: #eee;
+	opacity: 0.8;
+	margin: 2px;
+	padding: 1px;
+	margin: 2px;
+	padding: 1px;
+}
+
+em {
+	color: black !important;
+	display: inline;
+	font-style: normal;
+	font-style: italic;
+}
+
+strong em u {
+	background: #333 !important;
+	color: white !important;
+
+	background: white !important;
+	color: black !important;
+
+	letter-spacing: 6px;
+	font-size: 180%;
+	opacity: 0.7;
+	padding: 4px;
+}
+
+em u {
+	line-height: 130%;
+	background: none !important;
+	font-style: none !important;
+	text-decoration: none !important;
+	font-size: 140%;
+}
+
+h2,
+h3 {
+	margin-top: 10px;
+	background-color: white;
+
+	padding: 0.2em;
+	/* border-bottom: 2px solid; */
+}
+
+code {
+	background-color: lightgrey;
+	padding: 3px;
+}
+
+img {
+	max-width: 400px;
+	width: 100%;
+	height: auto;
+	margin-bottom: 15px;
+	margin-bottom: 15px;
+	display: block;
+}
+p {
+	font-size: 1.25em;
+}
+
+/* OVERRIDE BOOTSTRAP MAX WIDTH WITH THESE MEDIA QUERIES */
+/* THIS IS A HACK - Idea from stackoverflow here: https://stackoverflow.com/questions/22996429/override-bootstrap-container-width#22996746   */
+@media (min-width: 768px) {
+	.container {
+		max-width: 100%;
+	}
+}
+
+@media (min-width: 992px) {
+	.container {
+		max-width: 100%;
+	}
+}
