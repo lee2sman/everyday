@@ -1,0 +1,22 @@
+@font-face {
+  font-family: frogblock;
+  src: url(FROGBLOCK-V2.1-by-Polyducks.ttf);
+}
+html, body {
+  /* padding: none;
+  margin: none; */
+}
+body {
+  font-family: frogblock, sans-serif;
+  /* font-size: 1.3em;  */
+  background-color: #dfbf9f;
+  color: #55552b;
+  /* max-width: 80vmin; */
+  width: 70vmin;
+  height: 70vmin;
+  margin: auto;
+}
+
+p {
+  line-height: 0;
+}

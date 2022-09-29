@@ -351,3 +351,5 @@ map of the neighborhood, made as demonstration site for Scripting for the Web
 just something i thought of, a 10print variation, while taking a walk and seeing an old (better!) mural peeking out behind a more recent capitalist realism one  
 256  
 a list of many of my projects. now it's a todo list to make pages and get all of these online and documented on my website portfolio.  
+257  
+created minimal 'dungeon' tile with frogfont  
