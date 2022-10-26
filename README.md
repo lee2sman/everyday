@@ -353,3 +353,7 @@ just something i thought of, a 10print variation, while taking a walk and seeing
 a list of many of my projects. now it's a todo list to make pages and get all of these online and documented on my website portfolio.  
 257  
 created minimal 'dungeon' tile with frogfont  
+258  
+yiddish bund (pirate) radio station in the car. tim gave me a reminder of an idea i had and i implemented a minimal version.  
+259  
+experimental intuitive idea. took photos walking to studio today and have them populate this page. plain 'gallery' without js. experimental zine-sign with js in p5.  
