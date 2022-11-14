@@ -357,3 +357,5 @@ created minimal 'dungeon' tile with frogfont
 yiddish bund (pirate) radio station in the car. tim gave me a reminder of an idea i had and i implemented a minimal version.  
 259  
 experimental intuitive idea. took photos walking to studio today and have them populate this page. plain 'gallery' without js. experimental zine-sign with js in p5.  
+260  
+took no time at all. some little test from playing around with w3schools looking at html color names.  
