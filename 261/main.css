@@ -1,0 +1,23 @@
+			body {
+			        background-color: eggshell;
+				width: 64vw;
+				margin: auto;
+				font-size: larger;
+				font-family: Tahoma, Verdana, Helvetica, sans-serif;
+			}
+			#overlay {
+				position: absolute;
+				left: 0;
+				top: 0;
+				z-index: 999;
+				pointer-events: none;
+				min-width: 100%; 
+				opacity: 0.7;
+			}
+			.flag {
+                                background-color: lightblue;
+				display: inline;
+				padding: 2vmin;
+				margin: 30px 2vmin 300px 0;
+				border-radius: 14px 14px 0 0;
+			}
