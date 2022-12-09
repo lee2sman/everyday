@@ -30,7 +30,7 @@ let kenyaImg,brooklynImg,melbourneImg
 } 
 let pX,pY,player,width,height,area,startButton
 let song
-let loc,serverCity="http://solarprotocol.net/api/v2/opendata.php?systemInfo=city"
+let loc,cityURL="http://solarprotocol.net/api/v2/opendata.php?systemInfo=city",batteryURL="http://solarprotocol.net/api/v2/opendata.php?value=battery-percentage",batteryPercentage=1
 
 //debug
   let streamURL = "http://stream.zeno.fm/as9keh14668uv"
@@ -51,7 +51,8 @@ function setup() {
 //create player
   player = createImg("gemini.png")
   player.position(pX,pY)
-  //loc = loadJSON(serverCity,start,errAudio)
+  //loc = loadJSON(cityURL,start,errAudio)
+  //batteryPercentage = loadJSON(batteryURL)
   
   start()
 }
