@@ -1,0 +1,4 @@
+# Bio
+
+Lee Tusman is a NYC-based artist, educator, programmer and organizer applying his experience in collectives and DIY community to the creation of, aesthetics, and open-source distribution methods of digital culture to his practice. He works in code, collage, sound and text to produce installations with interactive media and simulations. His work is also presented as experimental games, micro-power radio stations, bots, websites and sound art. His work has been shown at museums, galleries, artist-run spaces and virtual environments. Tusman received his MFA in Design Media Arts at UCLA and a BA in Sociology at Brandeis University. He is an organizer at Babycastles art space, a co-founder of Processing Community Day NYC, and host of the podcast Artists and Hackers, a podcast on art, code and community. Tusman is Assistant Professor of New Media and Computer Science at the State University of New York, Purchase College.
+
