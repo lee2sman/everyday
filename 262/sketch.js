@@ -77,33 +77,33 @@ function draw(){
 
 function createBrooklyn(){
   let brooklynX=width/4,brooklynY=height/4
-  //for (let i=1;i<9;i++){
+  for (let i=1;i<4;i++){
   let i = int(random(1,9))
     let img = createImg("assets/brooklyn"+i+".gif");
     img.size(200,200)
     img.position(brooklynX+random(-area,area), brooklynY+random(-area,area));
     img.style('opacity','0.3')
-  //}
+  }
 }
 function createNairobi(){
   let nairobiX=3*(width/4),nairobiY=height/3
-  //for (let i=1;i<6;i++){
+  for (let i=1;i<4;i++){
   let i = int(random(1,6))
     let img = createImg("assets/kenya"+i+".gif");
     img.size(200,200)
     img.position(nairobiX+random(-area,area), nairobiY+random(-area,area))
     img.style('opacity','0.3')
-  //}
+  }
 }
 function createMelbourne(){
   let melbourneX=width/2,melbourneY=2*(height/3)
-  //for (let i=1;i<8;i++){
+  for (let i=1;i<4;i++){
   let i = int(random(1,8))
     let img = createImg("assets/melbourne"+i+".gif");
     img.size(200,200)
     img.position(melbourneX+random(-area,area), melbourneY+random(-area,area));
     img.style('opacity','0.3')
-  //}
+  }
 }
 function start(){
   startButton = createImg("assets/artware.gif")
