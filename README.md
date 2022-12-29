@@ -361,3 +361,7 @@ experimental intuitive idea. took photos walking to studio today and have them p
 took no time at all. some little test from playing around with w3schools looking at html color names.  
 261  
 experimenting with a see thru overlay  
+262  
+minimal demo toward sol*r protoc*l  
+263  
+un-sell-able logo gen  

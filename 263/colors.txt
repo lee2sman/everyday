@@ -1,0 +1,6 @@
+yellow = #fec900
+blue = #2265f6
+green = #00d17f
+red = #f46c3d
+black = #000000
+

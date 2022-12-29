@@ -1,0 +1,17 @@
+body {
+  background-color: black;
+  font-family: Arial, sans-serif;
+}
+canvas {
+  display: inline;
+  position: absolute;
+  left: 40%;
+  top: 40%;
+}
+h1 {
+  color: white;
+  font-size: 2.5em;
+  position: absolute;
+  left: 37%;
+  top: 30%;
+}

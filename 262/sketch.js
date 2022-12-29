@@ -132,6 +132,7 @@ source = document.getElementsByTagName("source");
 
 		audioSrc.src = source.src;
 
+                snd.volume = batteryPercentage
 		snd.play();
 
 
