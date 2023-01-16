@@ -1,0 +1,32 @@
+body 
+{
+	font-family: TimesNewRoman,Times New Roman,Times,Baskerville,Georgia,serif;
+	font-size: 32px;
+	margin: 1%;
+}
+p 
+{
+	margin: 0px;
+}
+ul
+{
+	margin: 0px;
+}
+li
+{
+	margin: 0px;
+}
+img
+{	
+	max-width: 90%;
+}
+.fix
+{
+    position:fixed;
+    bottom:1%;
+    right:1%;
+    /* normal puke logo */
+    /* width:15%; */
+    /* flying foxes logo */
+    height:100%; 
+}

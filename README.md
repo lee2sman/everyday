@@ -365,3 +365,5 @@ experimenting with a see thru overlay
 minimal demo toward sol*r protoc*l  
 263  
 un-sell-able logo gen  
+264  
+cory arcangel website project page rip + dall-e generated imgs "Cory Arcangel painting in plein air style"  
