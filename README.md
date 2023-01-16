@@ -369,3 +369,5 @@ un-sell-able logo gen
 cory arcangel website project page rip + dall-e generated imgs "Cory Arcangel painting in plein air style"  
 265  
 copy of 264 page template, making a new page for the Distances video I made with Amelia, screening Friday at the Internet Archive  
+266  
+still using that page template. now showing digitally altered images - my head 'collapsed' and pixelated.  
