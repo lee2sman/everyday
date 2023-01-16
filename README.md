@@ -367,3 +367,5 @@ minimal demo toward sol*r protoc*l
 un-sell-able logo gen  
 264  
 cory arcangel website project page rip + dall-e generated imgs "Cory Arcangel painting in plein air style"  
+265  
+copy of 264 page template, making a new page for the Distances video I made with Amelia, screening Friday at the Internet Archive  
