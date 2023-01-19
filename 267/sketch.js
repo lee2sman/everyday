@@ -44,10 +44,10 @@ function mousePressed(){
 
   }  
   if(mouseX<20&&mouseY<20){
-    direction="horizontal"
+    direction="vertical"
   }
   if (mouseX<20&&mouseY>20&&mouseY<40){
-    direction="vertical"
+    direction="horizontal"
   }
   
   //weave
