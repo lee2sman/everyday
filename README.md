@@ -373,3 +373,5 @@ copy of 264 page template, making a new page for the Distances video I made with
 still using that page template. now showing digitally altered images - my head 'collapsed' and pixelated.  
 267  
 demo "pattern weaver" made for Dan Lichtman for a class. this is a MVP!  
+268  
+modified 267 to create a fullscreen grid of pattern grid weavings  
