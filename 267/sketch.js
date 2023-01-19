@@ -3,11 +3,14 @@ let block;
 const coolors = ["#606c38","#283618","#fefae0","#dda15e","#bc6c25"]
 let coolor = 0;
 let direction = "vertical";
+let savedCanvas;
 
 function setup() {
   createCanvas(400, 400);
+  savedCanvas = createGraphics(width-40,260)
   block=width/5;
   noStroke()
+
 
   background(220);
   
@@ -27,9 +30,13 @@ function setup() {
   noFill()
   rect(0,0,20,20)
   rect(0,20,20,20)
+  rect(width-20,0,20,20)
+  rect(width-20,20,20,20)
   textSize(16)
   text("↕",3,16)
   text("↔",3,36)
+  text("⇲",width-18,16)
+  text("💣",width-18,36)
   noStroke()
 }
 
@@ -43,13 +50,25 @@ function mousePressed(){
     if (mouseX<block)(coolor=0)
 
   }  
+  //direction picker
   if(mouseX<20&&mouseY<20){
     direction="vertical"
   }
   if (mouseX<20&&mouseY>20&&mouseY<40){
     direction="horizontal"
   }
-  
+  //exporter
+  if (mouseX>width-20&&mouseY<20){
+    savedCanvas = get(20,20,width-40,260)
+    save(savedCanvas)
+    print('save')
+  }
+  //destroy
+  if (mouseX>width-20&&mouseY>20&&mouseY<40){
+    fill("#faedcd")
+    rect(20,20,width-40,260)
+  }
+
   //weave
   if(mouseX>20&&mouseX<width-40&&mouseY>20&&mouseY<280){
     fill(coolors[coolor])
