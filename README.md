@@ -375,3 +375,5 @@ still using that page template. now showing digitally altered images - my head '
 demo "pattern weaver" made for Dan Lichtman for a class. this is a MVP!  
 268  
 modified 267 to create a fullscreen grid of pattern grid weavings  
+269  
+rapid landing page test  
