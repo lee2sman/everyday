@@ -377,3 +377,5 @@ demo "pattern weaver" made for Dan Lichtman for a class. this is a MVP!
 modified 267 to create a fullscreen grid of pattern grid weavings  
 269  
 rapid landing page test  
+270  
+purch.us link shortener redirectory for Purchase College  
