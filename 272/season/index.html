@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang='en'>
+<!-- this concept comes from Scott Thrift's project The Present and I do not claim any ownership of the idea. For more info and to order The Present visit https://timeincolor.com/ 
+This is a code sketch (#9 in a series) and took a few hours to figure out gradient, rotation, design.
+Finished early hours of the morning after a Hospital Records festival at the Knockdown Center. Great set by Merzbow. -->
+<!-- coded dec 27, 2018 -->
+
+	<head>
+		<title>SEASON</title>
+
+	<!-- polyfill to be able to use conic-gradient in css -->
+        <script src="prefixfree.min.js"></script>
+        <script src="conic-gradient.js"></script>
+	<!-- end polyfill -->
+
+	<link rel="stylesheet" href="style.css"> 
+	</head>
+
+	<body>
+
+            <!-- face -->
+	    <div id="clock"></div>
+	    <!-- hand -->
+	    <div id="hand"></div>
+	    <!-- center -->
+	    <div id="center"></div>
+	    <!-- info popup modal -->
+	    <div id="question">
+		    <a href="#openModal">?</a>
+	    </div>
+
+	    <div id="openModal" class="modalDialog">
+		    <div>
+			    <a href="." title="Close" class="close">X</a>
+			    <h2>Info</h2>
+			    <p>The Season clock is an implementation of Scott Thrift's project The Present, a clock that rotates once a year, beginning on the winter solstice. The colors indicate the season. Green for the fall harvest. When the hand reaches the golden bottom it is at the summer equinox. Red represents the fall and violet/blue indicate the winter. Thrift's project reminds us to slow down and experience time in the moment by displaying our movement through the seasons. For additional information including the ability to order your own physical clock visit The Present's <a href="https://timeincolor.com/" alt="Scott Thrift's The Present">website</a>.</p>
+			    <p>I coded this over several hours while working on code sketching. Methodology: There are 365 days in a year, but only 360 degrees of rotation. We subtract 170 in order to center the hand at the top center on the winter equinox. Thus, New Year's Eve and Day is rotated slightly to the right of the top center. I claim no ownership behind the idea for this clock. This is just for fun.</p>
+		    </div>
+	    </div>
+	<!-- jquery -->
+	<script src="jquery-3.3.1.min.js"></script>
+
+	<script>
+let today = new Date();
+let first = new Date(today.getFullYear(), 0, 1);
+let day = Math.round(((today - first) / 1000 / 60 / 60 / 24) + .5, 0);
+
+let angle = Math.round(day*360/365-170); 
+
+$("#hand").css({ 
+'rotation-point': '0% 0%',
+'transform': 'rotate('+angle+'deg)' });
+
+	</script>
+	</body>
+</html>
