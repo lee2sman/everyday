@@ -385,3 +385,7 @@ Piper's Winter Garden, created during HTML Energy Freewrite (well, recreated aft
 Hmmm, needed to put this somewhere. Tonight I wanted to check my season clock so i copied it over here to make it convenient and have a 'new' project page. I actually coded this 5 years ago, in 2018.  
 273  
 Dalle: Yiddish anarchists against the machine  
+274  
+ReadifyWikipedia bookmarklet. Removes link styling and sidebars so you can just read without distraction on wikipedia.  
+275  
+WikipediaTerminal, an emulation that styles the web-based wikipedia page to look like a green text minospaced font on black terminal.  
