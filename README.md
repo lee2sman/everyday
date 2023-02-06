@@ -382,4 +382,6 @@ purch.us link shortener redirectory for Purchase College
 271  
 Piper's Winter Garden, created during HTML Energy Freewrite (well, recreated afterward).  
 272  
-Hmmm, needed to put this somewhere. Tonight I wanted to check my season clock so i copied it over here to make it convenient and have a 'new' project page. I actually coded this 5 years ago, in 2018.
+Hmmm, needed to put this somewhere. Tonight I wanted to check my season clock so i copied it over here to make it convenient and have a 'new' project page. I actually coded this 5 years ago, in 2018.  
+273  
+Dalle: Yiddish anarchists against the machine  
