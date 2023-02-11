@@ -389,3 +389,5 @@ Dalle: Yiddish anarchists against the machine
 ReadifyWikipedia bookmarklet. Removes link styling and sidebars so you can just read without distraction on wikipedia.  
 275  
 WikipediaTerminal, an emulation that styles the web-based wikipedia page to look like a green text minospaced font on black terminal.  
+276  
+Dalle experiment to generate images of luddites fighting back against surveillance technology  
