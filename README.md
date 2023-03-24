@@ -391,3 +391,5 @@ ReadifyWikipedia bookmarklet. Removes link styling and sidebars so you can just 
 WikipediaTerminal, an emulation that styles the web-based wikipedia page to look like a green text minospaced font on black terminal.  
 276  
 Dalle experiment to generate images of luddites fighting back against surveillance technology  
+277  
+dalle experiment generating speculative exquisitecorp imgs  
