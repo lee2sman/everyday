@@ -393,3 +393,5 @@ WikipediaTerminal, an emulation that styles the web-based wikipedia page to look
 Dalle experiment to generate images of luddites fighting back against surveillance technology  
 277  
 dalle experiment generating speculative exquisitecorp imgs  
+278  
+face generator, simple code for students  
