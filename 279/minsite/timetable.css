@@ -1,0 +1,41 @@
+/* modified from my timetable column.css */
+
+body {
+  background-color: lightblue;
+  overflow-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+background-color: dodgerblue;
+  max-width: 500px;
+  margin: auto;
+}
+
+body > div {
+  padding: 2vmin;
+  background-color: #f1f1f1;
+  width: 90%;
+  min-height: 15vmin;
+  margin: 10px;
+  font-size: xx-large;
+  border-radius: 5px;
+  align-self: center;
+
+}
+#logo{
+  font-size: 1em;
+  color: black;
+  /* background-color: dodgerblue; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+h1 {
+  font-size: large;
+}
+
+p {
+  font-size: 1rem;
+}

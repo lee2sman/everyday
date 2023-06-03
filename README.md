@@ -395,3 +395,5 @@ Dalle experiment to generate images of luddites fighting back against surveillan
 dalle experiment generating speculative exquisitecorp imgs  
 278  
 face generator, simple code for students  
+279  
+minsite minimal website style scheme testing  

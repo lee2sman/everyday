@@ -1,0 +1,36 @@
+/* minimal recreation of buttondown's default css */
+
+html {
+  border-top: 10px solid #0069FF;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Ubuntu,serif;
+}
+
+body {
+  margin: auto;
+  padding: 10px;
+  max-width: 30em;
+  font-size: 1.4rem;
+}
+
+blockquote {
+  background-color: lightgrey;
+  font-style: italic;
+}
+
+a {
+  color: #0069FF;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 684px) {
+  body {
+    font-size: 1.53rem;
+  }
+}
+@media (max-width: 382px) {
+  body {
+    font-size: 1.35rem;
+  }
+}
+

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>newsletter theme</title>
+    <link rel='stylesheet' href='timetable.css'>
+<style>
+nav > div {
+  float: left;
+  display: block;
+  padding: 8px;
+  background-color: #dddddd;
+}
+nav>div:hover {
+  cursor: pointer;
+}
+
+</style>
+  </head>
+  <body>
+    <header>
+      <nav>
+       <div onclick='timetable()'>
+	  timetable
+       </div>
+       <div onclick='cblgh()'>
+	 cblgh-default
+       </div>
+       <div  onclick='btndwn()'>
+	 btndwn
+       </div>
+       <div onclick='cerca()'>
+	 cerca
+       </div>
+       <div onclick='cmmn()'>
+	 commoninternet
+       </div>
+      </nav>
+    </header>
+
+    <h1>Adventures in minimal styling</h1>
+    <p>This text appears to be a minimal and boring <a href='https://en.wikipedia.org/wiki/Plaintext' alt='wikipedia article on plaintext'>plaintext</a> website. Fine. But it is also a way to test out various 'minimal' style schema.</p>
+    <blockquote>This would be a quote someone once said. A Blockquote, if you will.</blockquote>
+    <p>
+      I am doing this because I want to have a minimal, attractive, eminently readable site that would still attract an audience, can be scanned, and be (as much as possible) resilient to the brittleness of the web browser. 
+    </p>
+    <h2>What about images?</h2>
+    <p>We have them. Here's a dithered low resolution image of a book, sharing a design sensibility with this webpage design and a goal of enabling longterm archiving. When we're talking about considering longterm preservation then websites and books can and should go hand in hand!</p>
+
+    <h3>Experiments in lower resolutions</h>
+      <p>Okay, but why the low resolution? This can also be considered a form af accessibility as a lower resolution may mean lower file size which means this can be downloaded quicker, use less bandwdith and compute resources, and thus is more accessible for a wider community on slower connections and a rebuke too the high-intensity web apps and frameworks of today.</p>
+ <figure>
+    <img src="color-book.gif" alt="low res dithered image of a book">
+    <figcaption>Low resolution color image of the Processing Community Catalog 2001-2021 book by Processing Foundation and contributors. Made small but not dithered with ImageMagick</figcaption>
+  </figure> 
+
+
+
+  <h3>Now black and white</h3>
+  <p>I left the size of this one a bit larger to test how the different stylesheets will handle it<p>
+  <p>For the <a href='https://solar.lowtechmagazine.com/2018/09/how-to-build-a-low-tech-website/' alt='Low Power Website'>Low Tech Website</a> they discuss how the low res image helps clue the viewer into something different going on. This may be a reason to pursue this approach, since the new (and Google-initiated?) webp format is a lower filesize than the jpeg lossy filesize for example, thus potentially removing some of the size goals of creating a lower consumption/bandwidth website</p>
+
+   <figure>
+    <img src="book.gif" alt="low res dithered image of a book">
+    <figcaption>Low resolution black and white dithered image of the Processing Community Catalog 2001-2021 book by Processing Foundation and contributors. Saved as a low resolution dithered gif converted with ImageMagick</figcaption>
+  </figure> 
+    <h3>Stylesheets I am evaluating</h3>
+    <ul>
+      <li>Cblgh's default, also using XXIIVV defaults</li>
+      <li>My own recreation of the Buttondown style</li>
+      <li>A modified version by Cblgh used for the cerca forum</li>
+      <li>A more minimal stylesheet by Canalswans</li>
+    </ul>
+    <p>Advantages of a minimal style</p>
+    <ol>
+      <li>Resist brittleness of changing styles and standards</li>
+      <li>Less to debug</li>
+      <li>Easier for humans and robots to scan</li>
+    </ol>
+    <h2>Considerations</h2>
+
+    <p>
+    <em>Ideally</em> I use and create open source styles that are still <strong>attractive</strong> to an audience who doesn't care about any of these above concerns but will gain the advantages nonetheless!</p>
+    <p>One last consideration. Does this work well on phones? Try it and see.</p>
+
+    <footer>
+      <p>A footer should go here. Banner images? <a href='https://www.gamemaking.tools/' alt='GameMaking Tools wiki'><img src='https://www.gamemaking.tools/images/banner_v3.gif' alt='GameMaking Tools wiki'></a> </p>
+    </footer>
+
+    <script>
+  
+
+let theme = document.getElementsByTagName('link')[0];
+
+function timetable(){
+  theme.setAttribute('href', 'timetable.css');
+}
+function cblgh(){
+  theme.setAttribute('href', 'cblgh.css');
+}
+
+function btndwn(){
+  theme.setAttribute('href', 'btndwn.css');
+}
+function cerca(){
+  theme.setAttribute('href', 'cerca.css');
+}
+function cmmn(){
+  theme.setAttribute('href','cmmn.css');
+}
+
+    </script>
+  </body>
+</html>
