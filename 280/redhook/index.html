@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- initially written during HTML Energy freewrite in valentino park in red hook in a blustery breeze from 6:30pm - 7:30pm on June 3, 2023, in a notebook! Then coded in vim ssh'ed into the ctrl-c server. This is the post-event cleaned up version finished the next day.-->
+<html>
+  <head>
+  <style>
+    img {
+      position: fixed;
+      opacity: 0.6;
+      height: 100vh;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: palegoldenrod;
+    }
+    footer {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+    }
+  </style>
+ </head>
+ <body>
+
+      <img src='assets/bikes.png' alt='bikes'>
+      <img src='assets/warehouse.png' alt='warehouse'>
+      <img src='assets/crew.png' alt='crew'>
+      <img src='assets/blanket.png' alt='blanket'>
+      <img src='assets/water.png' alt='water'>
+
+      <footer>
+	<p>
+	Made by Lee during html.energy freewrite session 3 june 2023, 1830-1930 in valentino park, redhook, bk, ny.
+		</p>
+
+      </footer>
+      <script defer>
+
+let allimg = document.getElementsByTagName("img");
+
+
+window.setInterval(
+function(){
+
+let which = Math.floor(Math.random()*allimg.length);
+let L = Math.random()*window.innerWidth;
+
+allimg[which].style.left = L+"px";
+
+
+}
+
+,4000);
+
+    </script>
+  </body>
+</html>
