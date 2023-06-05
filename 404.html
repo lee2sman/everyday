@@ -17,18 +17,59 @@ THIS IS THE 404'ed version of 107!
 		<meta charset='utf-8'>
 
 		<title>404'ed!</title>
-		<link rel="stylesheet" type="text/css" href="114/style.css">
-<script src="lib/p5.min.js"></script>
-<script src="lib/addons/p5.sound.min.js"></script>
 
+<style>
+
+html, body{ height:100%; margin:0; }
+header{ height:50px; background:lightcyan; }
+footer{ height:50px; background:PapayaWhip; }
+
+/* Trick */
+body{ 
+  display:flex; 
+  flex-direction:column; 
+  padding: 1rem;
+  border: dashed;
+  background-color: yellow;
+  color: purple;
+}
+  #lee {
+position: absolute;
+  }
+</style>
 	</head>
-<body id="gradient">
-
-	<script src="114/sketch.js"> </script>
-
+<body >
 	<div id="overlay">
-	<p class="bg-color">404'ed! That page doesn't exist! Try going <a href="http://leetusman.com/nosebook" alt="home">somewhere else</a>.</p>
+	<p >404'ed! That page doesn't exist (yet)! Try going <a href="http://leetusman.com/nosebook" alt="home">somewhere else</a>.</p>
+	<img id='lee' src='assets/img/lee.png'>
 	</div>
+
+
+  <script>
+let rot = 0;
+let x = 0;
+let y = 0;
+let xspeed = 30;
+let yspeed = 12;
+
+setInterval( 
+
+  function(){
+    lee.style.rotate = rot + "deg";
+    rot+=10;
+    lee.style.left = x + "px";
+    lee.style.top = y + "px";
+    x+=xspeed;
+    y+=yspeed;
+    if (x>window.innerWidth-lee.width||x<0)(xspeed*=-1);
+    if (y>window.innerHeight-lee.height||y<0)(yspeed*=-1);
+   
+  }
+  ,60);
+
+  </script>
+
+
 </body>
 
 </html>
