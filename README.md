@@ -397,3 +397,5 @@ dalle experiment generating speculative exquisitecorp imgs
 face generator, simple code for students  
 279  
 minsite minimal website style scheme testing  
+280  
+lil site made for the html.energy freewrite, initially written in a notebook, then coded in vim on the phone and ssh'ed into the server. this is a cleaned-up post-event version.  
