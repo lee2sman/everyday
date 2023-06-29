@@ -401,3 +401,5 @@ minsite minimal website style scheme testing
 lil site made for the html.energy freewrite, initially written in a notebook, then coded in vim on the phone and ssh'ed into the server. this is a cleaned-up post-event version.  
 281  
 Archiving Artist-Run Spaces project page  
+282  
+draft prototype (too large) for taper issue 11. ascii car driving sim poem.  

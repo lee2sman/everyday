@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <body>
+
+<style>
+html {
+font-family: mono;
+font-size: xx-large;
+ }
+#road {
+  position: absolute;
+  top: 100px;
+  scale: 3;
+}
+#car {
+  position: absolute;
+  padding: 2px;
+  top: 300px;
+  font-size: smaller; 
+  background-color: dodgerblue;
+  scale: 3;
+}
+#smoke {
+  position: absolute;
+  scale: 2;
+  background-color: darkgrey;
+}
+</style>
+<div id='road'>
+</div>
+<div id='car'>
+</div>
+<div id='smoke'>
+</div>
+<div id='msg'>
+</div>
+
+<script>
+let sentence="he's going the distance for speed all alone in his time of need driving forever forward horizon there back never still burning yearning day doubt full life force"
+let words = sentence.split(' ')
+let m=0,x = 165,r=0, crashed=false;
+let road_top = 
+[[",,,,,,,,,/,,,,,,,,,,\\<br>",
+",,,,,,,,,,,/,,|,,,\\,,, <br>",
+",,,,,,,/,,,,,,,,,,,,,,\\<br>",
+",,,,,,,,,,/,,,|,,,,\\,,,, <br>",
+",,,,,/,,,,,,,,,,,,,,,,,,\\<br>",
+",,,,,,,,,/,,,,|,,,,,\\,,,,, <br>",
+",,,/,,,,,,,,,,,,,,,,,,,,,,\\<br>",
+",,,,,,,,/,,,,,|,,,,,,\\,,,,,, <br>",
+",/,,,,,,,,,,,,,,,,,,,,,,,,,,\\<br>"],
+[",,,,,,,,,/,/,,|,,\\,,\\<br>",
+",,,,,,,,/,,,,,,,,,,,,\\<br>",
+",,,,,,,,,,/,,,|,,,\\,,,, <br>",
+",,,,,,/,,,,,,,,,,,,,,,,\\<br>",
+",,,,,,,,,/,,,,|,,,,\\,,,,, <br>",
+",,,,/,,,,,,,,,,,,,,,,,,,,\\<br>",
+",,,,,,,,/,,,,,|,,,,,\\,,,,,, <br>",
+",,/,,,,,,,,,,,,,,,,,,,,,,,,\\<br>",
+",,,,,,,/,,,,,,|,,,,,,\\,,,,,,, <br>"]]
+
+let car_left =
+[",,,o=o<br>",
+",,/_/<br>",
+",/,/<br>",
+"(_0<br>"]
+
+let car_center = 
+["o=o<br>",
+"[_]<br>",
+"| |<br>",
+"0_0<br>"]
+
+let car_right =
+["o=o<br>",
+",\\_\\<br>",
+",,\\,\\<br>",
+",,,0_)<br>"]
+
+let car_crash =
+[",oo<br>",
+"/X)<br>",
+"(&%<br>",
+"0#o<br>"]
+
+setInterval(function(){
+
+let road = document.getElementById("road");
+road.innerHTML = "";
+let w = window.innerWidth;
+road.style.left = w/3+"px";
+for (let i=0;i<road_top[r].length;i++){
+  let p = document.createElement("span");
+let fixed = road_top[r][i].replace(/,/g, "&nbsp;");
+  p.innerHTML = fixed;
+  road.appendChild(p);
+}
+
+  r++;
+  if (r>1)(r=0);
+let car = document.getElementById("car");
+car.innerHTML = "";
+car.style.left = w/3 + x+"px";
+if (x<(road.offsetWidth/2-75)) {
+  which_car = car_left;
+} else if (x>(road.offsetWidth/2+20)){
+  which_car = car_right;
+} else {
+  which_car = car_center;
+}
+for (let i=0;i<which_car.length;i++){
+  let p = document.createElement("span");
+  let fixed = which_car[i].replace(/,/g, "&nbsp;");
+  p.innerHTML = fixed;
+  car.appendChild(p);
+}
+
+//smoke
+for (let i=0;i<20;i++){
+let smoke = document.getElementById('smoke')
+//smoke.innerHTML = String.fromCharCode(42+Math.floor(Math.random()*255))
+  c = "*"
+  if (Math.random()<0.5)(c="°")
+  smoke.innerHTML = c
+smoke.style.left = (w/3+x+Math.random()*80-40)+"px";
+smoke.style.top = (600+Math.random()*200)+"px";
+}
+//msg
+let msg=document.getElementById('msg')
+msg.innerHTML = words[m]
+  msg.style.left = w/3+x+"px"
+  msg.style.top = "700px"
+
+},300);
+
+
+document.onkeydown = checkKey; 
+
+function checkKey(e) {
+    e = e || window.event;
+  m = Math.floor(Math.random()*words.length)
+    if (e.keyCode == '37') ( x-=15)
+    else if (e.keyCode == '39') ( x+=15 )
+  return false;
+}
+
+</script>
+  </body>
+</html>
