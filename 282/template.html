@@ -40,97 +40,49 @@ https://taper.badquar.to/11/title_of_your_work.html
 	</h1>
 </header> 
 <style>
-html{font-family:mono;font-size:xx-large;background-color:grey;}
-#rd{position:absolute;top:100px;scale:3;}
-#c{position:absolute;top:300px;font-size:smaller;background-color:dodgerblue;scale:3;}
-#s{position:absolute;scale:2;}
+html{font-family:mono;font-size:xx-large;background-color:grey}#rd{position:absolute;top:100px;scale:3}#c{position:absolute;top:300px;font-size:smaller;background-color:dodgerblue;scale:3}#s{position:absolute;scale:2}
 </style>
-<div id='rd'></div>
-<div id='c'></div>
-<div id='s'></div>
-<div id='m'></div>
+<div id='rd'></div><div id='c'></div><div id='s'></div><div id='m'></div>
 <script>
 let t="he's going the distance for speed all alone in his time of need driving forever forward horizon there back never still burning yearning day doubt full life force".split(' ')
-let o=0,x=165,n=0,rt=
-[[",,,,,,,,,/,,,,,,,,,,\\<br>",
-",,,,,,,,,,,/,,|,,,\\,,, <br>",
-",,,,,,,/,,,,,,,,,,,,,,\\<br>",
-",,,,,,,,,,/,,,|,,,,\\,,,, <br>",
-",,,,,/,,,,,,,,,,,,,,,,,,\\<br>",
-",,,,,,,,,/,,,,|,,,,,\\,,,,, <br>",
-",,,/,,,,,,,,,,,,,,,,,,,,,,\\<br>",
-",,,,,,,,/,,,,,|,,,,,,\\,,,,,, <br>",
-",/,,,,,,,,,,,,,,,,,,,,,,,,,,\\<br>"],
-[",,,,,,,,,/,/,,|,,\\,,\\<br>",
-",,,,,,,,/,,,,,,,,,,,,\\<br>",
-",,,,,,,,,,/,,,|,,,\\,,,, <br>",
-",,,,,,/,,,,,,,,,,,,,,,,\\<br>",
-",,,,,,,,,/,,,,|,,,,\\,,,,, <br>",
-",,,,/,,,,,,,,,,,,,,,,,,,,\\<br>",
-",,,,,,,,/,,,,,|,,,,,\\,,,,,, <br>",
-",,/,,,,,,,,,,,,,,,,,,,,,,,,\\<br>",
-",,,,,,,/,,,,,,|,,,,,,\\,,,,,,, <br>"]]
-let cl=
-[",,,o=o<br>",
-",,/_/<br>",
-",/,/<br>",
-"(_0<br>"]
-let cc= 
-["o=o<br>",
-"[_]<br>",
-"| |<br>",
-"0_0<br>"]
-let cr=
-["o=o<br>",
-",\\_\\<br>",
-",,\\,\\<br>",
-",,,0_)<br>"]
-let $=document.getElementById.bind(document)
-let ce=document.createElement.bind(document)
-let y=()=>Math.random()
-setInterval(function(){
-let r=$('rd')
+let o=0,x=165,n=0,rt=[[",,,,,,,,,/,,,,,,,,,,\\<br>",",,,,,,,,,,,/,,|,,,\\,,, <br>",",,,,,,,/,,,,,,,,,,,,,,\\<br>",",,,,,,,,,,/,,,|,,,,\\,,,, <br>",",,,,,/,,,,,,,,,,,,,,,,,,\\<br>",",,,,,,,,,/,,,,|,,,,,\\,,,,, <br>",",,,/,,,,,,,,,,,,,,,,,,,,,,\\<br>",",,,,,,,,/,,,,,|,,,,,,\\,,,,,, <br>",",/,,,,,,,,,,,,,,,,,,,,,,,,,,\\<br>"],[",,,,,,,,,/,/,,|,,\\,,\\<br>",",,,,,,,,/,,,,,,,,,,,,\\<br>",",,,,,,,,,,/,,,|,,,\\,,,, <br>",",,,,,,/,,,,,,,,,,,,,,,,\\<br>",",,,,,,,,,/,,,,|,,,,\\,,,,, <br>",",,,,/,,,,,,,,,,,,,,,,,,,,\\<br>",",,,,,,,,/,,,,,|,,,,,\\,,,,,, <br>",",,/,,,,,,,,,,,,,,,,,,,,,,,,\\<br>",",,,,,,,/,,,,,,|,,,,,,\\,,,,,,, <br>"]]
+cl=[",,,o=o<br>",",,/_/<br>",",/,/<br>","(_0<br>"]
+cc=["o=o<br>","[_]<br>","| |<br>","0_0<br>"]
+cr=["o=o<br>",",\\_\\<br>",",,\\,\\<br>",",,,0_)<br>"]
+$=document.getElementById.bind(document)
+ce=document.createElement.bind(document)
+y=()=>Math.random()
+setInterval(function(){r=$('rd')
 r.innerHTML=''
-let w=window.innerWidth
+w=window.innerWidth
 r.style.left=w/3+'px'
-for (i=0;i<rt[n].length;i++){
-let p=ce('span')
-let f=rt[n][i].replace(/,/g,'&nbsp;')
+for(i=0;i<rt[n].length;i++){p=ce('span')
+f=rt[n][i].replace(/,/g,' ')
 p.innerHTML=f
-r.appendChild(p)
-}
+r.appendChild(p)}
 n++
-if(n>1)(n=0);
-let c=$('c')
+if(n>1)(n=0);c=$('c')
 c.innerHTML=""
 c.style.left=w/3+x+"px"
 if(x<rd.offsetWidth/2-75)which_car=cl
 else if(x>rd.offsetWidth/2+20)which_car=cr
 else which_car=cc
-for(i=0;i<which_car.length;i++){
-let p=ce('span')
-let f=which_car[i].replace(/,/g,"&nbsp;")
+for(i=0;i<which_car.length;i++){p=ce('span')
+f=which_car[i].replace(/,/g," ")
 p.innerHTML=f
-c.appendChild(p)
-}
-for(i=0;i<20;i++){
-let s=$('s')
+c.appendChild(p)}
+for(i=0;i<20;i++){s=$('s')
 c='*'
 if(y()<0.5)c='°',s.innerHTML=c,s.style.left=(w/3+x+y()*80-40)+'px',s.style.top=(600+y()*200)+'px'}
-let m=$('m')
+m=$('m')
 m.innerHTML=t[o]
 m.style.left=w/3+x+'px'
-m.style.top='700px'
-},300)
-checkKey=e=>{
-o=0|(y()*t.length)
+m.style.top='700px'},300)
+checkKey=e=>{o=0|(y()*t.length)
 if(e.keyCode=='37')x-=15
 else if(e.keyCode=='39')x+=15
-return false
-}
+return false}
 document.onkeydown=checkKey
 </script>
-
-
 </body>
 </html>
