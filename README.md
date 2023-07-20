@@ -403,3 +403,5 @@ lil site made for the html.energy freewrite, initially written in a notebook, th
 Archiving Artist-Run Spaces project page  
 282  
 draft prototype (too large) for taper issue 11. ascii car driving sim poem.  
+283  
+images and writeup of old computer challenge 2023  
