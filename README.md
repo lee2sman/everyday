@@ -405,3 +405,5 @@ Archiving Artist-Run Spaces project page
 draft prototype (too large) for taper issue 11. ascii car driving sim poem.  
 283  
 images and writeup of old computer challenge 2023  
+284  
+my studio-visit sketch from back in 2018.  
