@@ -407,3 +407,5 @@ draft prototype (too large) for taper issue 11. ascii car driving sim poem.
 images and writeup of old computer challenge 2023  
 284  
 my studio-visit sketch from back in 2018.  
+285  
+'Drek' dirt emoji prototypes created for the Dirty Time open call.  
