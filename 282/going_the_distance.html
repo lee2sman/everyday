@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Going The Distance (Taper #11)</title>
+
+<!-- “Going The Distance” Copyright (C) 2023 Lee Tusman
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright 
+notice and this notice are preserved. This file is offered as-is,
+without any warranty.
+
+This is from Taper #11: Parallels, Fall 2023:
+
+https://taper.badquar.to/11/going_the_distance.html
+
+Going The Distance takes inspiration from minimal driving simulators and 1980s classic arcade cabinet Outrun; Cory Arcangel's F1 Racer Mod; and my experience as a child driving 'Turnpike cars' at the Pennsylvania amusement park 'Dutch Wonderland,' which dates back to the early 1960s. This web superhighway driving simulator imagines a future of infinite roads, no traffic, a true west coast fantasy. The lyrics of the infinite song of the road unspool.
+
+-->
+<style>
+	body { margin:0 ; overflow:hidden }
+	a { color:#eee ; text-decoration:none }
+	header { margin:0 ; padding:0 ; background-color:#444 ; color:#bbb ;
+		position:relative ; z-index:1000 }
+	header > h1 { margin:0 ; font-size:12px ; font-family:sans-serif ;
+		border-bottom:1px #999 solid ; padding:5px 10px ; line-height:17px }
+</style>
+</head>
+<body>
+<header id=nav>
+	<h1>
+		<a href="index.html">Taper #11 :
+		Parallels</a> : Fall 2023 <br>
+		<a href="going_the_distance.html">“Going The Distance”</a> by
+		<a href="about.html#Tusman">Lee Tusman</a> :
+		<a href="prev.html">&lt;&lt;</a> &mdash;
+		<a href="next.html">&gt;&gt;</a>
+	</h1>
+</header> 
+<style>
+html{font-family:mono;font-size:32px;background-color:grey}#rd{position:absolute;top:100px;scale:3}#c{position:absolute;top:300px;font-size:smaller;background-color:#1E90FF;scale:3}#m{position:absolute;scale:2;z-index:-1}
+</style>
+<div id=rd></div><div id=c></div><div id=s></div><div id=m></div>
+<script>
+t="he's going the distance for speed all alone in his time of need driving forever forward horizon there back never still burning yearning day doubt full life force".split` `
+h=o=n=0,x=165,rt=[[",,,,,,,,,/,,,,,,,,,,\\<br>",",,,,,,,,,,,/,,|,,,\\,,, <br>",",,,,,,,/,,,,,,,,,,,,,,\\<br>",",,,,,,,,,,/,,,|,,,,\\,,,, <br>",",,,,,/,,,,,,,,,,,,,,,,,,\\<br>",",,,,,,,,,/,,,,|,,,,,\\,,,,, <br>",",,,/,,,,,,,,,,,,,,,,,,,,,,\\<br>",",,,,,,,,/,,,,,|,,,,,,\\,,,,,, <br>",",/,,,,,,,,,,,,,,,,,,,,,,,,,,\\<br>"],[",,,,,,,,,/,/,,|,,\\,,\\<br>",",,,,,,,,/,,,,,,,,,,,,\\<br>",",,,,,,,,,,/,,,|,,,\\,,,, <br>",",,,,,,/,,,,,,,,,,,,,,,,\\<br>",",,,,,,,,,/,,,,|,,,,\\,,,,, <br>",",,,,/,,,,,,,,,,,,,,,,,,,,\\<br>",",,,,,,,,/,,,,,|,,,,,\\,,,,,, <br>",",,/,,,,,,,,,,,,,,,,,,,,,,,,\\<br>",",,,,,,,/,,,,,,|,,,,,,\\,,,,,,, <br>"]]
+cl=[",,,o=o<br>",",,/_/<br>",",/,/<br>","(_0<br>"]
+cc=["o=o<br>","[_]<br>","| |<br>","0_0<br>"]
+cr=["o=o<br>",",\\_\\<br>",",,\\,\\<br>",",,,0_)<br>"]
+d=document
+ce=d.createElement.bind(d)
+y=()=>Math.random()
+setInterval(()=>{
+c.innerHTML=rd.innerHTML=''
+w=window.innerWidth
+rd.style.left=w/3+'px'
+for(i in rt[n]){p=ce('span')
+p.innerHTML=rt[n][i].replace(/,/g,' ')
+rd.appendChild(p)}
+n++
+if(n>1)n=0
+c.style.left=w/3+x+"px"
+ow=rd.offsetWidth/2
+which_car=cc
+if(x<ow-75)which_car=cl
+if(x>ow+20)which_car=cr
+for(i in which_car){p=ce('span')
+p.innerHTML=which_car[i].replace(/,/g,' ')
+c.appendChild(p)}
+m.innerHTML=t[o]
+m.style.left=w/2-20+'px'
+h+=100;if(h>window.innerHeight){h=0;o=0|y()*28}
+m.style.top=h+'px'},300)
+checkKey=e=>{
+k=e.keyCode
+if(k=='37')x-=15
+if(k=='39')x+=15
+return false}
+d.onkeydown=checkKey
+</script>
+</body>
+</html>
