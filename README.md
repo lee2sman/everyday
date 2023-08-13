@@ -409,3 +409,5 @@ images and writeup of old computer challenge 2023
 my studio-visit sketch from back in 2018.  
 285  
 'Drek' dirt emoji prototypes created for the Dirty Time open call.  
+286  
+Shopkeeper solo ttrpg i made for james chip's micro fiction games jam in 2020  
