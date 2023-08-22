@@ -411,3 +411,9 @@ my studio-visit sketch from back in 2018.
 'Drek' dirt emoji prototypes created for the Dirty Time open call.  
 286  
 Shopkeeper solo ttrpg i made for james chip's micro fiction games jam in 2020  
+287  
+Project page for A Throw of the Text for Taper  
+288  
+Project page for Exocolony, published by ORAL.pub  
+289  
+Project page for Savage Words  
