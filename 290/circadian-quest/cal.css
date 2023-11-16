@@ -1,0 +1,28 @@
+body {
+  margin: 1em;
+  padding: 2em;
+  background-color: burlywood;
+}
+main {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 3em;
+  margin-right: 3em;
+}
+div {
+  border: dotted;
+  width: 128px;
+  height: 128px;
+}
+div > p {
+  background-color: white;
+  font-size: bigger;
+  padding: 0.3rem;
+  border: solid 0.5px;
+  border-radius: 50%;
+  position: absolute;
+}
+img {
+  width: 128px;
+  height: 128px;
+}
