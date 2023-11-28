@@ -15,7 +15,7 @@ This is from Taper #11: Parallels, Fall 2023:
 
 https://taper.badquar.to/11/going_the_distance.html
 
-Going The Distance takes inspiration from the history of American fascination with the automobile and highways: On The Road; 1980s arcade game Outrun; Cory Arcangel's F1 Racer Mod; and my experience as a child driving the 1960s 'Turnpike cars' at the Pennsylvania amusement park 'Dutch Wonderland.' This web superhighway driving simulator imagines a future of infinite roads without traffic, a true american fantasy. The lyrics of the infinite song of the road unspool. Left-Right arrow keys to drive. Our protagonist may never arrive, but it's the journey that's the destination.
+Going The Distance takes inspiration from the history of American fascination with the automobile and highways: On The Road; 1980s arcade game Outrun; Cory Arcangel's F1 Racer Mod; and my experience as a child driving the 1960s 'Turnpike cars' at the Pennsylvania amusement park 'Dutch Wonderland.' This web superhighway driving simulator imagines a future of infinite roads without traffic, a true american fantasy. The lyrics of the infinite song of the road unspool. Left-Right arrow keys to drive. Our protagonist may never arrive, but it's the journey that's the destination. 
 
 -->
 <style>
@@ -39,15 +39,13 @@ Going The Distance takes inspiration from the history of American fascination wi
 	</h1>
 </header> 
 <style>
-html{font-family:mono;font-size:32px;background-color:grey}#rd,#c,#m,#v,#a{position:fixed;scale:3}#rd{top:100px}#c{top:300px;font-size:smaller;background-color:#1E90FF}#m{z-index:-1}#a,#v{color:green}
+html{font-family:mono;font-size:32px;background-color:grey}#rd,#c,#m,#v,#a{position:fixed;scale:3}#rd{top:100px}#c{top:300px}#m{z-index:-1}#a,#v{color:green}
 </style>
 <div id=rd></div><div id=c></div><div id=s></div><div id=m></div><div id=v>⍋</div><div id=a>⍋</div>
 <script>
 t="he's going the distance speed alone time driving forever forward horizon need there back never still burning yearning day doubt full life force his".split` `
 h=o=n=0,x=165,rt=[[",,,,,,,,,/,,,,,,,,,,\\<br>",",,,,,,,,,,,/,,|,,,\\,,, <br>",",,,,,,,/,,,,,,,,,,,,,,\\<br>",",,,,,,,,,,/,,,|,,,,\\,,,, <br>",",,,,,/,,,,,,,,,,,,,,,,,,\\<br>",",,,,,,,,,/,,,,|,,,,,\\,,,,, <br>",",,,/,,,,,,,,,,,,,,,,,,,,,,\\<br>",",,,,,,,,/,,,,,|,,,,,,\\,,,,,, <br>",",/,,,,,,,,,,,,,,,,,,,,,,,,,,\\<br>"],[",,,,,,,,,/,/,,|,,\\,,\\<br>",",,,,,,,,/,,,,,,,,,,,,\\<br>",",,,,,,,,,,/,,,|,,,\\,,,, <br>",",,,,,,/,,,,,,,,,,,,,,,,\\<br>",",,,,,,,,,/,,,,|,,,,\\,,,,, <br>",",,,,/,,,,,,,,,,,,,,,,,,,,\\<br>",",,,,,,,,/,,,,,|,,,,,\\,,,,,, <br>",",,/,,,,,,,,,,,,,,,,,,,,,,,,\\<br>",",,,,,,,/,,,,,,|,,,,,,\\,,,,,,, <br>"]]
-cl=[",,,o=o<br>",",,/_/<br>",",/,/<br>","(_0<br>"]
-cc=["o=o<br>","[_]<br>","| |<br>","0_0<br>"]
-cr=["o=o<br>",",\\_\\<br>",",,\\,\\<br>",",,,0_)<br>"]
+cc='🏍'
 d=document
 ce=d.createElement.bind(d)
 y=()=>Math.random()
@@ -63,9 +61,9 @@ if(n>1)n=0
 c.style.left=w/3+x+"px"
 ow=rd.offsetWidth/2
 wc=cc
-if(x<ow-75)wc=cl
-if(x>ow+20)wc=cr
-if(x<0||x>600)wc="웃"
+if(x<ow-75)c.style.transform="rotate3d(0.8,1,-0.7,165deg)"
+if(x>ow+20)c.style.transform="rotate3d(1,1,1,75deg)"
+if(x<-200||x>800){wc="웃";m.style.transform="rotateZ("+y()+"turn)"}else{m.style.transform="rotateZ(90deg)"}
 for(i in wc){p=ce('span')
 p.innerHTML=wc[i].replace(/,/g,' ')
 c.appendChild(p)}
