@@ -65,12 +65,13 @@ ow=rd.offsetWidth/2
 wc=cc
 if(x<ow-75)wc=cl
 if(x>ow+20)wc=cr
+if(x<0||x>600)wc="웃"
 for(i in wc){p=ce('span')
 p.innerHTML=wc[i].replace(/,/g,' ')
 c.appendChild(p)}
 m.innerHTML=t[o]
 m.style.left=w/2-20+'px'
-h+=100;if(h>window.innerHeight){h=0;o=0|y()*24}
+h+=100;if(h>w){h=0;o=0|y()*24}
 z=2*h+'px'
 v.style.top=z
 a.style.top=z
