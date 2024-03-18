@@ -1,0 +1,37 @@
+@font-face {
+  font-family: avalanche;
+  src: url(fonts/avalanche.otf);
+}
+p {
+  font-family: avalanche;
+  font-size: large;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+p,h1,h2,h3 {
+  color: lightgrey;
+  opacity: 0.2;
+  margin: 2em;
+}
+canvas {
+  z-index: -10;
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+#player {
+  opacity: 0.01;
+  width: 100vw;
+  height: 100vh;
+}
+#tuner1, #tuner2, #tuner3 {
+  z-index: 10;
+  min-width: 200px;
+  min-height: 200px;
+  width: 10vmin;
+  height: 10vmin;
+}
