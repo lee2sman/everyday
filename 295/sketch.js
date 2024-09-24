@@ -200,7 +200,7 @@ function setup() {
 	background(226, 226, 216);
 
 	rectMode(CENTER);
-	title = "Borsh Belt System";
+	title = "Borscht Belt System";
 
 	initPlayer();
 	initSprites();
