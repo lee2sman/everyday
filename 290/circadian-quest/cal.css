@@ -1,3 +1,6 @@
+* {
+box-sizing: border-box;
+   }
 body {
   margin: 1em;
   padding: 2em;
@@ -11,7 +14,7 @@ main {
 }
 div {
   border: dotted;
-  width: 128px;
+  width: 14%;
   height: 128px;
 }
 div > p {
@@ -22,7 +25,10 @@ div > p {
   border-radius: 50%;
   position: absolute;
 }
-img {
-  width: 128px;
-  height: 128px;
+div > img {
+  width: 100%;
+  min-width: 100px;
+  height: 100%;
+  min-height: 100px;
+  object-fit: cover;
 }
