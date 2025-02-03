@@ -1,0 +1,22 @@
+@font-face {
+  font-family: victormono;
+  src: url(VictorMono-Regular.woff); 
+}
+body {
+  font-family: victormono, monospace; 
+  color: blue;
+  background-color: rgba(0,0,120,0.4);
+  padding: 2rem;
+  font-size: x-large;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+ }
+#container,h1 {
+  margin: auto;
+  max-width: 90vw;
+  font-size: clamp(10px, 3.5vw, 2.5rem); 
+}
+#container > h1 {
+  text-align: center;
+}
