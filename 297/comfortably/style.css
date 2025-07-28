@@ -1,0 +1,14 @@
+html {
+  background-image: url("assets/dust.png"),radial-gradient(#f1f0e9, #aceeb3);
+}
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+}
+div {
+  font-size: 200%;
+  color: white;
+}
