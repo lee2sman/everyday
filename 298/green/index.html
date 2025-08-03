@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>All the parks</title>
+<style>
+body {
+background-color: mediumseagreen;
+background:url(0.jpg)
+}
+img {
+position: absolute;
+opacity:0.65;
+}
+</style>>
+</head>
+<body>
+
+<img src="0.jpg">
+<img src="1.jpg">
+<img src="2.jpg">
+<img src="3.jpg">
+<img src="4.jpg">
+<img src="5.jpg">
+<img src="6.jpg">
+<img src="7.jpg">
+<img src="8.jpg">
+<img src="9.jpg">
+<img src="10.jpg">
+<img src="11.jpg">
+
+<script>
+
+const img=document.body.querySelectorAll("img")
+
+
+function remix(){
+for (let i=0;i<img.length;i++){
+img[i].style.left=Math.random()*1000+"px"
+img[i].style.top=Math.random()*1000+"px"
+img[i].style.width=Math.random()*1000+"px"
+img[i].style.transform="rotate("+Math.random()*360+"deg)"
+}
+}
+remix();
+document.addEventListener('click',remix)
+
+
+</script>
+</body>
+</html>

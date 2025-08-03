@@ -417,3 +417,21 @@ Project page for A Throw of the Text for Taper
 Project page for Exocolony, published by ORAL.pub  
 289  
 Project page for Savage Words  
+290  
+Circadian Quest (prototype for a "health quest" life RPG thing)  
+291  
+Radio prototype - prototype for an art residency proposal (didn't get it, but i still want to make this real)   
+292  
+Ron drawing software (eh)   
+293  
+Daily Quilt Poem - in conjunction with quilts.lua data 
+294  
+LoremSoft - Lorem text generator, ancient anti-software   
+295  
+Borscht Belt System for exhibition at Flux Factory - Gov Island, 2024
+296  
+Pico-8 Quilt Generator (demo)
+297  
+I Act Comfortably with Others - for LOVE.exe exhibit at New Media Artspace   
+298  
+All the Parks are Green - made at HTML Day 2025 - Berlin @ Offline and Tempelhofer Feld
